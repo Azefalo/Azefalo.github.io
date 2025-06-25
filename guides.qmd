@@ -1,0 +1,25 @@
+---
+title: "Guides"
+author: "Paolo Bosetti"
+date: "02/05/2025"
+format: html
+listing:
+  type: table
+  sort: "date desc"
+  contents: guides
+  categories: true
+  fields: [date, title, author, description, categories, reading-time]
+  feed: true
+  table-hover: true
+---
+
+::: callout-note 
+# Spotlight
+
+Be sure to start with [MADS structure](guides/structure.html) guide.
+
+If you want to contribute, head on to the [contribution guide](guides/contribute.html).
+
+:::
+
+
