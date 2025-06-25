@@ -101,4 +101,3 @@ Now you can use `<hostname>.local` in place of its address: for example, when la
 ```bash
 mads source -s tcp://mads-broker.local:9092 my_plugin.plugin
 ```
-
