@@ -373,8 +373,8 @@ function showNotFound() {
     const container = document.getElementById('projectContent');
     const notFoundDiv = document.getElementById('notFound');
     
-    if (container) {
-        container.style.display = 'none';
+    if (container && container.parentElement && container.parentElement.parentElement) {
+        container.parentElement.parentElement.style.display = 'none';
     }
     
     if (notFoundDiv) {
