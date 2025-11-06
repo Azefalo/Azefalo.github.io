@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio acadêmico - Projetos e tecnologias">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1 class="logo">Portfólio</h1>
+                <ul class="nav-links">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="fade-in">Olá, eu sou <span class="highlight">Desenvolvedor</span></h2>
+                    <p class="fade-in">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">Sobre Mim</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Quem Sou</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel sapien vel nisi lacinia commodo. Donec euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc vel nisl. Sed euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc.</p>
+                        
+                        <h3>O Que Faço</h3>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                    
+                    <div class="technologies">
+                        <h3>Tecnologias</h3>
+                        <div class="tech-grid">
+                            <div class="tech-item">
+                                <div class="tech-icon">💻</div>
+                                <p>HTML/CSS/JS</p>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">⚙️</div>
+                                <p>C/C++</p>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">🐍</div>
+                                <p>Python</p>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">📱</div>
+                                <p>Embedded Systems</p>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">🔧</div>
+                                <p>Git/GitHub</p>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">🚗</div>
+                                <p>Automotive</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Projetos</h2>
+                
+                <!-- Featured Project: Keyless Access Car -->
+                <div class="project-featured">
+                    <div class="project-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Crect fill='%23667eea' width='800' height='400'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='32' fill='white' text-anchor='middle' dominant-baseline='middle'%3EKeyless Access Car%3C/text%3E%3C/svg%3E" alt="Keyless Access Car Project">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">Projeto Destaque</span>
+                        <h3>Keyless Access Car</h3>
+                        <p class="project-partners">ACTIA & NXP</p>
+                        <p class="project-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Este projeto envolve o desenvolvimento de um sistema de acesso veicular sem chave utilizando tecnologias avançadas de comunicação e segurança. Implementação de protocolos de autenticação seguros, integração com sistemas embarcados e desenvolvimento de interfaces de usuário intuitivas.
+                        </p>
+                        <div class="project-details">
+                            <h4>Tecnologias Utilizadas:</h4>
+                            <ul>
+                                <li>NXP Microcontrollers</li>
+                                <li>RFID/NFC Communication</li>
+                                <li>Embedded C/C++</li>
+                                <li>Automotive Protocols (CAN, LIN)</li>
+                                <li>Security & Encryption</li>
+                            </ul>
+                            <h4>Principais Características:</h4>
+                            <ul>
+                                <li>Sistema de autenticação sem chave baseado em proximidade</li>
+                                <li>Comunicação segura entre chave e veículo</li>
+                                <li>Interface de usuário responsiva</li>
+                                <li>Conformidade com padrões automotivos</li>
+                            </ul>
+                        </div>
+                        <a href="pdfs/keyless-access-car-report.pdf" class="btn btn-secondary" target="_blank">Ver Relatório PDF</a>
+                    </div>
+                </div>
+
+                <!-- Other Projects Grid -->
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-card-image">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250'%3E%3Crect fill='%2364b5f6' width='400' height='250'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'%3EWeb App%3C/text%3E%3C/svg%3E" alt="Projeto Web App">
+                        </div>
+                        <div class="project-card-content">
+                            <h3>Sistema Web Responsivo</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Desenvolvimento de aplicação web com interface moderna e responsiva.</p>
+                            <a href="pdfs/web-app-report.pdf" class="btn btn-outline" target="_blank">Ver Relatório</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-card-image">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250'%3E%3Crect fill='%234db6ac' width='400' height='250'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'%3EIoT System%3C/text%3E%3C/svg%3E" alt="Projeto IoT">
+                        </div>
+                        <div class="project-card-content">
+                            <h3>Sistema IoT Integrado</h3>
+                            <p>Ut enim ad minim veniam, quis nostrud exercitation. Sistema de Internet das Coisas com sensores e atuadores conectados.</p>
+                            <a href="pdfs/iot-system-report.pdf" class="btn btn-outline" target="_blank">Ver Relatório</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-card-image">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250'%3E%3Crect fill='%23ba68c8' width='400' height='250'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'%3EMobile App%3C/text%3E%3C/svg%3E" alt="Projeto Mobile">
+                        </div>
+                        <div class="project-card-content">
+                            <h3>Aplicativo Mobile</h3>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate. Aplicativo móvel multiplataforma com funcionalidades avançadas.</p>
+                            <a href="pdfs/mobile-app-report.pdf" class="btn btn-outline" target="_blank">Ver Relatório</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-card-image">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250'%3E%3Crect fill='%23ff8a65' width='400' height='250'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'%3EData Analysis%3C/text%3E%3C/svg%3E" alt="Projeto Análise de Dados">
+                        </div>
+                        <div class="project-card-content">
+                            <h3>Análise de Dados</h3>
+                            <p>Excepteur sint occaecat cupidatat non proident. Projeto de análise e visualização de dados com machine learning.</p>
+                            <a href="pdfs/data-analysis-report.pdf" class="btn btn-outline" target="_blank">Ver Relatório</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contato</h2>
+                <div class="contact-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Entre em contato para mais informações sobre os projetos.</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <p>email@exemplo.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">💼</span>
+                            <p>LinkedIn</p>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🐙</span>
+                            <p>GitHub</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Portfólio Acadêmico. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
