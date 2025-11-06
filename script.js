@@ -69,22 +69,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const animateElements = document.querySelectorAll('.project-card, .tech-item, .about-text, .technologies');
     animateElements.forEach(el => observer.observe(el));
 
-    // Add some interactivity to project cards
-    const projectCards = document.querySelectorAll('.project-card');
-    
-    projectCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px) scale(1.02)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
-    });
-
-    // Add console message for developers
-    console.log('%cPortfólio Acadêmico', 'color: #667eea; font-size: 24px; font-weight: bold;');
-    console.log('%cDesenvolvido com HTML, CSS e JavaScript', 'color: #764ba2; font-size: 14px;');
+    // Add console message for developers (development only)
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        console.log('%cPortfólio Acadêmico', 'color: #667eea; font-size: 24px; font-weight: bold;');
+        console.log('%cDesenvolvido com HTML, CSS e JavaScript', 'color: #764ba2; font-size: 14px;');
+    }
 });
 
 // Add active state style dynamically
