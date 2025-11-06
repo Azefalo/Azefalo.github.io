@@ -374,7 +374,10 @@ function showNotFound() {
     const notFoundDiv = document.getElementById('notFound');
     
     if (container) {
-        container.style.display = 'none';
+        const mainElement = container.closest('.project-detail');
+        if (mainElement) {
+            mainElement.style.display = 'none';
+        }
     }
     
     if (notFoundDiv) {
