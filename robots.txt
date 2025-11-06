@@ -1,0 +1,8 @@
+# robots.txt para Azefalo.github.io
+# Permite que todos os bots rastreiem todas as páginas
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://azefalo.github.io/sitemap.xml
