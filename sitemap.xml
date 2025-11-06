@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- EDITAR: Substitua "azefalo.github.io" pelo seu domínio real se usar customizado -->
+    <url>
+        <loc>https://azefalo.github.io/</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://azefalo.github.io/projetos.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- URLs dos projetos individuais -->
+    <url>
+        <loc>https://azefalo.github.io/projeto.html?id=keyless-access-car</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://azefalo.github.io/projeto.html?id=projeto-ml-visao</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://azefalo.github.io/projeto.html?id=app-gestao-tarefas</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://azefalo.github.io/projeto.html?id=sistema-monitoramento-iot</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://azefalo.github.io/projeto.html?id=api-rest-ecommerce</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://azefalo.github.io/projeto.html?id=game-unity-2d</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+</urlset>

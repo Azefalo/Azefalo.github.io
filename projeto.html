@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto - Seu Nome</title>
+    <meta name="description" content="Detalhes do projeto">
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <!-- Navegação fixa -->
+    <nav class="navbar" role="navigation" aria-label="Menu principal">
+        <div class="container">
+            <a href="/" class="logo" aria-label="Página inicial">Seu Nome</a>
+            <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+                <span class="theme-icon">🌙</span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="/#contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Conteúdo do Projeto -->
+    <main id="projectContent" class="project-detail">
+        <div class="container">
+            <div class="loading">Carregando projeto...</div>
+        </div>
+    </main>
+
+    <!-- Página 404 (exibida via JavaScript se projeto não encontrado) -->
+    <div id="notFound" class="not-found" style="display: none;">
+        <div class="container">
+            <h1>404 - Projeto não encontrado</h1>
+            <p>Desculpe, o projeto que você está procurando não existe.</p>
+            <a href="projetos.html" class="btn btn-primary">Voltar para Projetos</a>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024-2025 Seu Nome. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

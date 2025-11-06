@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- EDITAR: Substitua o título abaixo pelo seu nome real -->
+    <title>Seu Nome - Portfólio</title>
+    <!-- EDITAR: Personalize a descrição para SEO -->
+    <meta name="description" content="Portfólio profissional de projetos do último ano da faculdade, incluindo desenvolvimento IoT, ML e sistemas embarcados.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://azefalo.github.io/">
+    <meta property="og:title" content="Seu Nome - Portfólio">
+    <meta property="og:description" content="Portfólio profissional de projetos do último ano da faculdade.">
+    <meta property="og:image" content="https://azefalo.github.io/assets/img/profile.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://azefalo.github.io/">
+    <meta property="twitter:title" content="Seu Nome - Portfólio">
+    <meta property="twitter:description" content="Portfólio profissional de projetos do último ano da faculdade.">
+    <meta property="twitter:image" content="https://azefalo.github.io/assets/img/profile.jpg">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <!-- Navegação fixa -->
+    <nav class="navbar" role="navigation" aria-label="Menu principal">
+        <div class="container">
+            <a href="/" class="logo" aria-label="Página inicial">Seu Nome</a>
+            <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+                <span class="theme-icon">🌙</span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <!-- EDITAR: Substitua pelo seu nome e função real -->
+                <h1 class="hero-title">Olá, sou [Seu Nome]</h1>
+                <p class="hero-subtitle">Desenvolvedor Full Stack | Estudante de Engenharia</p>
+                <p class="hero-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Especializado em desenvolvimento IoT, 
+                    sistemas embarcados e soluções mobile.
+                </p>
+                <a href="projetos.html" class="btn btn-primary">Ver Projetos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mim -->
+    <section class="about" id="sobre">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <!-- EDITAR: Substitua este lorem ipsum pela sua descrição real -->
+            <div class="about-content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et 
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                    ex ea commodo consequat.
+                </p>
+                <p>
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est 
+                    laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiência & Tecnologias -->
+    <section class="experience">
+        <div class="container">
+            <h2>Experiência & Tecnologias</h2>
+            
+            <div class="experience-grid">
+                <!-- EDITAR: Substitua estas experiências pelas suas reais -->
+                <div class="experience-item">
+                    <h3>Desenvolvedor Júnior</h3>
+                    <p class="company">Nome da Empresa Ltda.</p>
+                    <p class="period">Jan 2024 - Presente</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Desenvolvimento de soluções web e mobile.</p>
+                </div>
+                
+                <div class="experience-item">
+                    <h3>Estagiário de Desenvolvimento</h3>
+                    <p class="company">Outra Empresa S.A.</p>
+                    <p class="period">Jun 2023 - Dez 2023</p>
+                    <p>Lorem ipsum dolor sit amet. Participação em projetos de sistemas embarcados e IoT.</p>
+                </div>
+            </div>
+
+            <h3>Tecnologias</h3>
+            <div class="tech-stack">
+                <!-- EDITAR: Adicione ou remova tecnologias conforme necessário -->
+                <span class="tech-badge">HTML</span>
+                <span class="tech-badge">CSS</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">C/C++</span>
+                <span class="tech-badge">Git</span>
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">TensorFlow</span>
+                <span class="tech-badge">Arduino</span>
+                <span class="tech-badge">Raspberry Pi</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projeto em Destaque -->
+    <section class="featured-project">
+        <div class="container">
+            <h2>Projeto em Destaque do Ano</h2>
+            <!-- Este conteúdo é carregado dinamicamente do projects.json -->
+            <div id="featuredProject" class="featured-content">
+                <div class="loading">Carregando projeto em destaque...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Últimos Projetos -->
+    <section class="latest-projects">
+        <div class="container">
+            <h2>Últimos Projetos</h2>
+            <!-- Estes cards são carregados dinamicamente do projects.json -->
+            <div id="latestProjects" class="projects-grid">
+                <div class="loading">Carregando projetos...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="contact" id="contato">
+        <div class="container">
+            <h2>Contato</h2>
+            <!-- EDITAR: Substitua estes links pelos seus reais -->
+            <div class="contact-links">
+                <a href="mailto:seu.email@exemplo.com" class="contact-link" aria-label="Enviar email">
+                    <span class="icon">📧</span>
+                    <span>seu.email@exemplo.com</span>
+                </a>
+                <a href="https://linkedin.com/in/seu-perfil" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Perfil no LinkedIn">
+                    <span class="icon">💼</span>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/Azefalo" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Perfil no GitHub">
+                    <span class="icon">💻</span>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <!-- EDITAR: Substitua pelo seu nome e ano atual -->
+            <p>&copy; 2024-2025 Seu Nome. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
