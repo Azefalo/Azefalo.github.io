@@ -72,7 +72,7 @@ async function loadProjects() {
     try {
         const response = await fetch('data/projects.json');
         if (!response.ok) {
-            throw new Error(`Erro ao carregar projetos: ${response.status}`);
+            throw new Error(`Error loading projects: ${response.status}`);
         }
         
         projectsData = await response.json();
@@ -91,8 +91,8 @@ async function loadProjects() {
         }
         
     } catch (error) {
-        console.error('Erro ao carregar projetos:', error);
-        showError('Não foi possível carregar os projetos. Por favor, tente novamente mais tarde.');
+        console.error('Error loading projects:', error);
+        showError('Could not load projects. Please try again later.');
     }
 }
 
@@ -107,13 +107,13 @@ function renderFeaturedProject() {
     const project = projectsData.items.find(p => p.id === featuredId);
     
     if (!project) {
-        container.innerHTML = '<p>Projeto em destaque não encontrado.</p>';
+        container.innerHTML = '<p>Featured project not found.</p>';
         return;
     }
 
     const partnershipHTML = project.parcerias && project.parcerias.length > 0
         ? `<div class="featured-partnerships">
-             <strong>Parcerias:</strong> ${project.parcerias.join(', ')}
+             <strong>Partnerships:</strong> ${project.parcerias.join(', ')}
            </div>`
         : '';
 
@@ -153,7 +153,7 @@ function renderLatestProjects() {
         .slice(0, 3);
 
     if (projects.length === 0) {
-        container.innerHTML = '<p>Nenhum projeto disponível.</p>';
+        container.innerHTML = '<p>No projects available.</p>';
         return;
     }
 
@@ -198,7 +198,7 @@ function createProjectCard(project) {
                 <h3>${escapeHtml(project.titulo)}</h3>
                 <p class="project-card-intro">${escapeHtml(project.intro)}</p>
                 ${tagsHTML}
-                <a href="projeto.html?id=${escapeHtml(project.id)}" class="btn btn-secondary">Detalhes</a>
+                <a href="projeto.html?id=${escapeHtml(project.id)}" class="btn btn-secondary">Details</a>
             </div>
         </article>
     `;
@@ -225,7 +225,7 @@ function initFilters() {
     ).join('');
 
     container.innerHTML = `
-        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn active" data-filter="all">All</button>
         ${techButtons}
     `;
 

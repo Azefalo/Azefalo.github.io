@@ -8,8 +8,8 @@
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://azefalo.github.io/projetos.html">
-    <meta property="og:title" content="Projects - Your Name">
-    <meta property="og:description" content="Projects developed during the final year of college.">
+    <meta property="og:title" content="Projetos - Seu Nome">
+    <meta property="og:description" content="Projetos desenvolvidos durante o último ano da faculdade.">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="assets/css/main.css">
@@ -43,7 +43,7 @@
         <div class="container">
             <h2 class="visually-hidden">Filtrar projetos</h2>
             <div class="filter-buttons" id="filterButtons" role="group" aria-label="Filtros de tecnologia">
-                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn active" data-filter="all">Todos</button>
                 <!-- Outros filtros serão adicionados dinamicamente pelo JavaScript -->
             </div>
         </div>
@@ -64,7 +64,7 @@
     <!-- Rodapé -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024-2025 Your Name. All rights reserved.</p>
+            <p>&copy; 2024-2025 Seu Nome. Todos os direitos reservados.</p>
         </div>
     </footer>
 
