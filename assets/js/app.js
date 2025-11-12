@@ -138,6 +138,21 @@ function renderFeaturedProject() {
         </div>
     `;
 
+    // Force English labels for action buttons
+    (function() {
+        try {
+            const actionsEl = container.querySelector('.project-actions');
+            if (actionsEl) {
+                const dlEl = actionsEl.querySelector('a.btn.btn-primary[download]');
+                if (dlEl) dlEl.textContent = 'Download Report (PDF)';
+                const backEl = actionsEl.querySelector('a.btn.btn-secondary');
+                if (backEl) backEl.textContent = 'Back to Projects';
+            }
+        } catch (e) {
+            console.warn('Normalize action labels failed', e);
+        }
+    })();
+
     // Normalize English labels after render
     try {
         const actionsEl = container.querySelector('.project-actions');
