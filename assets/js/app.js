@@ -137,6 +137,19 @@ function renderFeaturedProject() {
             <a href="projeto.html?id=${escapeHtml(project.id)}" class="btn btn-primary">Ler mais</a>
         </div>
     `;
+
+    // Normalize action button labels in English
+    try {
+        const actions = container.querySelector('.project-actions');
+        if (actions) {
+            const backBtn = actions.querySelector('a.btn.btn-secondary');
+            if (backBtn) backBtn.textContent = 'Back to Projects';
+            const dlBtn = actions.querySelector('a.btn.btn-primary[download]');
+            if (dlBtn) dlBtn.textContent = 'Download Report (PDF)';
+        }
+    } catch (e) {
+        console.warn('Could not normalize action buttons:', e);
+    }
 }
 
 // ============================================

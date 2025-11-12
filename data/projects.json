@@ -16,7 +16,7 @@
         "assets/img/keyless-hardware.jpg"
       ],
       "relatorio_pdf": "reports/keyless-access-car.pdf",
-      "tags": ["Flagship project", "IoT", "Security"]
+      "tags": ["Ultra Wideband", "IoT", "Security"]
     },
     {
       "id": "projeto-ml-visao",
