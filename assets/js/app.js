@@ -138,6 +138,33 @@ function renderFeaturedProject() {
         </div>
     `;
 
+    // Normalize English labels after render
+    try {
+        const actionsEl = container.querySelector('.project-actions');
+        if (actionsEl) {
+            const backEl = actionsEl.querySelector('a.btn.btn-secondary');
+            if (backEl) backEl.textContent = 'Back to Projects';
+            const dlEl = actionsEl.querySelector('a.btn.btn-primary[download]');
+            if (dlEl) dlEl.textContent = 'Download Report (PDF)';
+        }
+    } catch (e) {
+        console.warn('Could not normalize action labels', e);
+    }
+
+    try {
+        const sectionTitles = container.querySelectorAll('.project-section h3');
+        sectionTitles.forEach(h => {
+            const t = h.textContent.trim().toLowerCase();
+            if (t === 'resumo') h.textContent = 'Summary';
+            else if (t === 'objetivos') h.textContent = 'Objectives';
+            else if (t.startsWith('papel')) h.textContent = 'Role and Contributions';
+            else if (t === 'tecnologias usadas') h.textContent = 'Technologies Used';
+            else if (t.startsWith('resultados')) h.textContent = 'Results and Learnings';
+        });
+    } catch (e) {
+        console.warn('Could not normalize headings', e);
+    }
+
     // Normalize texts to English (buttons and section headings)
     try {
         const actions = container.querySelector('.project-actions');
