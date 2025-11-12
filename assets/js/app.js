@@ -134,11 +134,11 @@ function renderFeaturedProject() {
             ${tagsHTML}
             <p class="featured-description">${escapeHtml(project.intro)}</p>
             <p class="featured-description">${escapeHtml(project.descricao)}</p>
-            <a href="projeto.html?id=${escapeHtml(project.id)}" class="btn btn-primary">Ler mais</a>
+            <a href="projeto.html?id=${escapeHtml(project.id)}" class="btn btn-primary">Read more</a>
         </div>
     `;
 
-    // Normalize action button labels in English
+    // Normalize texts to English (buttons and section headings)
     try {
         const actions = container.querySelector('.project-actions');
         if (actions) {
@@ -147,6 +147,16 @@ function renderFeaturedProject() {
             const dlBtn = actions.querySelector('a.btn.btn-primary[download]');
             if (dlBtn) dlBtn.textContent = 'Download Report (PDF)';
         }
+
+        const headings = container.querySelectorAll('.project-section h3');
+        headings.forEach(h => {
+            const t = h.textContent.trim();
+            if (t === 'Resumo') h.textContent = 'Summary';
+            else if (t === 'Objetivos') h.textContent = 'Objectives';
+            else if (t.startsWith('Papel')) h.textContent = 'Role and Contributions';
+            else if (t === 'Tecnologias Usadas') h.textContent = 'Technologies Used';
+            else if (t.startsWith('Resultados')) h.textContent = 'Results and Learnings';
+        });
     } catch (e) {
         console.warn('Could not normalize action buttons:', e);
     }
@@ -292,7 +302,7 @@ function renderProjectDetail() {
     }
 
     // Atualizar título da página
-    document.title = `${project.titulo} - Seu Nome`;
+    document.title = `${project.titulo} - João Gabriel Buttow Albuquerque`;
 
     // Renderizar galeria de imagens
     const galleryHTML = project.imagens && project.imagens.length > 0
@@ -344,12 +354,12 @@ function renderProjectDetail() {
         ${galleryHTML}
 
         <div class="project-section">
-            <h3>Resumo</h3>
+            <h3>Summary</h3>
             <p>${escapeHtml(project.descricao)}</p>
         </div>
 
         <div class="project-section">
-            <h3>Objetivos</h3>
+            <h3>Objectives</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Desenvolver uma solução robusta e escalável que atenda às necessidades do mercado.</p>
         </div>
 
@@ -359,12 +369,12 @@ function renderProjectDetail() {
         </div>
 
         <div class="project-section">
-            <h3>Tecnologias Usadas</h3>
+            <h3>Technologies Used</h3>
             ${techHTML}
         </div>
 
         <div class="project-section">
-            <h3>Resultados e Aprendizados</h3>
+            <h3>Results and Learnings</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. O projeto foi concluído com sucesso, resultando em aprendizados significativos em arquitetura de sistemas, trabalho em equipe e gestão de projetos complexos.</p>
         </div>
 
