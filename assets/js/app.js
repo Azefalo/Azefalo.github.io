@@ -380,9 +380,9 @@ function renderProjectDetail() {
 
         <div class="project-actions">
             ${project.relatorio_pdf ? 
-                `<a href="${escapeHtml(project.relatorio_pdf)}" class="btn btn-primary" download>📄 Baixar Relatório (PDF)</a>` 
+                `<a href="${escapeHtml(project.relatorio_pdf)}" class="btn btn-primary" download>📄 Download Report (PDF)</a>` 
                 : ''}
-            <a href="projetos.html" class="btn btn-secondary">← Voltar para Projetos</a>
+            <a href="projetos.html" class="btn btn-secondary">← Back to Projects</a>
         </div>
     `;
 
