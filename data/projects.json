@@ -5,56 +5,56 @@
       "id": "keyless-access-car",
       "titulo": "Keyless Access Car — ACTIA & NXP",
       "parcerias": ["ACTIA", "NXP"],
-      "periodo": "Ano letivo 2024–2025",
-      "status": "Em desenvolvimento",
-      "intro": "Sistema de acesso sem chave para frota corporativa via smartphone/autorização.",
-      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sistema inovador de desbloqueio de veículos da frota via smartphone utilizando credencial corporativa autorizada. Projeto anual de maior complexidade desenvolvido em parceria com ACTIA e NXP, envolvendo tecnologias de ponta em comunicação wireless, criptografia e autenticação segura. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "tecnologias": ["BLE", "NFC", "Criptografia", "Mobile", "Backend", "IoT"],
+      "periodo": "Academic Year 2024–2025",
+      "status": "In progress",
+      "intro": "Keyless access for a corporate fleet via smartphone/corporate authorization.",
+      "descricao": "Innovative system to unlock fleet vehicles via smartphone using authorized corporate credentials. Year-long, high‑complexity project developed in partnership with ACTIA and NXP, involving cutting‑edge wireless communication, cryptography, and secure authentication.",
+      "tecnologias": ["BLE", "NFC", "Cryptography", "Mobile", "Backend", "IoT"],
       "imagens": [
         "assets/img/keyless.jpg",
         "assets/img/keyless-app.jpg",
         "assets/img/keyless-hardware.jpg"
       ],
       "relatorio_pdf": "reports/keyless-access-car.pdf",
-      "tags": ["Projeto principal", "IoT", "Segurança"]
+      "tags": ["Flagship project", "IoT", "Security"]
     },
     {
       "id": "projeto-ml-visao",
-      "titulo": "Classificador de Imagens com Machine Learning",
-      "periodo": "2º Semestre 2024",
-      "status": "Concluído",
-      "intro": "Desenvolvimento de modelo de ML para classificação automática de imagens usando redes neurais convolucionais.",
-      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Projeto de machine learning focado em visão computacional utilizando TensorFlow e Keras. O sistema é capaz de classificar imagens em múltiplas categorias com alta precisão. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Implementação completa desde a coleta de dados até o deployment do modelo.",
+      "titulo": "Image Classifier with Machine Learning",
+      "periodo": "2nd Semester 2024",
+      "status": "Completed",
+      "intro": "Development of an ML model for automatic image classification using convolutional neural networks.",
+      "descricao": "Machine‑learning project focused on computer vision using TensorFlow and Keras. The system can classify images into multiple categories with high accuracy. End‑to‑end implementation from data collection to model deployment.",
       "tecnologias": ["Python", "TensorFlow", "Keras", "OpenCV", "NumPy"],
       "imagens": [
         "assets/img/projeto-ml.jpg",
         "assets/img/projeto-ml-results.jpg"
       ],
       "relatorio_pdf": "reports/projeto-ml-visao.pdf",
-      "tags": ["ML", "Visão Computacional", "Deep Learning"]
+      "tags": ["ML", "Computer Vision", "Deep Learning"]
     },
     {
       "id": "app-gestao-tarefas",
-      "titulo": "Aplicativo de Gestão de Tarefas",
-      "periodo": "1º Semestre 2024",
-      "status": "Concluído",
-      "intro": "Aplicativo web responsivo para gerenciamento de tarefas e projetos com sincronização em tempo real.",
-      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aplicação full-stack desenvolvida com React no frontend e Node.js no backend. Implementa funcionalidades de criação, edição e organização de tarefas com interface intuitiva. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Sistema de autenticação seguro e sincronização em tempo real utilizando WebSockets.",
+      "titulo": "Task Management App",
+      "periodo": "1st Semester 2024",
+      "status": "Completed",
+      "intro": "Responsive web app for managing tasks and projects with real‑time sync.",
+      "descricao": "Full‑stack application built with React on the frontend and Node.js on the backend. Implements task creation, editing, and organization with an intuitive interface. Secure authentication and real‑time synchronization via WebSockets.",
       "tecnologias": ["React", "Node.js", "Express", "MongoDB", "WebSocket"],
       "imagens": [
         "assets/img/app-tarefas.jpg",
         "assets/img/app-tarefas-mobile.jpg"
       ],
       "relatorio_pdf": "reports/app-gestao-tarefas.pdf",
-      "tags": ["Web", "Full Stack", "Real-time"]
+      "tags": ["Web", "Full Stack", "Real‑time"]
     },
     {
       "id": "sistema-monitoramento-iot",
-      "titulo": "Sistema de Monitoramento IoT para Agricultura",
-      "periodo": "2º Semestre 2024",
-      "status": "Concluído",
-      "intro": "Plataforma IoT para monitoramento de condições ambientais em cultivos agrícolas.",
-      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sistema completo de Internet das Coisas utilizando sensores ESP32 para coletar dados de temperatura, umidade e luminosidade. Dashboard web para visualização em tempo real dos dados coletados. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim. Integração com alertas automáticos por email quando valores críticos são detectados.",
+      "titulo": "IoT Monitoring System for Agriculture",
+      "periodo": "2nd Semester 2024",
+      "status": "Completed",
+      "intro": "IoT platform for monitoring environmental conditions in crops.",
+      "descricao": "Complete Internet of Things system using ESP32 sensors to collect temperature, humidity, and light. Web dashboard for real‑time data visualization. Integration with automatic email alerts when critical thresholds are detected.",
       "tecnologias": ["ESP32", "Arduino", "MQTT", "Python", "Flask", "Chart.js"],
       "imagens": [
         "assets/img/iot-agriculture.jpg",
@@ -62,30 +62,30 @@
         "assets/img/iot-sensor.jpg"
       ],
       "relatorio_pdf": "reports/sistema-monitoramento-iot.pdf",
-      "tags": ["IoT", "Hardware", "Agricultura", "Sensores"]
+      "tags": ["IoT", "Hardware", "Agriculture", "Sensors"]
     },
     {
       "id": "api-rest-ecommerce",
-      "titulo": "API REST para E-commerce",
-      "periodo": "1º Semestre 2024",
-      "status": "Concluído",
-      "intro": "API RESTful completa para gerenciamento de produtos, pedidos e usuários em plataforma de e-commerce.",
-      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Backend robusto desenvolvido seguindo as melhores práticas de arquitetura REST. Implementa autenticação JWT, validação de dados, tratamento de erros e documentação completa com Swagger. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium. Sistema de pagamento integrado e gestão completa de estoque com controle de transações.",
+      "titulo": "REST API for E‑commerce",
+      "periodo": "1st Semester 2024",
+      "status": "Completed",
+      "intro": "Full RESTful API to manage products, orders, and users for an e‑commerce platform.",
+      "descricao": "Robust backend following REST architecture best practices. Implements JWT authentication, data validation, error handling, and full documentation with Swagger. Integrated payments and complete inventory management with transaction control.",
       "tecnologias": ["Node.js", "Express", "PostgreSQL", "JWT", "Swagger"],
       "imagens": [
         "assets/img/api-ecommerce.jpg",
         "assets/img/api-swagger.jpg"
       ],
       "relatorio_pdf": "reports/api-rest-ecommerce.pdf",
-      "tags": ["Backend", "API", "E-commerce", "Database"]
+      "tags": ["Backend", "API", "E‑commerce", "Database"]
     },
     {
       "id": "game-unity-2d",
-      "titulo": "Jogo 2D de Plataforma com Unity",
-      "periodo": "2º Semestre 2024",
-      "status": "Concluído",
-      "intro": "Desenvolvimento de jogo 2D de plataforma com mecânicas inovadoras e visual pixel art.",
-      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Projeto de game design e desenvolvimento utilizando Unity e C#. Implementação de física personalizada, sistema de combate, progressão de níveis e sistema de conquistas. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur. Arte pixel art original e trilha sonora composta especialmente para o projeto.",
+      "titulo": "2D Platformer Game with Unity",
+      "periodo": "2nd Semester 2024",
+      "status": "Completed",
+      "intro": "2D platformer with innovative mechanics and pixel‑art visuals.",
+      "descricao": "Game design and development project using Unity and C#. Includes custom physics, combat system, level progression, and achievements. Original pixel art and soundtrack created specifically for the project.",
       "tecnologias": ["Unity", "C#", "Pixel Art", "Game Design"],
       "imagens": [
         "assets/img/game-unity.jpg",
