@@ -12,6 +12,7 @@ let currentFilter = 'all';
 document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     initNavigation();
+    initExperienceCarousel();
     loadProjects();
 });
 
@@ -63,6 +64,57 @@ function initNavigation() {
             link.classList.add('active');
         }
     });
+}
+
+// ============================================
+// EXPERIENCE CAROUSEL
+// ============================================
+function initExperienceCarousel() {
+    const carousel = document.querySelector('.experience-carousel');
+    if (!carousel) return;
+
+    const grid = carousel.querySelector('.experience-grid');
+    const leftArrow = carousel.querySelector('.carousel-arrow-left');
+    const rightArrow = carousel.querySelector('.carousel-arrow-right');
+
+    if (!grid || !leftArrow || !rightArrow) return;
+
+    // Calculate scroll amount based on first item width + gap
+    function getScrollAmount() {
+        const firstItem = grid.querySelector('.experience-item');
+        if (!firstItem) return 340;
+        const itemWidth = firstItem.offsetWidth;
+        const gap = parseInt(getComputedStyle(grid).gap) || 32;
+        return itemWidth + gap;
+    }
+
+    // Scroll left
+    leftArrow.addEventListener('click', () => {
+        grid.scrollBy({
+            left: -getScrollAmount(),
+            behavior: 'smooth'
+        });
+    });
+
+    // Scroll right
+    rightArrow.addEventListener('click', () => {
+        grid.scrollBy({
+            left: getScrollAmount(),
+            behavior: 'smooth'
+        });
+    });
+
+    // Update arrow visibility based on scroll position
+    function updateArrowState() {
+        const isAtStart = grid.scrollLeft <= 0;
+        const isAtEnd = grid.scrollLeft + grid.clientWidth >= grid.scrollWidth - 1;
+        
+        leftArrow.disabled = isAtStart;
+        rightArrow.disabled = isAtEnd;
+    }
+
+    grid.addEventListener('scroll', updateArrowState);
+    updateArrowState(); // Initial state
 }
 
 // ============================================
