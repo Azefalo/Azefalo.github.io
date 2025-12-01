@@ -371,13 +371,29 @@ section h3 {
 }
 
 /* ============================================
-   EXPERIÊNCIA
+   EXPERIÊNCIA - CAROUSEL
    ============================================ */
-.experience-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-md);
+.experience-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
     margin-bottom: var(--spacing-md);
+}
+
+.experience-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: var(--spacing-md);
+    padding: var(--spacing-sm) 0;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    flex: 1;
+}
+
+.experience-grid::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
 }
 
 .experience-item {
@@ -385,6 +401,9 @@ section h3 {
     padding: var(--spacing-md);
     border-radius: 12px;
     border: 1px solid var(--color-border);
+    min-width: 300px;
+    max-width: 350px;
+    flex-shrink: 0;
 }
 
 .experience-item h3 {
@@ -401,6 +420,44 @@ section h3 {
     color: var(--color-text-secondary);
     font-size: 0.9rem;
     margin-bottom: var(--spacing-sm);
+}
+
+/* Carousel Navigation Arrows */
+.carousel-arrow {
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-speed);
+    color: var(--color-text);
+    flex-shrink: 0;
+}
+
+.carousel-arrow:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+}
+
+.carousel-arrow:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.carousel-arrow:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.carousel-arrow:disabled:hover {
+    background-color: var(--color-bg-secondary);
+    border-color: var(--color-border);
+    color: var(--color-text);
 }
 
 /* ============================================
@@ -814,8 +871,21 @@ section h3 {
         grid-template-columns: 1fr;
     }
     
+    .experience-carousel {
+        flex-direction: column;
+    }
+    
     .experience-grid {
-        grid-template-columns: 1fr;
+        width: 100%;
+        padding-bottom: var(--spacing-sm);
+    }
+
+    .experience-item {
+        min-width: 280px;
+    }
+
+    .carousel-arrow {
+        display: none;
     }
     
     .featured-image {
