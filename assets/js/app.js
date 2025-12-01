@@ -12,8 +12,8 @@ let currentFilter = 'all';
 document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     initNavigation();
-    loadProjects();
     initExperienceCarousel();
+    loadProjects();
 });
 
 // ============================================
@@ -64,6 +64,57 @@ function initNavigation() {
             link.classList.add('active');
         }
     });
+}
+
+// ============================================
+// EXPERIENCE CAROUSEL
+// ============================================
+function initExperienceCarousel() {
+    const carousel = document.querySelector('.experience-carousel');
+    if (!carousel) return;
+
+    const grid = carousel.querySelector('.experience-grid');
+    const leftArrow = carousel.querySelector('.carousel-arrow-left');
+    const rightArrow = carousel.querySelector('.carousel-arrow-right');
+
+    if (!grid || !leftArrow || !rightArrow) return;
+
+    // Calculate scroll amount based on first item width + gap
+    function getScrollAmount() {
+        const firstItem = grid.querySelector('.experience-item');
+        if (!firstItem) return 340;
+        const itemWidth = firstItem.offsetWidth;
+        const gap = parseInt(getComputedStyle(grid).gap) || 32;
+        return itemWidth + gap;
+    }
+
+    // Scroll left
+    leftArrow.addEventListener('click', () => {
+        grid.scrollBy({
+            left: -getScrollAmount(),
+            behavior: 'smooth'
+        });
+    });
+
+    // Scroll right
+    rightArrow.addEventListener('click', () => {
+        grid.scrollBy({
+            left: getScrollAmount(),
+            behavior: 'smooth'
+        });
+    });
+
+    // Update arrow visibility based on scroll position
+    function updateArrowState() {
+        const isAtStart = grid.scrollLeft <= 0;
+        const isAtEnd = grid.scrollLeft + grid.clientWidth >= grid.scrollWidth - 1;
+        
+        leftArrow.disabled = isAtStart;
+        rightArrow.disabled = isAtEnd;
+    }
+
+    grid.addEventListener('scroll', updateArrowState);
+    updateArrowState(); // Initial state
 }
 
 // ============================================
@@ -445,73 +496,6 @@ function showError(message) {
             container.innerHTML = errorHTML;
         }
     });
-}
-
-// ============================================
-// EXPERIENCE CAROUSEL
-// ============================================
-function initExperienceCarousel() {
-    const track = document.getElementById('expTrack');
-    const prevBtn = document.getElementById('expPrev');
-    const nextBtn = document.getElementById('expNext');
-    
-    if (!track || !prevBtn || !nextBtn) return;
-    
-    const items = track.querySelectorAll('.experience-item');
-    const totalItems = items.length;
-    let currentIndex = 0;
-    
-    // Determine items per page based on screen width
-    function getItemsPerPage() {
-        if (window.innerWidth <= 768) return 1;
-        return 3;
-    }
-    
-    function updateCarousel() {
-        const itemsPerPage = getItemsPerPage();
-        const maxIndex = Math.max(0, totalItems - itemsPerPage);
-        
-        // Ensure currentIndex is within bounds
-        if (currentIndex > maxIndex) currentIndex = maxIndex;
-        if (currentIndex < 0) currentIndex = 0;
-        
-        // Calculate translation - gap is 32px (2rem = --spacing-md)
-        const gap = 32;
-        const itemWidthPercent = 100 / itemsPerPage;
-        const translateX = -(currentIndex * itemWidthPercent);
-        const gapOffset = currentIndex * gap / itemsPerPage;
-        
-        track.style.transition = 'transform 0.3s ease';
-        track.style.transform = `translateX(calc(${translateX}% - ${gapOffset}px))`;
-        
-        // Update button states
-        prevBtn.disabled = currentIndex === 0;
-        nextBtn.disabled = currentIndex >= maxIndex;
-    }
-    
-    prevBtn.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateCarousel();
-        }
-    });
-    
-    nextBtn.addEventListener('click', () => {
-        const itemsPerPage = getItemsPerPage();
-        const maxIndex = Math.max(0, totalItems - itemsPerPage);
-        if (currentIndex < maxIndex) {
-            currentIndex++;
-            updateCarousel();
-        }
-    });
-    
-    // Update on resize
-    window.addEventListener('resize', () => {
-        updateCarousel();
-    });
-    
-    // Initial update
-    updateCarousel();
 }
 
 // ============================================
