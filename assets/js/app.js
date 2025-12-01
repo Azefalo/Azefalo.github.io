@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     initNavigation();
     loadProjects();
+    initExperienceCarousel();
 });
 
 // ============================================
@@ -444,6 +445,73 @@ function showError(message) {
             container.innerHTML = errorHTML;
         }
     });
+}
+
+// ============================================
+// EXPERIENCE CAROUSEL
+// ============================================
+function initExperienceCarousel() {
+    const track = document.getElementById('expTrack');
+    const prevBtn = document.getElementById('expPrev');
+    const nextBtn = document.getElementById('expNext');
+    
+    if (!track || !prevBtn || !nextBtn) return;
+    
+    const items = track.querySelectorAll('.experience-item');
+    const totalItems = items.length;
+    let currentIndex = 0;
+    
+    // Determine items per page based on screen width
+    function getItemsPerPage() {
+        if (window.innerWidth <= 768) return 1;
+        return 3;
+    }
+    
+    function updateCarousel() {
+        const itemsPerPage = getItemsPerPage();
+        const maxIndex = Math.max(0, totalItems - itemsPerPage);
+        
+        // Ensure currentIndex is within bounds
+        if (currentIndex > maxIndex) currentIndex = maxIndex;
+        if (currentIndex < 0) currentIndex = 0;
+        
+        // Calculate translation - gap is 32px (2rem = --spacing-md)
+        const gap = 32;
+        const itemWidthPercent = 100 / itemsPerPage;
+        const translateX = -(currentIndex * itemWidthPercent);
+        const gapOffset = currentIndex * gap / itemsPerPage;
+        
+        track.style.transition = 'transform 0.3s ease';
+        track.style.transform = `translateX(calc(${translateX}% - ${gapOffset}px))`;
+        
+        // Update button states
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex >= maxIndex;
+    }
+    
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
+    
+    nextBtn.addEventListener('click', () => {
+        const itemsPerPage = getItemsPerPage();
+        const maxIndex = Math.max(0, totalItems - itemsPerPage);
+        if (currentIndex < maxIndex) {
+            currentIndex++;
+            updateCarousel();
+        }
+    });
+    
+    // Update on resize
+    window.addEventListener('resize', () => {
+        updateCarousel();
+    });
+    
+    // Initial update
+    updateCarousel();
 }
 
 // ============================================
