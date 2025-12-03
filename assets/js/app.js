@@ -417,7 +417,7 @@ function renderProjectDetail() {
 
         <div class="project-section">
             <h3>Role and Contributions</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Responsible for system architecture, backend development and integration with external APIs. Collaboration with multidisciplinary team.</p>
+            <p>${escapeHtml(project.papel || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Responsible for system architecture, backend development and integration with external APIs. Collaboration with multidisciplinary team.')}</p>
         </div>
 
         <div class="project-section">
@@ -427,7 +427,7 @@ function renderProjectDetail() {
 
         <div class="project-section">
             <h3>Results and Learnings</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. The project was successfully completed, resulting in significant learnings in system architecture, teamwork and complex project management.</p>
+            <p>${escapeHtml(project.resultados || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. The project was successfully completed, resulting in significant learnings in system architecture, teamwork and complex project management.')}</p>
         </div>
 
         <div class="project-actions">
