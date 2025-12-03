@@ -5,11 +5,11 @@
       "id": "keyless-access-car",
       "titulo": "Keyless Access Car — ACTIA & NXP",
       "parcerias": ["ACTIA", "NXP"],
-      "periodo": "Academic Year 2024–2025",
+      "periodo": "Academic Year 2025–2026",
       "status": "In progress",
       "intro": "Keyless access for a corporate fleet via smartphone/corporate authorization.",
       "descricao": "Innovative system to unlock fleet vehicles via smartphone using authorized corporate credentials. Year-long, high‑complexity project developed in partnership with ACTIA and NXP, involving cutting‑edge wireless communication, cryptography, and secure authentication.",
-      "tecnologias": ["BLE", "NFC", "Cryptography", "Mobile", "Backend", "IoT"],
+      "tecnologias": [ "Python", "UWB", "BLE", "Cryptography", "Mobile", "IoT", "AWS IoT Core"],
       "imagens": [
         "assets/img/keyless.jpg",
         "assets/img/keyless-app.jpg",
@@ -19,18 +19,18 @@
       "tags": ["Ultra Wideband", "IoT", "Security"]
     },
     {
-      "id": "projeto-ml-visao",
-      "titulo": "Image Classifier with Machine Learning",
-      "periodo": "2nd Semester 2024",
-      "status": "Completed",
-      "intro": "Development of an ML model for automatic image classification using convolutional neural networks.",
-      "descricao": "Machine‑learning project focused on computer vision using TensorFlow and Keras. The system can classify images into multiple categories with high accuracy. End‑to‑end implementation from data collection to model deployment.",
-      "tecnologias": ["Python", "TensorFlow", "Keras", "OpenCV", "NumPy"],
+      "id": "projeto-ml-fall-detection",
+      "titulo": "Image Fall Detection with Machine Learning",
+      "periodo": "1st Semester 2024",
+      "status": "In progress",
+      "intro": "Development of an ML model for automatic image classification using convolutional neural networks (CNN).",
+      "descricao": "Machine‑learning project focused on computer vision using TensorFlow and Keras. The system can classify images into fall and no fall with high accuracy. End‑to‑end implementation from data collection to model deployment.",
+      "tecnologias": ["Python", "TensorFlow", "Keras", "NumPy"],
       "imagens": [
         "assets/img/projeto-ml.jpg",
         "assets/img/projeto-ml-results.jpg"
       ],
-      "relatorio_pdf": "reports/projeto-ml-visao.pdf",
+      "relatorio_pdf": "reports/projeto-ml.pdf",
       "tags": ["ML", "Computer Vision", "Deep Learning"]
     },
     {
@@ -80,21 +80,18 @@
       "tags": ["Backend", "API", "E‑commerce", "Database"]
     },
     {
-      "id": "game-unity-2d",
-      "titulo": "2D Platformer Game with Unity",
-      "periodo": "2nd Semester 2024",
+      "id": "ethics",
+      "titulo": "Social psychology and ethics",
+      "periodo": "1st Semester 2025",
       "status": "Completed",
-      "intro": "2D platformer with innovative mechanics and pixel‑art visuals.",
-      "descricao": "Game design and development project using Unity and C#. Includes custom physics, combat system, level progression, and achievements. Original pixel art and soundtrack created specifically for the project.",
-      "tecnologias": ["Unity", "C#", "Pixel Art", "Game Design"],
+      "intro": "Study of social psychology principles and ethical considerations in technology and in our engineer life.",
+      "descricao": "Research project exploring key concepts in social psychology and their application to ethical decision‑making in technology development. Analysis of case studies and formulation of guidelines for ethical engineering practices. Study of multicultural perspectives on our day to life.",
+      "tecnologias": ["Canva", "Presentations", "Research"],
       "imagens": [
-        "assets/img/game-unity.jpg",
-        "assets/img/game-gameplay.jpg",
-        "assets/img/game-level.jpg",
-        "assets/img/game-menu.jpg"
+        "assets/img/ethics.jpg"
       ],
-      "relatorio_pdf": "reports/game-unity-2d.pdf",
-      "tags": ["Game Dev", "Unity", "Design"]
+      "relatorio_pdf": "reports/ethics.pptx",
+      "tags": ["Ethics", "Social Psychology", "Research"]
     }
   ]
 }
