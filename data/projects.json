@@ -86,6 +86,8 @@
       "status": "Completed",
       "intro": "Study of social psychology principles and ethical considerations in technology and in our engineer life.",
       "descricao": "Research project exploring key concepts in social psychology and their application to ethical decision‑making in technology development. Analysis of case studies and formulation of guidelines for ethical engineering practices. Study of multicultural perspectives on our day to life.",
+      "papel": "Researcher and presenter",
+      "resultados": "Comprehensive report and presentation summarizing findings and recommendations for ethical practices in engineering.",
       "tecnologias": ["Canva", "Presentations", "Research"],
       "imagens": [
         "assets/img/ethics.jpg"
