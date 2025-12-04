@@ -81,19 +81,61 @@
     },
     {
       "id": "ethics",
-      "titulo": "Social psychology and ethics",
-      "periodo": "1st Semester 2025",
+      "titulo": "Social Psychology and Ethics",
+      "periodo": "1st Semester 2025–2026",
       "status": "Completed",
-      "intro": "Study of social psychology principles and ethical considerations in technology and in our engineer life.",
-      "descricao": "Research project exploring key concepts in social psychology and their application to ethical decision‑making in technology development. Analysis of case studies and formulation of guidelines for ethical engineering practices. Study of multicultural perspectives on our day to life.",
+
+      "intro": "Study of social psychology principles and ethical considerations in technology and in our engineering life.",
+
+      "descricao": "Research project exploring key concepts in social psychology and their application to ethical decision-making in technology development. The project involved analyzing real-world case studies, identifying ethical dilemmas, and proposing guidelines for responsible engineering practice. It also included reflections on multicultural perspectives and how cultural context influences ethical judgments in everyday situations.",
+
       "papel": "Researcher and presenter",
-      "resultados": "Comprehensive report and presentation summarizing findings and recommendations for ethical practices in engineering.",
-      "tecnologias": ["Canva", "Presentations", "Research"],
+
+      "sistema_aprendizado": "Blended learning combining lectures on social psychology and ethical frameworks, guided readings, and group discussions. The project was structured around a research report and an oral presentation, with continuous feedback from the instructor during TD-like discussion sessions.",
+
+      "carga_horaria": {
+        "cm": "Approximately 8 hours of lectures (CM) introducing core theories and ethical principles.",
+        "td": "Approximately 6 hours of discussion-based sessions (TD) focusing on case study analysis and debate.",
+        "tp": "Approximately 10 hours of project work (TP) dedicated to research, writing the report, and preparing the final presentation."
+      },
+
+      "competencias": {
+        "tecnicas": [
+          "Understanding of fundamental concepts in social psychology such as conformity, obedience, group dynamics, and cognitive biases.",
+          "Ability to apply ethical frameworks (deontology, utilitarianism, virtue ethics) to real engineering and technology scenarios.",
+          "Capability to analyze complex case studies and identify potential ethical risks in technology development."
+        ],
+        "transversais": [
+          "Critical thinking and structured argumentation about ethical issues.",
+          "Written and oral communication skills through the report and final presentation.",
+          "Teamwork and collaborative decision-making in defining ethical guidelines and recommendations."
+        ]
+      },
+
+      "justificativa": "This project is important because it connects human psychology with ethical responsibility in technology. As engineers, we do not only design systems; we also influence people's behavior and society at large. Understanding how social pressures and cognitive biases affect decisions helps prevent unethical practices and supports more responsible engineering choices.",
+
+      "relacao_projeto_profissional": "In my future professional path, I aim to work on technology and engineering projects that have a strong impact on people's daily lives. This project prepared me to integrate ethical reflection into technical decision-making, to question the social consequences of design choices, and to promote a culture of responsibility within engineering teams and organizations.",
+
+      "resultados": "Comprehensive written report and oral presentation summarizing theoretical foundations in social psychology, key ethical issues in technology, and a set of practical recommendations for responsible engineering practices within multicultural contexts.",
+
+      "tecnologias": [
+        "Canva for creating visual slides and diagrams",
+        "Presentation tools for delivering the oral defense",
+        "Online academic databases and digital libraries for research"
+      ],
+
       "imagens": [
         "assets/img/ethics.jpg"
       ],
-      "relatorio_pdf": "reports/ethics.pptx",
-      "tags": ["Ethics", "Social Psychology", "Research"]
+
+      "relatorio_pdf": "reports/ethics.pdf",
+
+      "tags": [
+        "Ethics",
+        "Social Psychology",
+        "Research",
+        "Professional Responsibility"
+      ]
     }
   ]
 }
