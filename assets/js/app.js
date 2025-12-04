@@ -392,6 +392,38 @@ function renderProjectDetail() {
            </div>`
         : '';
 
+    // Renderizar carga horária (hours breakdown)
+    const cargaHorariaHTML = project.carga_horaria
+        ? `<div class="project-section">
+             <h3>Workload Breakdown</h3>
+             <ul>
+               ${project.carga_horaria.cm ? `<li><strong>CM (Lectures):</strong> ${escapeHtml(project.carga_horaria.cm)}</li>` : ''}
+               ${project.carga_horaria.td ? `<li><strong>TD (Discussions):</strong> ${escapeHtml(project.carga_horaria.td)}</li>` : ''}
+               ${project.carga_horaria.tp ? `<li><strong>TP (Practical Work):</strong> ${escapeHtml(project.carga_horaria.tp)}</li>` : ''}
+             </ul>
+           </div>`
+        : '';
+
+    // Renderizar competências técnicas
+    const competenciasTecnicasHTML = project.competencias && project.competencias.tecnicas && project.competencias.tecnicas.length > 0
+        ? `<div class="project-section">
+             <h3>Technical Skills Acquired</h3>
+             <ul>
+               ${project.competencias.tecnicas.map(comp => `<li>${escapeHtml(comp)}</li>`).join('')}
+             </ul>
+           </div>`
+        : '';
+
+    // Renderizar competências transversais
+    const competenciasTransversaisHTML = project.competencias && project.competencias.transversais && project.competencias.transversais.length > 0
+        ? `<div class="project-section">
+             <h3>Soft Skills Acquired</h3>
+             <ul>
+               ${project.competencias.transversais.map(comp => `<li>${escapeHtml(comp)}</li>`).join('')}
+             </ul>
+           </div>`
+        : '';
+
     container.innerHTML = `
         <div class="project-header">
             <h1 class="project-title">${escapeHtml(project.titulo)}</h1>
@@ -405,29 +437,56 @@ function renderProjectDetail() {
 
         ${galleryHTML}
 
+        ${project.intro ? `
         <div class="project-section">
-            <h3>Summary</h3>
+            <h3>Introduction</h3>
+            <p>${escapeHtml(project.intro)}</p>
+        </div>` : ''}
+
+        <div class="project-section">
+            <h3>Description</h3>
             <p>${escapeHtml(project.descricao)}</p>
         </div>
 
-        <div class="project-section">
-            <h3>Objectives</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Develop a robust and scalable solution that meets market needs.</p>
-        </div>
-
+        ${project.papel ? `
         <div class="project-section">
             <h3>Role and Contributions</h3>
-            <p>${escapeHtml(project.papel || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Responsible for system architecture, backend development and integration with external APIs. Collaboration with multidisciplinary team.')}</p>
-        </div>
+            <p>${escapeHtml(project.papel)}</p>
+        </div>` : ''}
+
+        ${project.sistema_aprendizado ? `
+        <div class="project-section">
+            <h3>Learning System</h3>
+            <p>${escapeHtml(project.sistema_aprendizado)}</p>
+        </div>` : ''}
+
+        ${cargaHorariaHTML}
+
+        ${competenciasTecnicasHTML}
+
+        ${competenciasTransversaisHTML}
+
+        ${project.justificativa ? `
+        <div class="project-section">
+            <h3>Justification</h3>
+            <p>${escapeHtml(project.justificativa)}</p>
+        </div>` : ''}
+
+        ${project.relacao_projeto_profissional ? `
+        <div class="project-section">
+            <h3>Relation to Professional Goals</h3>
+            <p>${escapeHtml(project.relacao_projeto_profissional)}</p>
+        </div>` : ''}
+
+        ${project.resultados ? `
+        <div class="project-section">
+            <h3>Results</h3>
+            <p>${escapeHtml(project.resultados)}</p>
+        </div>` : ''}
 
         <div class="project-section">
             <h3>Technologies Used</h3>
             ${techHTML}
-        </div>
-
-        <div class="project-section">
-            <h3>Results and Learnings</h3>
-            <p>${escapeHtml(project.resultados || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. The project was successfully completed, resulting in significant learnings in system architecture, teamwork and complex project management.')}</p>
         </div>
 
         <div class="project-actions">
