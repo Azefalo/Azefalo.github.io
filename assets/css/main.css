@@ -541,6 +541,12 @@ section h3 {
     font-weight: 500;
 }
 
+.featured-tech {
+    margin: var(--spacing-sm) 0;
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+}
+
 /* ============================================
    GRID DE PROJETOS
    ============================================ */
@@ -677,6 +683,11 @@ section h3 {
     color: var(--color-primary);
 }
 
+.project-section p {
+    white-space: pre-line;
+    line-height: 1.8;
+}
+
 .project-tech-list {
     display: flex;
     flex-wrap: wrap;
@@ -703,6 +714,84 @@ section h3 {
 
 .back-link:hover {
     text-decoration: underline;
+}
+
+/* Competence Matrix */
+.competence-matrix {
+    display: grid;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+}
+
+.competence-item {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: var(--spacing-sm);
+}
+
+.competence-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-xs);
+    gap: var(--spacing-sm);
+}
+
+.competence-title {
+    font-size: 1.1rem;
+    margin: 0;
+    color: var(--color-text);
+    flex: 1;
+}
+
+.competence-rating {
+    display: flex;
+    align-items: center;
+}
+
+.competence-score {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.competence-description {
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Project Card Meta */
+.project-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    align-items: center;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text-secondary);
+    font-size: 0.85rem;
+}
+
+.project-status {
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.status-completed {
+    background-color: #28a745;
+    color: white;
+}
+
+.status-in-progress {
+    background-color: #ffc107;
+    color: #212529;
 }
 
 /* ============================================

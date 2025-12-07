@@ -163,55 +163,31 @@ function renderFeaturedProject() {
         return;
     }
 
-    const partnershipHTML = project.parcerias && project.parcerias.length > 0
-        ? `<div class="featured-partnerships">
-             <strong>Partnerships:</strong> ${project.parcerias.join(', ')}
-           </div>`
-        : '';
-
     const tagsHTML = project.tags && project.tags.length > 0
         ? `<div class="featured-tags">
              ${project.tags.map(tag => `<span class="featured-tag">${escapeHtml(tag)}</span>`).join('')}
            </div>`
         : '';
 
+    const techHTML = project.tecnologias && project.tecnologias.length > 0
+        ? `<div class="featured-tech">
+             <strong>Technologies:</strong> ${project.tecnologias.slice(0, 5).map(tech => escapeHtml(tech)).join(', ')}${project.tecnologias.length > 5 ? '...' : ''}
+           </div>`
+        : '';
+
     container.innerHTML = `
-        <img src="${escapeHtml(project.imagens[0])}" alt="${escapeHtml(project.titulo)}" class="featured-image">
         <div class="featured-info">
             <h3>${escapeHtml(project.titulo)}</h3>
             <div class="featured-meta">
-                <span>📅 ${escapeHtml(project.periodo || 'Período não especificado')}</span>
-                ${project.parcerias ? `<span>🤝 ${escapeHtml(project.parcerias.join(', '))}</span>` : ''}
+                <span>📅 ${escapeHtml(project.periodo || 'Period not specified')}</span>
+                <span>📊 ${escapeHtml(project.status || 'Status unknown')}</span>
             </div>
             ${tagsHTML}
-            <p class="featured-description">${escapeHtml(project.intro)}</p>
+            ${techHTML}
             <p class="featured-description">${escapeHtml(project.descricao)}</p>
             <a href="projeto.html?id=${escapeHtml(project.id)}" class="btn btn-primary">Read more</a>
         </div>
     `;
-
-    // Normalize texts to English (buttons and section headings)
-    try {
-        const actions = container.querySelector('.project-actions');
-        if (actions) {
-            const backBtn = actions.querySelector('a.btn.btn-secondary');
-            if (backBtn) backBtn.textContent = 'Back to Projects';
-            const dlBtn = actions.querySelector('a.btn.btn-primary[download]');
-            if (dlBtn) dlBtn.textContent = 'Download Report (PDF)';
-        }
-
-        const headings = container.querySelectorAll('.project-section h3');
-        headings.forEach(h => {
-            const t = h.textContent.trim();
-            if (t === 'Resumo') h.textContent = 'Summary';
-            else if (t === 'Objetivos') h.textContent = 'Objectives';
-            else if (t.startsWith('Papel')) h.textContent = 'Role and Contributions';
-            else if (t === 'Tecnologias Usadas') h.textContent = 'Technologies Used';
-            else if (t.startsWith('Resultados')) h.textContent = 'Results and Learnings';
-        });
-    } catch (e) {
-        console.warn('Could not normalize action buttons:', e);
-    }
 }
 
 // ============================================
@@ -266,12 +242,20 @@ function createProjectCard(project) {
            </div>`
         : '';
 
+    // Truncate description to first 150 characters for card display
+    const shortDesc = project.descricao.length > 150 
+        ? project.descricao.substring(0, 150) + '...'
+        : project.descricao;
+
     return `
         <article class="project-card">
-            <img src="${escapeHtml(project.imagens[0])}" alt="${escapeHtml(project.titulo)}">
             <div class="project-card-content">
                 <h3>${escapeHtml(project.titulo)}</h3>
-                <p class="project-card-intro">${escapeHtml(project.intro)}</p>
+                <div class="project-card-meta">
+                    <span>📅 ${escapeHtml(project.periodo)}</span>
+                    <span class="project-status status-${escapeHtml(project.status.toLowerCase().replace(' ', '-'))}">${escapeHtml(project.status)}</span>
+                </div>
+                <p class="project-card-intro">${escapeHtml(shortDesc)}</p>
                 ${tagsHTML}
                 <a href="projeto.html?id=${escapeHtml(project.id)}" class="btn btn-secondary">Details</a>
             </div>
@@ -356,24 +340,6 @@ function renderProjectDetail() {
     // Atualizar título da página
     document.title = `${project.titulo} - João Gabriel Buttow Albuquerque`;
 
-    // Renderizar galeria de imagens
-    const galleryHTML = project.imagens && project.imagens.length > 0
-        ? `<div class="project-gallery">
-             ${project.imagens.map(img => 
-                 `<img src="${escapeHtml(img)}" alt="${escapeHtml(project.titulo)}">`
-             ).join('')}
-           </div>`
-        : '';
-
-    // Renderizar parcerias
-    const partnershipsHTML = project.parcerias && project.parcerias.length > 0
-        ? `<div class="project-partnerships">
-             ${project.parcerias.map(partner => 
-                 `<span class="partnership-badge">${escapeHtml(partner)}</span>`
-             ).join('')}
-           </div>`
-        : '';
-
     // Renderizar tecnologias
     const techHTML = project.tecnologias && project.tecnologias.length > 0
         ? `<div class="project-tech-list">
@@ -392,6 +358,23 @@ function renderProjectDetail() {
            </div>`
         : '';
 
+    // Renderizar matriz de competência
+    const competenceHTML = project.matriz_competencia && project.matriz_competencia.length > 0
+        ? `<div class="competence-matrix">
+             ${project.matriz_competencia.map(comp => `
+                 <div class="competence-item">
+                     <div class="competence-header">
+                         <h4 class="competence-title">${escapeHtml(comp.titulo)}</h4>
+                         <div class="competence-rating">
+                             <span class="competence-score">${comp.nota}/4</span>
+                         </div>
+                     </div>
+                     <p class="competence-description">${escapeHtml(comp.descricao)}</p>
+                 </div>
+             `).join('')}
+           </div>`
+        : '';
+
     container.innerHTML = `
         <div class="project-header">
             <h1 class="project-title">${escapeHtml(project.titulo)}</h1>
@@ -399,41 +382,55 @@ function renderProjectDetail() {
                 ${project.periodo ? `<div class="project-meta-item">📅 ${escapeHtml(project.periodo)}</div>` : ''}
                 ${project.status ? `<div class="project-meta-item">📊 ${escapeHtml(project.status)}</div>` : ''}
             </div>
-            ${partnershipsHTML}
             ${tagsHTML}
         </div>
 
-        ${galleryHTML}
-
         <div class="project-section">
-            <h3>Summary</h3>
+            <h3>Description</h3>
             <p>${escapeHtml(project.descricao)}</p>
         </div>
 
+        ${project.tecnica ? `
         <div class="project-section">
-            <h3>Objectives</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Develop a robust and scalable solution that meets market needs.</p>
+            <h3>Technical Content</h3>
+            <p>${escapeHtml(project.tecnica)}</p>
         </div>
-
-        <div class="project-section">
-            <h3>Role and Contributions</h3>
-            <p>${escapeHtml(project.papel || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Responsible for system architecture, backend development and integration with external APIs. Collaboration with multidisciplinary team.')}</p>
-        </div>
+        ` : ''}
 
         <div class="project-section">
             <h3>Technologies Used</h3>
             ${techHTML}
         </div>
 
+        ${project.sistema_de_curso ? `
         <div class="project-section">
-            <h3>Results and Learnings</h3>
-            <p>${escapeHtml(project.resultados || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. The project was successfully completed, resulting in significant learnings in system architecture, teamwork and complex project management.')}</p>
+            <h3>Learning System Organisation</h3>
+            <p>${escapeHtml(project.sistema_de_curso)}</p>
         </div>
+        ` : ''}
+
+        ${project.matriz_competencia && project.matriz_competencia.length > 0 ? `
+        <div class="project-section">
+            <h3>Competence Matrix</h3>
+            ${competenceHTML}
+        </div>
+        ` : ''}
+
+        ${project.justificativa ? `
+        <div class="project-section">
+            <h3>Justification</h3>
+            <p>${escapeHtml(project.justificativa)}</p>
+        </div>
+        ` : ''}
+
+        ${project.relacao_projeto_profissional ? `
+        <div class="project-section">
+            <h3>Relation to Professional Project</h3>
+            <p>${escapeHtml(project.relacao_projeto_profissional)}</p>
+        </div>
+        ` : ''}
 
         <div class="project-actions">
-            ${project.relatorio_pdf ? 
-                `<a href="${escapeHtml(project.relatorio_pdf)}" class="btn btn-primary" download>📄 Download Report (PDF)</a>` 
-                : ''}
             <a href="projetos.html" class="btn btn-secondary">← Back to Projects</a>
         </div>
     `;
