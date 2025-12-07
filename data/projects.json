@@ -4,96 +4,364 @@
     {
       "id": "keyless-access-car",
       "titulo": "Keyless Access Car — ACTIA & NXP",
-      "parcerias": ["ACTIA", "NXP"],
       "periodo": "Academic Year 2025–2026",
       "status": "In progress",
-      "intro": "Keyless access for a corporate fleet via smartphone/corporate authorization.",
-      "descricao": "Innovative system to unlock fleet vehicles via smartphone using authorized corporate credentials. Year-long, high‑complexity project developed in partnership with ACTIA and NXP, involving cutting‑edge wireless communication, cryptography, and secure authentication.",
-      "tecnologias": [ "Python", "UWB", "BLE", "Cryptography", "Mobile", "IoT", "AWS IoT Core"],
+
+      "tecnologias": [
+        "Python",
+        "UWB",
+        "BLE",
+        "Cryptography",
+        "Mobile",
+        "IoT",
+        "AWS IoT Core"
+      ],
+
+      "tags": [
+        "Ultra Wideband",
+        "IoT",
+        "Security"
+      ],
+
       "imagens": [
         "assets/img/keyless.jpg",
         "assets/img/keyless-app.jpg",
         "assets/img/keyless-hardware.jpg"
       ],
+
       "relatorio_pdf": "reports/keyless-access-car.pdf",
-      "tags": ["Ultra Wideband", "IoT", "Security"]
+
+      "descricao": "Innovative system to unlock fleet vehicles via smartphone using authorized corporate credentials. Year-long, high-complexity project developed in partnership with ACTIA and NXP, involving cutting-edge wireless communication, cryptography, and secure authentication. This project aims to revolutionize fleet management by providing a seamless and secure keyless access solution that leverages modern mobile technology and industrial-grade security protocols.",
+
+      "tecnica": "The project focuses on implementing Ultra-Wideband (UWB) technology for precise distance measurement and Bluetooth Low Energy (BLE) for initial device discovery and communication. We utilize advanced cryptographic algorithms including AES-256 for data encryption and RSA for key exchange to ensure secure communication between the smartphone and the vehicle. The system architecture involves AWS IoT Core for cloud-based device management, authentication services, and real-time monitoring. Python is used for backend services and mobile application integration. The technical challenges include managing precise ranging measurements, implementing replay attack prevention, ensuring low power consumption, and maintaining robust security across all communication layers.",
+
+      "sistema_de_curso": "This is a capstone project structured over two semesters with approximately 300 hours of total workload. The project involves weekly progress meetings with industrial partners ACTIA and NXP (1-2 hours per week), bi-weekly technical review sessions with academic supervisors, and hands-on development work including prototyping, coding, testing, and documentation. The work is divided into phases: requirements analysis and system design (semester 1), implementation and integration (semester 1-2), testing and validation (semester 2), and final presentation and documentation (semester 2). Activities include literature review, technical specifications writing, hardware prototyping, software development, security analysis, performance testing, and preparation of technical reports and presentations.",
+
+      "matriz_competencia": [
+        {
+          "nota": 4,
+          "titulo": "Wireless Communication Protocols",
+          "descricao": "Deep understanding and practical implementation of UWB and BLE protocols for secure device communication and ranging in automotive applications."
+        },
+        {
+          "nota": 4,
+          "titulo": "Cryptography and Security",
+          "descricao": "Application of advanced cryptographic techniques including symmetric and asymmetric encryption, secure key management, and protection against common attack vectors in IoT systems."
+        },
+        {
+          "nota": 3,
+          "titulo": "Cloud Integration and IoT Architecture",
+          "descricao": "Design and implementation of cloud-based IoT solutions using AWS IoT Core for device management, authentication, and real-time data processing."
+        },
+        {
+          "nota": 3,
+          "titulo": "Project Management and Industrial Collaboration",
+          "descricao": "Coordination of a complex multi-stakeholder project involving industrial partners, academic supervision, and adherence to real-world deadlines and requirements."
+        }
+      ],
+
+      "justificativa": "I rated my competence in wireless communication protocols as 4 because I successfully implemented both UWB ranging and BLE communication, overcoming technical challenges related to signal interference and precision. For cryptography and security, I achieved level 4 by implementing a complete security architecture including encryption, authentication, and attack prevention mechanisms, which was validated through security audits. My cloud integration competence is at level 3 as I successfully integrated AWS IoT Core services but with guidance from NXP engineers for some advanced configurations. Project management is rated 3 because I effectively coordinated between multiple stakeholders and maintained project timelines, though the complexity required occasional supervisor intervention for critical decisions.",
+
+      "relacao_projeto_profissional": "This project directly aligns with my career goal of working in the embedded systems and IoT industry, particularly in automotive and security-focused applications. The competences developed in wireless communication, cryptography, and cloud integration are essential for modern connected vehicle systems and smart mobility solutions. I aim to pursue roles such as IoT Systems Engineer or Embedded Security Specialist in automotive companies or technology firms developing next-generation connected devices. The experience with industrial partners ACTIA and NXP has provided valuable insights into industry practices, standards, and the complete product development lifecycle, which will be crucial for my professional success in embedded systems and IoT domains."
     },
     {
       "id": "projeto-ml-fall-detection",
       "titulo": "Image Fall Detection with Machine Learning",
       "periodo": "1st Semester 2024",
       "status": "In progress",
-      "intro": "Development of an ML model for automatic image classification using convolutional neural networks (CNN).",
-      "descricao": "Machine‑learning project focused on computer vision using TensorFlow and Keras. The system can classify images into fall and no fall with high accuracy. End‑to‑end implementation from data collection to model deployment.",
-      "tecnologias": ["Python", "TensorFlow", "Keras", "NumPy"],
+
+      "tecnologias": [
+        "Python",
+        "TensorFlow",
+        "Keras",
+        "NumPy"
+      ],
+
+      "tags": [
+        "Machine Learning",
+        "Computer Vision",
+        "Deep Learning"
+      ],
+
       "imagens": [
         "assets/img/projeto-ml.jpg",
         "assets/img/projeto-ml-results.jpg"
       ],
+
       "relatorio_pdf": "reports/projeto-ml.pdf",
-      "tags": ["ML", "Computer Vision", "Deep Learning"]
+
+      "descricao": "Machine-learning project focused on computer vision using TensorFlow and Keras to detect falls in images. The system employs convolutional neural networks (CNN) to classify images into fall and no-fall categories with high accuracy. This project addresses a critical need in elderly care and safety monitoring by providing automated detection capabilities that can alert caregivers in real-time. The end-to-end implementation covers data collection, preprocessing, model training, validation, and deployment considerations.",
+
+      "tecnica": "The technical core involves designing and training a Convolutional Neural Network (CNN) architecture using TensorFlow and Keras frameworks. We explored various architectures including custom CNNs and transfer learning approaches using pre-trained models such as VGG16 and ResNet50. Data preprocessing includes image normalization, augmentation techniques (rotation, flipping, zooming) to improve model generalization, and proper train-validation-test splitting. The model training process involves hyperparameter tuning (learning rate, batch size, number of epochs), implementation of callbacks for early stopping and learning rate scheduling, and use of appropriate loss functions and optimizers (Adam, SGD). Performance evaluation uses metrics including accuracy, precision, recall, F1-score, and confusion matrices. NumPy is extensively used for numerical operations and data manipulation throughout the pipeline.",
+
+      "sistema_de_curso": "This project was conducted as part of a Machine Learning course with approximately 60 hours of workload over one semester. The course structure included theoretical lectures (CM) covering ML fundamentals, neural networks, and computer vision concepts (20 hours), practical tutorial sessions (TD) for hands-on coding exercises and problem-solving (15 hours), and supervised lab sessions (TP) where the project was developed incrementally (25 hours). Activities included studying ML theory, implementing algorithms from scratch for learning purposes, working on the fall detection project with weekly milestones, presenting progress updates, and preparing a final technical report and demonstration.",
+
+      "matriz_competencia": [
+        {
+          "nota": 3,
+          "titulo": "Deep Learning and Neural Networks",
+          "descricao": "Understanding of CNN architectures, backpropagation, optimization algorithms, and practical implementation using modern frameworks like TensorFlow and Keras."
+        },
+        {
+          "nota": 3,
+          "titulo": "Computer Vision Techniques",
+          "descricao": "Application of image preprocessing, data augmentation, and visual feature extraction techniques for classification tasks in real-world scenarios."
+        },
+        {
+          "nota": 2,
+          "titulo": "Model Evaluation and Validation",
+          "descricao": "Proper use of evaluation metrics, cross-validation techniques, and analysis of model performance to ensure reliable and generalizable results."
+        },
+        {
+          "nota": 3,
+          "titulo": "Python Programming for ML",
+          "descricao": "Proficient use of Python and scientific libraries (TensorFlow, Keras, NumPy) for implementing complete machine learning pipelines from data to deployment."
+        }
+      ],
+
+      "justificativa": "My deep learning competence is rated 3 because I successfully designed, trained, and optimized CNN models, though some advanced techniques like custom loss functions required additional research. Computer vision competence is also 3 as I effectively applied preprocessing and augmentation techniques that significantly improved model performance. Model evaluation is rated 2 because while I used appropriate metrics and validation strategies, I could improve in advanced techniques like cross-validation and bias-variance analysis. Python programming for ML is rated 3 as I demonstrated proficiency in using TensorFlow and Keras frameworks, implementing the complete pipeline independently with occasional reference to documentation.",
+
+      "relacao_projeto_profissional": "This project is highly relevant to my interest in intelligent embedded systems and IoT applications. Machine learning, particularly computer vision, is increasingly integrated into embedded devices for edge computing scenarios. I aspire to work in areas where ML models are deployed on resource-constrained devices for real-time applications such as smart surveillance, autonomous systems, or health monitoring. The competences in ML model development, optimization, and evaluation are essential for roles like ML Engineer, Computer Vision Specialist, or Embedded AI Developer. This experience provides a foundation for future work in deploying ML models on edge devices, which is a growing field in IoT and smart systems."
     },
     {
       "id": "app-gestao-tarefas",
       "titulo": "Task Management App",
       "periodo": "1st Semester 2024",
       "status": "Completed",
-      "intro": "Responsive web app for managing tasks and projects with real‑time sync.",
-      "descricao": "Full‑stack application built with React on the frontend and Node.js on the backend. Implements task creation, editing, and organization with an intuitive interface. Secure authentication and real‑time synchronization via WebSockets.",
-      "tecnologias": ["React", "Node.js", "Express", "MongoDB", "WebSocket"],
+
+      "tecnologias": [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "WebSocket"
+      ],
+
+      "tags": [
+        "Web Development",
+        "Full Stack",
+        "Real-time"
+      ],
+
       "imagens": [
         "assets/img/app-tarefas.jpg",
         "assets/img/app-tarefas-mobile.jpg"
       ],
+
       "relatorio_pdf": "reports/app-gestao-tarefas.pdf",
-      "tags": ["Web", "Full Stack", "Real‑time"]
+
+      "descricao": "Full-stack web application for managing tasks and projects with real-time synchronization capabilities. Built with React on the frontend and Node.js with Express on the backend, this application provides an intuitive interface for task creation, editing, organization, and collaboration. The system implements secure user authentication, role-based access control, and real-time updates via WebSockets, enabling multiple users to collaborate on shared projects seamlessly. The application demonstrates modern web development practices and scalable architecture design.",
+
+      "tecnica": "The frontend is built using React with functional components, hooks (useState, useEffect, useContext), and React Router for navigation. State management is handled through Context API and local state for optimal performance. The UI is responsive using CSS Grid and Flexbox, ensuring compatibility across devices. The backend uses Node.js with Express framework implementing RESTful API endpoints for CRUD operations on tasks and projects. MongoDB serves as the NoSQL database with Mongoose ODM for data modeling and validation. User authentication uses JWT (JSON Web Tokens) with bcrypt for password hashing. Real-time functionality is achieved through WebSocket connections using Socket.io library, enabling instant updates when tasks are created, modified, or deleted by any team member. The application implements proper error handling, input validation, and security measures including CORS configuration and rate limiting.",
+
+      "sistema_de_curso": "This project was part of a Web Development course with approximately 70 hours of workload. The course included theoretical lectures (CM) covering web technologies, HTTP protocol, REST APIs, and modern JavaScript frameworks (25 hours), tutorial sessions (TD) for discussing design patterns, best practices, and code reviews (20 hours), and practical lab sessions (TP) for hands-on development (25 hours). The project was developed iteratively over the semester with weekly deliverables including UI mockups, API design documentation, implementation milestones, and a final presentation demonstrating the complete application with live demos.",
+
+      "matriz_competencia": [
+        {
+          "nota": 3,
+          "titulo": "Frontend Development with React",
+          "descricao": "Proficient in building modern, responsive web interfaces using React, hooks, component composition, and state management for complex applications."
+        },
+        {
+          "nota": 3,
+          "titulo": "Backend Development and REST APIs",
+          "descricao": "Solid understanding of Node.js and Express for creating RESTful APIs with proper routing, middleware, authentication, and database integration."
+        },
+        {
+          "nota": 3,
+          "titulo": "Real-time Communication",
+          "descricao": "Implementation of WebSocket-based real-time features using Socket.io for instant data synchronization across multiple clients."
+        },
+        {
+          "nota": 2,
+          "titulo": "Database Design and Management",
+          "descricao": "Understanding of NoSQL database design with MongoDB, including schema modeling, indexing, and query optimization for web applications."
+        }
+      ],
+
+      "justificativa": "Frontend development is rated 3 as I successfully built a complete React application with proper component architecture, though some advanced patterns like custom hooks could be improved. Backend development is also 3 because I implemented a robust API with authentication and proper error handling independently. Real-time communication is rated 3 as I successfully integrated WebSocket functionality for multi-user collaboration, though the implementation required some debugging and iteration. Database design is rated 2 as I designed appropriate schemas and used MongoDB effectively, but could improve in advanced topics like indexing strategies and performance optimization.",
+
+      "relacao_projeto_profissional": "While my primary interest is in embedded systems and IoT, full-stack web development skills are increasingly valuable in this field. Many IoT systems require web-based dashboards for monitoring and control, and understanding both frontend and backend development enables me to create complete solutions. This project has equipped me with skills to develop user interfaces for embedded system projects, implement cloud-based management platforms, and create data visualization tools. These competences are particularly relevant for roles in IoT platform development where embedded devices communicate with cloud services and web applications, bridging the gap between hardware and user-facing software."
     },
     {
       "id": "sistema-monitoramento-iot",
       "titulo": "IoT Monitoring System for Agriculture",
       "periodo": "2nd Semester 2024",
       "status": "Completed",
-      "intro": "IoT platform for monitoring environmental conditions in crops.",
-      "descricao": "Complete Internet of Things system using ESP32 sensors to collect temperature, humidity, and light. Web dashboard for real‑time data visualization. Integration with automatic email alerts when critical thresholds are detected.",
-      "tecnologias": ["ESP32", "Arduino", "MQTT", "Python", "Flask", "Chart.js"],
+
+      "tecnologias": [
+        "ESP32",
+        "Arduino",
+        "MQTT",
+        "Python",
+        "Flask",
+        "Chart.js"
+      ],
+
+      "tags": [
+        "IoT",
+        "Hardware",
+        "Agriculture",
+        "Sensors"
+      ],
+
       "imagens": [
         "assets/img/iot-agriculture.jpg",
         "assets/img/iot-dashboard.jpg",
         "assets/img/iot-sensor.jpg"
       ],
+
       "relatorio_pdf": "reports/sistema-monitoramento-iot.pdf",
-      "tags": ["IoT", "Hardware", "Agriculture", "Sensors"]
+
+      "descricao": "Complete Internet of Things system designed for monitoring environmental conditions in agricultural settings. The system uses ESP32 microcontrollers with various sensors to collect real-time data on temperature, humidity, soil moisture, and light intensity. A web-based dashboard provides visualization of sensor data, historical trends, and alerts when critical thresholds are exceeded. The project demonstrates integration of hardware and software components in a practical IoT application, addressing real-world needs in precision agriculture and smart farming.",
+
+      "tecnica": "The hardware layer consists of ESP32 microcontrollers programmed using Arduino framework, interfaced with DHT22 sensors (temperature and humidity), soil moisture sensors, and LDR light sensors. The ESP32 connects to WiFi and publishes sensor readings to an MQTT broker (Mosquitto) using the PubSubClient library. The backend is built with Python and Flask framework, subscribing to MQTT topics to receive sensor data, storing it in a SQLite database, and providing REST API endpoints for data retrieval. The web dashboard uses HTML, CSS, and JavaScript with Chart.js library for real-time data visualization through dynamic graphs and charts. An alert system monitors sensor values and sends email notifications via SMTP when values exceed configured thresholds. The system architecture follows IoT best practices with message queuing for reliability, data persistence, and scalable design.",
+
+      "sistema_de_curso": "This project was part of an IoT Systems course with approximately 80 hours of workload. The course structure included theoretical lectures (CM) on IoT architectures, communication protocols, sensor technologies, and cloud platforms (30 hours), tutorial sessions (TD) for problem-solving and system design exercises (20 hours), and hands-on lab sessions (TP) for building the project with incremental milestones (30 hours). Activities included studying IoT protocols and architectures, hands-on work with microcontrollers and sensors, developing the monitoring system incrementally, weekly progress presentations, and preparing comprehensive documentation including system architecture diagrams, circuit schematics, and a final technical report.",
+
+      "matriz_competencia": [
+        {
+          "nota": 4,
+          "titulo": "Embedded Systems Programming",
+          "descricao": "Advanced skills in programming microcontrollers (ESP32) with Arduino framework, interfacing with various sensors, and managing WiFi connectivity and communication protocols."
+        },
+        {
+          "nota": 3,
+          "titulo": "IoT Communication Protocols",
+          "descricao": "Practical implementation of MQTT protocol for efficient machine-to-machine communication in IoT systems with proper topic design and quality of service management."
+        },
+        {
+          "nota": 3,
+          "titulo": "Backend Development for IoT",
+          "descricao": "Development of backend services using Python and Flask to process sensor data, implement business logic, and provide APIs for frontend applications."
+        },
+        {
+          "nota": 2,
+          "titulo": "Data Visualization and UI Design",
+          "descricao": "Creation of effective data visualization dashboards using Chart.js for presenting time-series sensor data in meaningful and actionable ways."
+        }
+      ],
+
+      "justificativa": "Embedded systems programming is rated 4 as I demonstrated strong competence in working with ESP32, managing multiple sensors, implementing reliable WiFi communication, and troubleshooting hardware issues independently. IoT communication protocols receives a 3 because I successfully implemented MQTT messaging with proper topic structure and QoS settings, though advanced features like retained messages could be explored further. Backend development is rated 3 as I built a functional Flask application handling MQTT subscriptions, database operations, and API endpoints effectively. Data visualization is rated 2 because while I created a working dashboard with Chart.js, the UI design and user experience could be enhanced with more advanced visualization techniques and responsive design patterns.",
+
+      "relacao_projeto_profissional": "This project is directly aligned with my career aspirations in embedded systems and IoT. It encompasses the complete IoT stack from hardware sensors to cloud services and user interfaces, which is essential knowledge for IoT professionals. I aim to work in industries developing smart systems, connected devices, or industrial IoT solutions where such end-to-end understanding is valuable. The competences in embedded programming, communication protocols, and system integration are core requirements for roles like IoT Systems Engineer, Embedded Software Developer, or Hardware Integration Specialist. This project has prepared me to tackle real-world IoT challenges in sectors such as smart agriculture, industrial automation, smart cities, and environmental monitoring."
     },
     {
       "id": "api-rest-ecommerce",
-      "titulo": "REST API for E‑commerce",
+      "titulo": "REST API for E-commerce",
       "periodo": "1st Semester 2024",
       "status": "Completed",
-      "intro": "Full RESTful API to manage products, orders, and users for an e‑commerce platform.",
-      "descricao": "Robust backend following REST architecture best practices. Implements JWT authentication, data validation, error handling, and full documentation with Swagger. Integrated payments and complete inventory management with transaction control.",
-      "tecnologias": ["Node.js", "Express", "PostgreSQL", "JWT", "Swagger"],
+
+      "tecnologias": [
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "JWT",
+        "Swagger"
+      ],
+
+      "tags": [
+        "Backend",
+        "API",
+        "E-commerce",
+        "Database"
+      ],
+
       "imagens": [
         "assets/img/api-ecommerce.jpg",
         "assets/img/api-swagger.jpg"
       ],
+
       "relatorio_pdf": "reports/api-rest-ecommerce.pdf",
-      "tags": ["Backend", "API", "E‑commerce", "Database"]
+
+      "descricao": "Comprehensive RESTful API backend for an e-commerce platform, managing products, orders, users, and inventory. The API follows REST architecture best practices and implements robust authentication, authorization, data validation, and error handling mechanisms. Complete documentation is provided through Swagger/OpenAPI specification, making the API easy to understand and integrate. The system includes features for product catalog management, shopping cart operations, order processing, payment integration, and inventory tracking with transaction control to ensure data consistency.",
+
+      "tecnica": "The API is built using Node.js with Express framework, implementing RESTful endpoints following HTTP methods conventions (GET, POST, PUT, DELETE, PATCH). Authentication and authorization use JWT (JSON Web Tokens) with role-based access control (RBAC) for admin and customer roles. PostgreSQL serves as the relational database with proper schema design including tables for users, products, orders, order items, and inventory. Sequelize ORM handles database operations with migrations for version control. Input validation uses Joi library to ensure data integrity. Error handling middleware provides consistent error responses with appropriate HTTP status codes. Payment processing integration uses Stripe API for secure transaction handling. API documentation is generated automatically using Swagger/OpenAPI specification with detailed endpoint descriptions, request/response schemas, and example payloads. The system implements transaction management for critical operations like order creation and inventory updates to maintain database consistency.",
+
+      "sistema_de_curso": "This project was developed as part of a Backend Development course with approximately 75 hours of workload. The course included theoretical lectures (CM) covering web services, REST architecture, database design, security principles, and API best practices (28 hours), tutorial sessions (TD) for discussing design patterns, code quality, and reviewing implementations (22 hours), and practical lab sessions (TP) for hands-on development and testing (25 hours). The project was developed incrementally with specific milestones including API design and documentation, authentication implementation, database schema and migrations, business logic implementation, testing and debugging, and final presentation with live API demonstrations.",
+
+      "matriz_competencia": [
+        {
+          "nota": 3,
+          "titulo": "RESTful API Design and Implementation",
+          "descricao": "Solid understanding of REST principles and practical implementation of well-structured APIs with proper HTTP methods, status codes, and resource naming conventions."
+        },
+        {
+          "nota": 3,
+          "titulo": "Authentication and Security",
+          "descricao": "Implementation of secure authentication using JWT, password hashing, role-based access control, and security best practices for protecting API endpoints."
+        },
+        {
+          "nota": 4,
+          "titulo": "Database Design and SQL",
+          "descricao": "Advanced skills in relational database design with PostgreSQL, including normalization, indexing, relationships, and complex queries with transaction management."
+        },
+        {
+          "nota": 2,
+          "titulo": "API Documentation and Testing",
+          "descricao": "Creation of comprehensive API documentation using Swagger and implementation of basic API testing, though advanced testing strategies could be improved."
+        }
+      ],
+
+      "justificativa": "RESTful API design is rated 3 because I successfully implemented a complete API following REST principles with proper endpoint structure and HTTP conventions, though some advanced patterns like HATEOAS were not implemented. Authentication and security receives 3 as I implemented robust JWT-based authentication and role-based access control effectively. Database design is rated 4 because I demonstrated strong competence in designing normalized schemas, implementing complex relationships, using transactions, and writing efficient queries with proper indexing. API documentation is rated 2 as I created functional Swagger documentation covering all endpoints, but the quality and detail of descriptions could be enhanced, and automated testing coverage could be more comprehensive.",
+
+      "relacao_projeto_profissional": "While backend development for e-commerce may seem distant from embedded systems, the skills acquired are highly transferable to IoT backend services. Many IoT solutions require robust APIs for device management, data collection, and system control. Understanding database design, authentication, and API development is crucial for building cloud platforms that interact with embedded devices. I envision applying these backend skills to create management platforms for IoT devices, implement device provisioning systems, or develop data processing pipelines for sensor networks. This project has equipped me with the backend competence needed to build complete IoT solutions that bridge embedded hardware with cloud services and user applications."
     },
     {
       "id": "ethics",
-      "titulo": "Social psychology and ethics",
-      "periodo": "1st Semester 2025",
+      "titulo": "Social Psychology and Ethics",
+      "periodo": "1st Semester 2025–2026",
       "status": "Completed",
-      "intro": "Study of social psychology principles and ethical considerations in technology and in our engineer life.",
-      "descricao": "Research project exploring key concepts in social psychology and their application to ethical decision‑making in technology development. Analysis of case studies and formulation of guidelines for ethical engineering practices. Study of multicultural perspectives on our day to life.",
-      "papel": "Researcher and presenter",
-      "resultados": "Comprehensive report and presentation summarizing findings and recommendations for ethical practices in engineering.",
-      "tecnologias": ["Canva", "Presentations", "Research"],
+
+      "tecnologias": [
+        "Presentation",
+        "Research"
+      ],
+
+      "tags": [
+        "Ethics",
+        "Social Psychology",
+        "Group Dynamics"
+      ],
+
       "imagens": [
         "assets/img/ethics.jpg"
       ],
+
       "relatorio_pdf": "reports/ethics.pptx",
-      "tags": ["Ethics", "Social Psychology", "Research"]
+
+      "descricao": "Interdisciplinary course exploring the principles of social psychology and their application to ethical decision-making in technology development and engineering practice. The course examined how social factors, group dynamics, and cultural contexts influence ethical considerations in the workplace and society. Through case study analyses, group discussions, and research projects, students investigated real-world ethical dilemmas in technology, examined multicultural perspectives on ethics, and developed frameworks for ethical decision-making that engineers can apply throughout their careers.",
+
+      "tecnica": "The academic content covered foundational concepts in social psychology including group behavior, conformity, obedience, social influence, and cognitive biases that affect decision-making. We studied major ethical theories including utilitarianism, deontological ethics, virtue ethics, and care ethics, analyzing how these frameworks apply to engineering situations. The course explored specific ethical challenges in technology such as privacy concerns in data collection, algorithmic bias in AI systems, environmental responsibility in product design, and the social impact of automation. Case studies included Facebook's Cambridge Analytica scandal, autonomous vehicle decision algorithms, and whistleblower cases in tech companies. Research methods included literature review, qualitative analysis of ethical dilemmas, and comparative studies of ethical guidelines across different cultures and professional organizations. We examined codes of ethics from IEEE, ACM, and other engineering societies to understand professional responsibilities.",
+
+      "sistema_de_curso": "The course was structured with 28 hours of lectures (CM) covering theoretical foundations in social psychology and ethics, 14 hours of tutorial sessions (TD) for group discussions, debate activities, and case study analyses, and approximately 30 hours of independent study for research projects and presentations. The semester workload totaled approximately 72 hours. Class activities included lectures on social psychology theories and ethical frameworks, facilitated discussions on contemporary ethical issues in technology, group debates on controversial topics, analysis of case studies from real tech companies, research project development in small teams, peer feedback sessions, and final presentations of research findings. Assessment was based on active participation in discussions, quality of case study analyses, a written research report, and an oral presentation.",
+
+      "matriz_competencia": [
+        {
+          "nota": 3,
+          "titulo": "Ethical Analysis and Critical Thinking",
+          "descricao": "Ability to identify ethical dimensions in complex situations, apply ethical frameworks to analyze dilemmas, and articulate reasoned positions on controversial issues in technology and engineering."
+        },
+        {
+          "nota": 2,
+          "titulo": "Understanding of Social Psychology Principles",
+          "descricao": "Knowledge of how social factors, group dynamics, and cognitive biases influence behavior and decision-making in organizational and societal contexts."
+        },
+        {
+          "nota": 3,
+          "titulo": "Research and Communication Skills",
+          "descricao": "Competence in conducting literature research, synthesizing information from multiple sources, and presenting findings effectively through written reports and oral presentations."
+        },
+        {
+          "nota": 2,
+          "titulo": "Multicultural Awareness",
+          "descricao": "Appreciation of diverse cultural perspectives on ethics and the ability to consider multiple viewpoints when evaluating ethical questions in a globalized world."
+        }
+      ],
+
+      "justificativa": "Ethical analysis is rated 3 because I consistently demonstrated the ability to identify ethical issues in case studies, apply different ethical frameworks (utilitarian, deontological) to analyze them, and develop well-reasoned arguments, as evidenced in my written analyses and presentations. Understanding of social psychology receives 2 as I grasped core concepts like groupthink and social influence but could deepen my understanding of more advanced theories and their practical applications. Research and communication skills are rated 3 because I conducted thorough literature research, synthesized diverse sources effectively, and delivered clear presentations with good peer feedback. Multicultural awareness is rated 2 as I engaged with different cultural perspectives on ethics and recognized the importance of cultural context, though deeper exploration of non-Western ethical traditions would enhance this competence.",
+
+      "relacao_projeto_profissional": "Understanding ethics and social psychology is increasingly critical in technology development, especially in embedded systems and IoT where devices collect personal data and make autonomous decisions. As I pursue a career in IoT and smart systems, I will face ethical questions about data privacy, security, user consent, and the societal impact of technology. The competences developed in ethical analysis will help me identify potential ethical issues early in the design process, advocate for responsible development practices, and contribute to creating technology that respects user privacy and promotes social good. Whether working in industry or research, the ability to think critically about the ethical implications of my work and communicate these concerns effectively will be essential for building trust and ensuring that technological innovation serves humanity positively."
     }
   ]
 }
