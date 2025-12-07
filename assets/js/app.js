@@ -242,10 +242,16 @@ function createProjectCard(project) {
            </div>`
         : '';
 
-    // Truncate description to first 150 characters for card display
-    const shortDesc = project.descricao.length > 150 
-        ? project.descricao.substring(0, 150) + '...'
-        : project.descricao;
+    // Truncate description to first 150 characters for card display, respecting word boundaries
+    let shortDesc = project.descricao;
+    if (project.descricao.length > 150) {
+        shortDesc = project.descricao.substring(0, 150);
+        const lastSpace = shortDesc.lastIndexOf(' ');
+        if (lastSpace > 0) {
+            shortDesc = shortDesc.substring(0, lastSpace);
+        }
+        shortDesc += '...';
+    }
 
     return `
         <article class="project-card">
@@ -253,7 +259,7 @@ function createProjectCard(project) {
                 <h3>${escapeHtml(project.titulo)}</h3>
                 <div class="project-card-meta">
                     <span>📅 ${escapeHtml(project.periodo)}</span>
-                    <span class="project-status status-${escapeHtml(project.status.toLowerCase().replace(' ', '-'))}">${escapeHtml(project.status)}</span>
+                    <span class="project-status status-${escapeHtml(project.status.toLowerCase().replace(/ /g, '-'))}">${escapeHtml(project.status)}</span>
                 </div>
                 <p class="project-card-intro">${escapeHtml(shortDesc)}</p>
                 ${tagsHTML}
