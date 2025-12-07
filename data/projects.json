@@ -23,6 +23,14 @@
         "Security"
       ],
 
+      "imagens": [
+        "assets/img/keyless.jpg",
+        "assets/img/keyless-app.jpg",
+        "assets/img/keyless-hardware.jpg"
+      ],
+
+      "relatorio_pdf": "reports/keyless-access-car.pdf",
+
       "descricao": "Innovative system to unlock fleet vehicles via smartphone using authorized corporate credentials. Year-long, high-complexity project developed in partnership with ACTIA and NXP, involving cutting-edge wireless communication, cryptography, and secure authentication. This project aims to revolutionize fleet management by providing a seamless and secure keyless access solution that leverages modern mobile technology and industrial-grade security protocols.",
 
       "tecnica": "The project focuses on implementing Ultra-Wideband (UWB) technology for precise distance measurement and Bluetooth Low Energy (BLE) for initial device discovery and communication. We utilize advanced cryptographic algorithms including AES-256 for data encryption and RSA for key exchange to ensure secure communication between the smartphone and the vehicle. The system architecture involves AWS IoT Core for cloud-based device management, authentication services, and real-time monitoring. Python is used for backend services and mobile application integration. The technical challenges include managing precise ranging measurements, implementing replay attack prevention, ensuring low power consumption, and maintaining robust security across all communication layers.",
@@ -74,6 +82,13 @@
         "Computer Vision",
         "Deep Learning"
       ],
+
+      "imagens": [
+        "assets/img/projeto-ml.jpg",
+        "assets/img/projeto-ml-results.jpg"
+      ],
+
+      "relatorio_pdf": "reports/projeto-ml.pdf",
 
       "descricao": "Machine-learning project focused on computer vision using TensorFlow and Keras to detect falls in images. The system employs convolutional neural networks (CNN) to classify images into fall and no-fall categories with high accuracy. This project addresses a critical need in elderly care and safety monitoring by providing automated detection capabilities that can alert caregivers in real-time. The end-to-end implementation covers data collection, preprocessing, model training, validation, and deployment considerations.",
 
@@ -127,6 +142,13 @@
         "Full Stack",
         "Real-time"
       ],
+
+      "imagens": [
+        "assets/img/app-tarefas.jpg",
+        "assets/img/app-tarefas-mobile.jpg"
+      ],
+
+      "relatorio_pdf": "reports/app-gestao-tarefas.pdf",
 
       "descricao": "Full-stack web application for managing tasks and projects with real-time synchronization capabilities. Built with React on the frontend and Node.js with Express on the backend, this application provides an intuitive interface for task creation, editing, organization, and collaboration. The system implements secure user authentication, role-based access control, and real-time updates via WebSockets, enabling multiple users to collaborate on shared projects seamlessly. The application demonstrates modern web development practices and scalable architecture design.",
 
@@ -183,6 +205,14 @@
         "Sensors"
       ],
 
+      "imagens": [
+        "assets/img/iot-agriculture.jpg",
+        "assets/img/iot-dashboard.jpg",
+        "assets/img/iot-sensor.jpg"
+      ],
+
+      "relatorio_pdf": "reports/sistema-monitoramento-iot.pdf",
+
       "descricao": "Complete Internet of Things system designed for monitoring environmental conditions in agricultural settings. The system uses ESP32 microcontrollers with various sensors to collect real-time data on temperature, humidity, soil moisture, and light intensity. A web-based dashboard provides visualization of sensor data, historical trends, and alerts when critical thresholds are exceeded. The project demonstrates integration of hardware and software components in a practical IoT application, addressing real-world needs in precision agriculture and smart farming.",
 
       "tecnica": "The hardware layer consists of ESP32 microcontrollers programmed using Arduino framework, interfaced with DHT22 sensors (temperature and humidity), soil moisture sensors, and LDR light sensors. The ESP32 connects to WiFi and publishes sensor readings to an MQTT broker (Mosquitto) using the PubSubClient library. The backend is built with Python and Flask framework, subscribing to MQTT topics to receive sensor data, storing it in a SQLite database, and providing REST API endpoints for data retrieval. The web dashboard uses HTML, CSS, and JavaScript with Chart.js library for real-time data visualization through dynamic graphs and charts. An alert system monitors sensor values and sends email notifications via SMTP when values exceed configured thresholds. The system architecture follows IoT best practices with message queuing for reliability, data persistence, and scalable design.",
@@ -237,6 +267,13 @@
         "Database"
       ],
 
+      "imagens": [
+        "assets/img/api-ecommerce.jpg",
+        "assets/img/api-swagger.jpg"
+      ],
+
+      "relatorio_pdf": "reports/api-rest-ecommerce.pdf",
+
       "descricao": "Comprehensive RESTful API backend for an e-commerce platform, managing products, orders, users, and inventory. The API follows REST architecture best practices and implements robust authentication, authorization, data validation, and error handling mechanisms. Complete documentation is provided through Swagger/OpenAPI specification, making the API easy to understand and integrate. The system includes features for product catalog management, shopping cart operations, order processing, payment integration, and inventory tracking with transaction control to ensure data consistency.",
 
       "tecnica": "The API is built using Node.js with Express framework, implementing RESTful endpoints following HTTP methods conventions (GET, POST, PUT, DELETE, PATCH). Authentication and authorization use JWT (JSON Web Tokens) with role-based access control (RBAC) for admin and customer roles. PostgreSQL serves as the relational database with proper schema design including tables for users, products, orders, order items, and inventory. Sequelize ORM handles database operations with migrations for version control. Input validation uses Joi library to ensure data integrity. Error handling middleware provides consistent error responses with appropriate HTTP status codes. Payment processing integration uses Stripe API for secure transaction handling. API documentation is generated automatically using Swagger/OpenAPI specification with detailed endpoint descriptions, request/response schemas, and example payloads. The system implements transaction management for critical operations like order creation and inventory updates to maintain database consistency.",
@@ -286,6 +323,12 @@
         "Social Psychology",
         "Group Dynamics"
       ],
+
+      "imagens": [
+        "assets/img/ethics.jpg"
+      ],
+
+      "relatorio_pdf": "reports/ethics.pptx",
 
       "descricao": "Interdisciplinary course exploring the principles of social psychology and their application to ethical decision-making in technology development and engineering practice. The course examined how social factors, group dynamics, and cultural contexts influence ethical considerations in the workplace and society. Through case study analyses, group discussions, and research projects, students investigated real-world ethical dilemmas in technology, examined multicultural perspectives on ethics, and developed frameworks for ethical decision-making that engineers can apply throughout their careers.",
 

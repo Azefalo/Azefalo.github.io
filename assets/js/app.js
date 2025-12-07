@@ -169,13 +169,8 @@ function renderFeaturedProject() {
            </div>`
         : '';
 
-    const techHTML = project.tecnologias && project.tecnologias.length > 0
-        ? `<div class="featured-tech">
-             <strong>Technologies:</strong> ${project.tecnologias.slice(0, 5).map(tech => escapeHtml(tech)).join(', ')}${project.tecnologias.length > 5 ? '...' : ''}
-           </div>`
-        : '';
-
     container.innerHTML = `
+        <img src="${escapeHtml(project.imagens[0])}" alt="${escapeHtml(project.titulo)}" class="featured-image">
         <div class="featured-info">
             <h3>${escapeHtml(project.titulo)}</h3>
             <div class="featured-meta">
@@ -183,7 +178,6 @@ function renderFeaturedProject() {
                 <span>📊 ${escapeHtml(project.status || 'Status unknown')}</span>
             </div>
             ${tagsHTML}
-            ${techHTML}
             <p class="featured-description">${escapeHtml(project.descricao)}</p>
             <a href="projeto.html?id=${escapeHtml(project.id)}" class="btn btn-primary">Read more</a>
         </div>
@@ -255,12 +249,9 @@ function createProjectCard(project) {
 
     return `
         <article class="project-card">
+            <img src="${escapeHtml(project.imagens[0])}" alt="${escapeHtml(project.titulo)}">
             <div class="project-card-content">
                 <h3>${escapeHtml(project.titulo)}</h3>
-                <div class="project-card-meta">
-                    <span>📅 ${escapeHtml(project.periodo)}</span>
-                    <span class="project-status status-${escapeHtml(project.status.toLowerCase().replace(/ /g, '-'))}">${escapeHtml(project.status)}</span>
-                </div>
                 <p class="project-card-intro">${escapeHtml(shortDesc)}</p>
                 ${tagsHTML}
                 <a href="projeto.html?id=${escapeHtml(project.id)}" class="btn btn-secondary">Details</a>
@@ -346,6 +337,15 @@ function renderProjectDetail() {
     // Atualizar título da página
     document.title = `${project.titulo} - João Gabriel Buttow Albuquerque`;
 
+    // Renderizar galeria de imagens
+    const galleryHTML = project.imagens && project.imagens.length > 0
+        ? `<div class="project-gallery">
+             ${project.imagens.map(img => 
+                 `<img src="${escapeHtml(img)}" alt="${escapeHtml(project.titulo)}">`
+             ).join('')}
+           </div>`
+        : '';
+
     // Renderizar tecnologias
     const techHTML = project.tecnologias && project.tecnologias.length > 0
         ? `<div class="project-tech-list">
@@ -390,6 +390,8 @@ function renderProjectDetail() {
             </div>
             ${tagsHTML}
         </div>
+
+        ${galleryHTML}
 
         <div class="project-section">
             <h3>Description</h3>
@@ -437,6 +439,9 @@ function renderProjectDetail() {
         ` : ''}
 
         <div class="project-actions">
+            ${project.relatorio_pdf ? 
+                `<a href="${escapeHtml(project.relatorio_pdf)}" class="btn btn-primary" download>📄 Download Report (PDF)</a>` 
+                : ''}
             <a href="projetos.html" class="btn btn-secondary">← Back to Projects</a>
         </div>
     `;
