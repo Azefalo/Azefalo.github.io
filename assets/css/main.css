@@ -219,6 +219,7 @@ body {
     color: var(--color-text-secondary);
     max-width: 600px;
     margin: 0 auto var(--spacing-md);
+    text-align: justify;
 }
 
 /* ============================================
@@ -312,6 +313,7 @@ section h3 {
     font-size: 1.05rem;
     line-height: 1.8;
     margin-bottom: var(--spacing-sm);
+    text-align: justify;
 }
 
 .objective .objective-content ul {
@@ -368,6 +370,7 @@ section h3 {
     margin-bottom: var(--spacing-sm);
     font-size: 1.1rem;
     line-height: 1.8;
+    text-align: justify;
 }
 
 /* ============================================
@@ -404,6 +407,10 @@ section h3 {
     min-width: 300px;
     max-width: 350px;
     flex-shrink: 0;
+}
+
+.experience-item p {
+    text-align: justify;
 }
 
 .experience-item h3 {
@@ -523,6 +530,7 @@ section h3 {
 .featured-description {
     margin: var(--spacing-sm) 0;
     line-height: 1.8;
+    text-align: justify;
 }
 
 .featured-tags {
@@ -594,6 +602,7 @@ section h3 {
     color: var(--color-text-secondary);
     margin-bottom: var(--spacing-sm);
     flex-grow: 1;
+    text-align: justify;
 }
 
 .project-card-tags {
@@ -686,6 +695,7 @@ section h3 {
 .project-section p {
     white-space: pre-line;
     line-height: 1.8;
+    text-align: justify;
 }
 
 .project-tech-list {
@@ -763,6 +773,7 @@ section h3 {
     color: var(--color-text-secondary);
     margin: 0;
     line-height: 1.6;
+    text-align: justify;
 }
 
 /* Project Card Meta */
