@@ -102,6 +102,47 @@
       "relacao_projeto_profissional": ""
     },
 
+    {
+      "id": "wireless-sensor-networks",
+      "titulo": "Wireless Sensor Networks",
+      "periodo": "1st Semester 2025-2026",
+      "status": "Completed",
+      "tecnologias": [""],
+      "tags": [""],
+      "imagens": ["assets/img/wsn.jpg"],
+      "descricao": "",
+      "tecnica": "",
+      "sistema_de_curso": "",
+      "matriz_competencia": [
+        {
+          "nota": 0,
+          "titulo": ""
+        }
+      ],
+      "justificativa": "",
+      "relacao_projeto_profissional": ""
+    },
+
+    {
+      "id": "cloud-and-edge-computing",
+      "titulo": "Cloud and Edge Computing",
+      "periodo": "1st Semester 2025-2026",
+      "status": "Completed",
+      "tecnologias": [""],
+      "tags": [""],
+      "imagens": ["assets/img/edge-computing.jpg"],
+      "descricao": "",
+      "tecnica": "",
+      "sistema_de_curso": "",
+      "matriz_competencia": [
+        {
+          "nota": 0,
+          "titulo": ""
+        }
+      ],
+      "justificativa": "",
+      "relacao_projeto_profissional": ""
+    },
     
     
     {
