@@ -70,21 +70,29 @@
       "titulo": "Energy for connected objects",
       "periodo": "1st Semester 2025-2026",
       "status": "Completed",
-      "tecnologias": [],
-      "tags": [],
+      "tecnologias": ["Raspberry Pi", "SDR", "Rectenna (RF-to-DC)", "PMU", "Supercapacitor"],
+      "tags": ["IoT", "Energy Harvesting", "Wireless Power Transfer", "Battery-free", "Low-power design", "RF"],
       "imagens": ["assets/img/energy.png"],
       "relatorio_pdf": "reports/energy_connected_objects.pdf",
-      "descricao": "",
-      "tecnica": "",
-      "sistema_de_curso": "",
+      "descricao": "Energy for Connected Objects focused on powering low-power IoT nodes without wires and without conventional batteries, combining energy storage, ambient energy harvesting, and wireless power transfer. The course connected the physics of energy conversion with practical design choices required to build energy-autonomous sensing nodes. Hands-on lab work explored what “battery-free” really means in practice: how much energy is needed for a task, what power levels are realistically available, and which architecture makes the system robust to fluctuations. The final report documented the full chain from RF capture to DC power management and real-world constraints such as non-linearities and propagation effects.",
+      "tecnica": "The course covered three main approaches: (1) electricity storage (capacitors/inductors versus indirect options like batteries/supercapacitors), focusing on usable energy, voltage thresholds, losses, and regulation needs; (2) ambient harvesting (light, mechanical, thermal, electromagnetic), emphasizing variability and order-of-magnitude feasibility checks; and (3) wireless power transfer with dedicated sources, including near-field vs far-field regimes, free-space losses, and practical ISM-band considerations. A rectenna-based chain was used as a reference architecture for RF harvesting/WPT: antenna, impedance matching, RF-to-DC rectifier, and DC filtering/storage, with an emphasis on end-to-end co-optimization. In the lab, the work started from a power budget for a red LED and compared two strategies: direct consumption (antenna → rectifier → LED) versus store-then-use (PMU + DC-DC + supercapacitor) to accumulate energy and then discharge at a controlled operating point. Rectifier characterization used frequency sweeps in the 868 MHz and 2.45 GHz bands with an SDR-based setup; observations highlighted parasitics/non-linearities and the impact of antenna choice and polarization alignment in over-the-air tests.",
+      "sistema_de_curso": "The course was organized into four 1h15 lecture sessions and two 2h45 laboratory sessions, progressing from general concepts (energy, storage, harvesting) to electromagnetic wireless power transfer and design guidelines for low-power connected objects. Assessment relied on lab attendance and a group report summarizing the work carried out (context, choices, issues and solutions, conclusions), plus a reflection on energy autonomy for an innovative project.",
       "matriz_competencia": [
         {
-          "nota": 0,
-          "titulo": ""
+          "nota": 4,
+          "titulo": "Know how to harvest/transfer, store and manage power for connected objects, and how to increase power efficiency"
+        },
+        {
+          "nota": 4,
+          "titulo": "Be able to optimize the power consumption of connected objects"
+        },
+        {
+          "nota": 4,
+          "titulo": "Be able to design and implement an energy-autonomous and battery-free connected object"
         }
       ],
-      "justificativa": "",
-      "relacao_projeto_profissional": ""
+      "justificativa": "These scores reflect both the breadth of the course content and the fact that the lab validated the full reasoning chain from requirements to implementation constraints. The work combined power budgeting, architecture selection (direct vs store-then-use), and system-level interpretation of RF measurements, including MPPT dynamics and antenna/polarization effects. Writing the final report also required explaining decisions and limitations clearly, matching the intended learning outcomes of designing energy-autonomous connected objects under realistic constraints.",
+      "relacao_projeto_profissional": "This course directly supports embedded systems and IoT work by grounding low-power design in realistic energy constraints rather than only computation and communication requirements. Understanding how storage thresholds, duty cycling, and RF link conditions translate into usable DC power is a practical skill for deployable sensor nodes in constrained environments. Battery-free and maintenance-free sensing is particularly relevant for industrial monitoring use cases where replacing batteries is costly or impossible; the end-to-end rectenna-based approach clarified what is feasible with ambient RF versus dedicated WPT and highlighted improvement levers such as antenna strategy, matching, and power-management choices when pushing for range and robustness."
     },
 
     {
