@@ -55,24 +55,24 @@
       "sistema_de_curso": "This project was conducted as part of a Machine Learning course with approximately 60 hours of workload over one semester. The course structure included theoretical lectures (CM) covering ML fundamentals, neural networks, and computer vision concepts (20 hours), practical tutorial sessions (TD) for hands-on coding exercises and problem-solving (15 hours), and supervised lab sessions (TP) where the project was developed incrementally (25 hours). Activities included studying ML theory, implementing algorithms from scratch for learning purposes, working on the fall detection project with weekly milestones, presenting progress updates, and preparing a final technical report and demonstration.",
       "matriz_competencia": [
         {
-          "nota": 3,
-          "titulo": "Deep Learning and Neural Networks",
-          "descricao": "Understanding of CNN architectures, backpropagation, optimization algorithms, and practical implementation using modern frameworks like TensorFlow and Keras."
+          "nota": 4,
+          "titulo": "Be able to explain the main concepts of AI at the edge",
+          "descricao": "Understanding of AI principles, edge computing constraints, and the trade-offs involved in deploying ML models on resource-limited devices."
+        },
+        {
+          "nota": 4,
+          "titulo": "Dimension an AI tool for an application at the edge: communication bandwidth, latency, realiability of the model decisions, and privacy.",
+          "descricao": "Ability to assess and optimize AI model deployment considering edge-specific factors such as limited bandwidth, low latency requirements, decision reliability, and data privacy concerns."
         },
         {
           "nota": 3,
-          "titulo": "Computer Vision Techniques",
-          "descricao": "Application of image preprocessing, data augmentation, and visual feature extraction techniques for classification tasks in real-world scenarios."
+          "titulo": "Set up a machine learning workflow on heterogeneous IoT data (tabular, images, temporal series)",
+          "descricao": "Competence in designing and implementing ML workflows that handle diverse data types, including data preprocessing, feature extraction, model training, and evaluation."
         },
         {
-          "nota": 2,
-          "titulo": "Model Evaluation and Validation",
-          "descricao": "Proper use of evaluation metrics, cross-validation techniques, and analysis of model performance to ensure reliable and generalizable results."
-        },
-        {
-          "nota": 3,
-          "titulo": "Python Programming for ML",
-          "descricao": "Proficient use of Python and scientific libraries (TensorFlow, Keras, NumPy) for implementing complete machine learning pipelines from data to deployment."
+          "nota": 4,
+          "titulo": "Use Python machine learning libraries and compression methods",
+          "descricao": "Proficiency in utilizing Python libraries such as TensorFlow, Keras, and NumPy for ML model development, along with techniques for model compression to enable deployment on edge devices."
         }
       ],
       "justificativa": "My deep learning competence is rated 3 because I successfully designed, trained, and optimized CNN models, though some advanced techniques like custom loss functions required additional research. Computer vision competence is also 3 as I effectively applied preprocessing and augmentation techniques that significantly improved model performance. Model evaluation is rated 2 because while I used appropriate metrics and validation strategies, I could improve in advanced techniques like cross-validation and bias-variance analysis. Python programming for ML is rated 3 as I demonstrated proficiency in using TensorFlow and Keras frameworks, implementing the complete pipeline independently with occasional reference to documentation.",
@@ -89,6 +89,7 @@
       "tecnologias": [""],
       "tags": [""],
       "imagens": ["assets/img/energy.png"],
+      "relatorio_pdf": "reports/energy_connected_objects.pdf",
       "descricao": "",
       "tecnica": "",
       "sistema_de_curso": "",
@@ -131,6 +132,7 @@
       "tecnologias": [""],
       "tags": [""],
       "imagens": ["assets/img/edge-computing.jpg"],
+      "relatorio_pdf": "reports/edge_computing.pdf",
       "descricao": "",
       "tecnica": "",
       "sistema_de_curso": "",
@@ -144,7 +146,27 @@
       "relacao_projeto_profissional": ""
     },
     
-    
+    {
+      "id": "software-engineering",
+      "titulo": "Software Engineering",
+      "periodo": "1st Semester 2025-2026",
+      "status": "Completed",
+      "tecnologias": [""],
+      "tags": [""],
+      "imagens": [""],
+      "relatorio_pdf": "",
+      "descricao": "",
+      "tecnica": "",
+      "sistema_de_curso": "",
+      "matriz_competencia": [
+        {
+          "nota": 0,
+          "titulo": ""
+        }
+      ],
+      "justificativa": "",
+      "relacao_projeto_profissional": ""
+    },
     {
       "id": "from3gto6g",
       "titulo": "From 3G to 6G",
@@ -153,6 +175,7 @@
       "tecnologias": ["3GPP","UMTS","LTE","5G-Advanced","6G","mmWave","Antenna Arrays (Beamforming/MIMO)","Semiconductor Scaling (nm/Å nodes)","Literature Review","Oral Presentation"],
       "tags": ["Wireless Communications","Mobile Networks","Telecom Standardization","IoT","Spectrum","EM Waves","Health & Safety","Technology Roadmaps"],
       "imagens": ["assets/img/from3gto6g.jpg"],
+      "relatorio_pdf": "reports/from3gto6g.pdf",
       "descricao": "In this course, a structured understanding was built around how mobile networks evolved from 3G to today's 5G era and how the industry is already shaping the path toward 6G. The focus went beyond “what changed” generation by generation (services, performance, spectrum), and also addressed why it changed through market dynamics, technology scaling, and global standardization processes.\n\nA controversial but essential topic for modern wireless systems was also explored: the potential health impacts of electromagnetic (EM) waves and the societal concerns surrounding mobile deployments. The work aimed to keep a balanced view, separating established physical mechanisms (mainly thermal effects) from debated non-thermal hypotheses, while explaining why scientific opinions can diverge depending on methods, exposure metrics, and evidence quality.",
       "tecnica": "The course covered the ecosystem that drives mobile-network innovation, linking technical evolution to market cycles, investment dynamics, and the push from smartphones, IoT adoption, and industrial connectivity. This “market lens” clarified why each new generation is not only a performance upgrade, but also a response to demand, competition, and feasibility at scale.\n\nKey topics included how mobile technologies become “official” through global standardization. The role of 3GPP was studied as a partnership framework that consolidates specifications defining architecture, protocol layers, interfaces, requirements, and testing for GSM/UMTS/LTE/5G NR, while also structuring the transition to 5G-Advanced and early 6G roadmaps via Release planning and timelines.\n\nFrom a physical-layer perspective, the work focused on how spectrum selection and propagation constraints shape system design. Coverage vs. capacity trade-offs were connected to the progressive move toward higher frequencies, and the implications were discussed in terms of wavelength, antenna integration, and the practical need for antenna arrays, beamforming, and massive MIMO to maintain link budget and increase throughput. Basic RF relationships (frequency-wavelength links and related measurement concepts) were used to ground these conclusions.\n\nThe hardware dimension was also emphasized: semiconductor scaling as an enabler for higher integration, stronger compute capabilities, and tighter coupling between communication and AI features. Expected directions for 6G were examined, including wider bandwidths (potentially extending toward sub-THz/terahertz ranges), improved localization, network automation with AI/ML, and the emergence of concepts such as battery-less or “zero-energy” devices for massive sensing and data collection.\n\nFor the selected topic (Cancer & EM waves), the course required a state-of-the-art review approach. Exposure concepts (device proximity, infrastructure, and typical field levels) were placed alongside the mainstream emphasis on thermal effects, then contrasted with publications that argue for possible long-term non-thermal impacts versus sources highlighting limitations in replication, dosimetry, and the difficulty of extrapolating lab conditions to real-world human physiology. I presented this synthesis in an evaluated oral talk, concluding with a pragmatic precaution stance: reduce unnecessary exposure when feasible without turning uncertainty into alarmism.",
       "sistema_de_curso": "The course was organized as 6 sessions of about 1h15: 2 instructor-led lectures to build the historical and technical foundation (market context, spectrum, standardization, technology scaling, roadmap to 6G), followed by 4 student presentation sessions. Students worked in pairs, each selecting a topic (e.g., 6G modulation, satellites, vehicle connectivity, mmWave threats, mobile addiction, cancer & EM waves) and delivering a 10-15 minute oral presentation followed by Q&A, which served as the main evaluation method.",
