@@ -132,27 +132,6 @@
     },
     
     {
-      "id": "software-engineering",
-      "titulo": "Software Engineering",
-      "periodo": "1st Semester 2025-2026",
-      "status": "Completed",
-      "tecnologias": [""],
-      "tags": [""],
-      "imagens": ["assets/img/software-engineering.jpg"],
-      "relatorio_pdf": "",
-      "descricao": "",
-      "tecnica": "",
-      "sistema_de_curso": "",
-      "matriz_competencia": [
-        {
-          "nota": 0,
-          "titulo": ""
-        }
-      ],
-      "justificativa": "",
-      "relacao_projeto_profissional": ""
-    },
-    {
       "id": "from3gto6g",
       "titulo": "From 3G to 6G",
       "periodo": "1st Semester 2025-2026",
