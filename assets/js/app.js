@@ -271,7 +271,12 @@ function initFilters() {
     const allTechs = new Set();
     projectsData.items.forEach(project => {
         if (project.tecnologias) {
-            project.tecnologias.forEach(tech => allTechs.add(tech));
+            project.tecnologias.forEach(tech => {
+                // Filter out empty strings
+                if (tech && tech.trim() !== '') {
+                    allTechs.add(tech);
+                }
+            });
         }
     });
 
