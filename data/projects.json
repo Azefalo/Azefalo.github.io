@@ -17,22 +17,17 @@
         {
           "nota": 4,
           "titulo": "Wireless Communication Protocols",
-          "descricao": "Deep understanding and practical implementation of UWB and BLE protocols for secure device communication and ranging in automotive applications."
         },
         {
           "nota": 4,
-          "titulo": "Cryptography and Security",
-          "descricao": "Application of advanced cryptographic techniques including symmetric and asymmetric encryption, secure key management, and protection against common attack vectors in IoT systems."
-        },
+          "titulo": "Cryptography and Security",},
         {
           "nota": 3,
           "titulo": "Cloud Integration and IoT Architecture",
-          "descricao": "Design and implementation of cloud-based IoT solutions using AWS IoT Core for device management, authentication, and real-time data processing."
         },
         {
           "nota": 3,
           "titulo": "Project Management and Industrial Collaboration",
-          "descricao": "Coordination of a complex multi-stakeholder project involving industrial partners, academic supervision, and adherence to real-world deadlines and requirements."
         }
       ],
       "justificativa": "I rated my competence in wireless communication protocols as 4 because I successfully implemented both UWB ranging and BLE communication, overcoming technical challenges related to signal interference and precision. For cryptography and security, I achieved level 4 by implementing a complete security architecture including encryption, authentication, and attack prevention mechanisms, which was validated through security audits. My cloud integration competence is at level 3 as I successfully integrated AWS IoT Core services but with guidance from NXP engineers for some advanced configurations. Project management is rated 3 because I effectively coordinated between multiple stakeholders and maintained project timelines, though the complexity required occasional supervisor intervention for critical decisions.",
@@ -57,22 +52,18 @@
         {
           "nota": 4,
           "titulo": "Be able to explain the main concepts of AI at the edge",
-          "descricao": "Understanding of AI principles, edge computing constraints, and the trade-offs involved in deploying ML models on resource-limited devices."
         },
         {
           "nota": 4,
           "titulo": "Dimension an AI tool for an application at the edge: communication bandwidth, latency, realiability of the model decisions, and privacy.",
-          "descricao": "Ability to assess and optimize AI model deployment considering edge-specific factors such as limited bandwidth, low latency requirements, decision reliability, and data privacy concerns."
         },
         {
           "nota": 3,
           "titulo": "Set up a machine learning workflow on heterogeneous IoT data (tabular, images, temporal series)",
-          "descricao": "Competence in designing and implementing ML workflows that handle diverse data types, including data preprocessing, feature extraction, model training, and evaluation."
         },
         {
           "nota": 4,
           "titulo": "Use Python machine learning libraries and compression methods",
-          "descricao": "Proficiency in utilizing Python libraries such as TensorFlow, Keras, and NumPy for ML model development, along with techniques for model compression to enable deployment on edge devices."
         }
       ],
       "justificativa": "My deep learning competence is rated 3 because I successfully designed, trained, and optimized CNN models, though some advanced techniques like custom loss functions required additional research. Computer vision competence is also 3 as I effectively applied preprocessing and augmentation techniques that significantly improved model performance. Model evaluation is rated 2 because while I used appropriate metrics and validation strategies, I could improve in advanced techniques like cross-validation and bias-variance analysis. Python programming for ML is rated 3 as I demonstrated proficiency in using TensorFlow and Keras frameworks, implementing the complete pipeline independently with occasional reference to documentation.",
@@ -183,7 +174,6 @@
         {
           "nota": 4,
           "titulo": "Mastery of new mobile network technologies",
-          "descricao": "Understand and master the new mobile networks technologies"
         }
       ],
       "justificativa": "These ratings reflect what was practiced in the course: a clear generation-by-generation model (services, spectrum, and KPIs) was consolidated, connected to the 3GPP release logic, and grounded with RF fundamentals explaining why higher frequencies require new antenna strategies. The health-focused topic was handled as a structured synthesis rather than a “settled” claim, highlighting mechanisms, evidence limits, and interpretation gaps then delivered through an evaluated oral presentation with a responsible conclusion.",
@@ -208,27 +198,22 @@
         {
           "nota": 3,
           "titulo": "Analyse Group Situations Using Concepts from Social Psychology",
-          "descricao": "Ability to observe and interpret group dynamics, social influence processes, conformity patterns, and collective decision-making mechanisms using theoretical frameworks from social psychology, as demonstrated through the analysis of 12 Angry Men and understanding of key concepts from Mayo, Moreno and Lewin."
         },
         {
           "nota": 3,
           "titulo": "Understand Interpersonal Relations in Professional and Intercultural Situations",
-          "descricao": "Competence in recognizing cultural differences, managing intercultural communication challenges, adapting communication styles across contexts, and navigating professional relationships in diverse environments, developed through the presentation on intercultural communication and study of micro-cultures, ethnocentrism and cultural adaptation phases."
         },
         {
           "nota": 3,
           "titulo": "Integrate Reflection on Socio-Ecological Issues into Career Path",
-          "descricao": "Capacity to connect technical decisions with their broader societal and environmental impacts, considering digital ethics issues such as data privacy, environmental footprint of technologies, and the social acceptability of engineering solutions in the context of IoT and connected systems."
         },
         {
           "nota": 3,
           "titulo": "Identify the Ethical Dimensions of Situations and Argue One's Position",
-          "descricao": "Ability to recognize ethical dilemmas in professional contexts, apply multiple ethical frameworks (reciprocity, duty-based, utilitarian, conviction-based ethics) to analyze situations, and articulate well-reasoned positions using the three-question approach (origins, purpose, long-term impacts) when evaluating engineering practices."
         },
         {
           "nota": 3,
           "titulo": "Sharpen Critical Thinking, Decentring and Self-Reflection: Meta-Cognition",
-          "descricao": "Development of reflexive thinking to question one's own assumptions, stereotypes and cognitive biases, recognize the limits of one's perspective, practice decentring to understand diverse viewpoints, and engage in continuous self-evaluation of one's reasoning processes and ethical judgements."
         }
       ],
       "justificativa": "Level 3 is appropriate for all these competencies because they were mobilised repeatedly throughout the course, even if still at a student level rather than in a professional position. Through the film analysis, group presentations and debates, it became possible to identify ethical and intercultural issues while remaining attentive to people's limits and vulnerabilities. Preparing and delivering the presentation on intercultural communication required questioning the objectives and implicit assumptions behind ways of working together, reflecting on stereotypes and ethnocentrism, and considering the social acceptability of behaviours and communication styles. The need to structure arguments, adapt explanations to a diverse audience and react in real time to questions corresponds to agile implementation of chosen strategies. Continuous reflection on personal values, cultural background, biases and reactions - for example in discussions on discrimination, digital surveillance or cultural shock - supported a genuinely reflective evaluation of progress and limitations.",
