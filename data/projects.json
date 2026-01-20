@@ -160,8 +160,6 @@
       "relacao_projeto_profissional": "This course directly supports my professional trajectory in embedded systems and connected devices because it connects real industry constraints (standardization, roadmap timing, spectrum availability, hardware scaling) to the design decisions behind IoT and mobile connectivity. Understanding the 3GPP ecosystem and the evolution from LTE to 5G NR and beyond helps position cellular IoT technologies within realistic constraints for products and industrial systems. This knowledge also proved immediately useful in my interview at Thales for the “R&I: Communications V2X et Sécurité 5G” role, where I could discuss these constraints and trade-offs with concrete technical grounding.\n\nIt also strengthened my ability to account for societal and safety concerns that still influence engineering decisions. For roles involving IoT, smart systems, or telecom-connected embedded products, discussing EM exposure questions responsibly without exaggeration, but with technical grounding and awareness of uncertainty adds value when designing systems, documenting risk, or communicating with stakeholders."
     },
 
-
-
     {
       "id": "ethics",
       "titulo": "Social Psychology and Ethics",
@@ -193,6 +191,36 @@
       ],
       "justificativa": "Level 3 is appropriate for all these competencies because they were mobilised repeatedly throughout the course, even if still at a student level rather than in a professional position. Through the film analysis, group presentations and debates, it became possible to identify ethical and intercultural issues while remaining attentive to people's limits and vulnerabilities. Preparing and delivering the presentation on intercultural communication required questioning the objectives and implicit assumptions behind ways of working together, reflecting on stereotypes and ethnocentrism, and considering the social acceptability of behaviours and communication styles. The need to structure arguments, adapt explanations to a diverse audience and react in real time to questions corresponds to agile implementation of chosen strategies. Continuous reflection on personal values, cultural background, biases and reactions - for example in discussions on discrimination, digital surveillance or cultural shock - supported a genuinely reflective evaluation of progress and limitations.",
       "relacao_projeto_profissional": "This course is connected to my professional project as an engineer working with embedded systems, IoT and smart, data-driven technologies in international and multicultural environments. In these fields, technical choices affect privacy, safety, environmental impact, work organisation and power relations inside companies and in society, and they are often implemented by teams composed of people with very different cultural backgrounds. Studying social psychology, ethics and intercultural communication helped to see teams, organisations and users as complex groups with histories, norms and expectations, and to anticipate how technologies and communication styles can reinforce or challenge existing dynamics.\n\nFor future roles in industry or research, this background supports the ability to question the purpose of the systems being designed, to evaluate their social and environmental impacts, and to defend responsible choices when facing dilemmas between performance, cost and ethical concerns. The specific work on intercultural communication strengthened the capacity to collaborate with international colleagues, adapt language and behaviour, and transform cultural differences into an asset rather than a source of conflict. Altogether, the course contributes to building a professional profile of an engineer who is technically competent and also aware of his responsibilities towards people, organisations and the broader society."
+    },
+
+    {
+      "id": "physical_education",
+      "titulo": "Physical Activity in Nature",
+      "periodo": "1st Semester 2025-2026",
+      "status": "Completed",
+      "tecnologias": ["Kayak", "Archery", "Electronic shooting", "Bike"],
+      "tags": ["Outdoor", "Nature", "River", "Off-road"],
+      "imagens": ["assets/img/bike.jpg, assets/img/kayak.jpg"],
+      "relatorio_pdf": "",
+      "descricao": "This three-day outdoor module combined physical challenge, nature immersion, and group coordination through kayaking on a river near Toulouse, archery and electronic shooting practice, and a 22 km off-road cycling route.\n\nBeyond fitness, the experience strengthened social bonds at the start of the semester and created a practical context for decision-making, safety awareness, and mutual support. Photos of the kayaking and cycling sessions are included as appendices to represent the activities completed.",
+      "tecnica": "The module focused on operating safely in natural environments while adapting to changing conditions and working efficiently as a group. The kayaking day emphasized route awareness, coordination between paddlers, and fast reaction to obstacles such as small drops and unstable flows.\n\nHands-on work required using specific equipment correctly (helmet, buoyancy aid, paddle handling, and basic river navigation behaviors), as well as applying safety procedures to prevent falls and respond quickly when someone entered the water. I contributed by staying proactive in communication, keeping the group organized during critical moments, and helping ensure a rapid, calm response when assistance was needed.\n\nThe second day developed precision and focus through archery and electronic shooting, reinforcing controlled posture, attention management, and consistent execution under observation. The final cycling route demanded endurance, pacing strategy, and terrain handling, with off-road sections requiring stability, anticipation, and respect for the group’s rhythm to avoid unnecessary risks.\n\nAcross all activities, environmental responsibility was treated as part of performance: keeping personal items secured, leaving no waste behind, and preserving the natural area while moving through it.",
+      "sistema_de_curso": "The course was organized as three full outdoor days, each centered on a different activity (river kayaking, archery and electronic shooting, and off-road cycling). Instruction and supervision guided safe equipment use and group behavior, and the assessment relied mainly on observed engagement, adaptation to the environment, and demonstrated safety and teamwork behaviors aligned with the competency matrix.",
+      "matriz_competencia": [
+        {
+          "nota": 4,
+          "titulo": "Take action in a natural environment: analyze, decide, act, put security in place, use specific equipment, discover an area"},
+        {
+          "nota": 4,
+          "titulo": "Respect and adapt in an environment different from one’s normal habits"},
+        {
+          "nota": 4,
+          "titulo": "Invest oneself coherently in activities"},
+        {
+          "nota": 3,
+          "titulo": "Actively take part in a community"}
+      ],
+      "justificativa": "The high scores reflect consistent performance across the three days: quick decision-making and teamwork were essential during kayaking to manage obstacles and support a teammate in the water, while the other sessions reinforced focus, discipline, and sustained effort.\n\nStrong adaptation and coherent investment were visible through active participation, sustained motivation, and a collective mindset during each activity. I also paid attention to environmental respect by keeping the area clean and treating nature as a shared space that must be protected.\n\nThe community score was set slightly lower because participation was strong within the group context, but the experience was primarily framed as a cohort activity rather than a long-term community commitment beyond the module itself.",
+      "relacao_projeto_profissional": "This module is not directly tied to a specific engineering domain, but it reinforces behaviors that transfer strongly to technical projects: teamwork under pressure, leadership by action, disciplined execution, and following safety constraints while staying goal-oriented.\n\nIn engineering environments, the same skills apply when managing risk, coordinating roles, and reacting to unexpected events without compromising the team’s stability. I see this kind of experience as a practical reminder that performance is not only technical, but also depends on communication, responsibility, and respect for the broader environment where systems operate."
     }
   ]
 }
