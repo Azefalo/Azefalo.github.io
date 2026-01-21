@@ -34,10 +34,10 @@
 
 
     {
-      "id": "projeto-ml-fall-detection",
-      "titulo": "Image Fall Detection with Machine Learning",
+      "id": "embedded-ia-for-iot",
+      "titulo": "Embedded IA for IoT - Fall Detection",
       "periodo": "1st Semester 2025-2026",
-      "status": "In progress",
+      "status": "Completed",
       "tecnologias": ["Python","TensorFlow","Keras","NumPy"],
       "tags": ["Machine Learning","Computer Vision","Deep Learning"],
       "imagens": ["assets/img/projeto-ml.jpg","assets/img/projeto-ml-results.jpg"],
@@ -63,7 +63,27 @@
       "relacao_projeto_profissional": "This project is highly relevant to my interest in intelligent embedded systems and IoT applications. Machine learning, particularly computer vision, is increasingly integrated into embedded devices for edge computing scenarios. I aspire to work in areas where ML models are deployed on resource-constrained devices for real-time applications such as smart surveillance, autonomous systems, or health monitoring. The competences in ML model development, optimization, and evaluation are essential for roles like ML Engineer, Computer Vision Specialist, or Embedded AI Developer. This experience provides a foundation for future work in deploying ML models on edge devices, which is a growing field in IoT and smart systems."
     },
 
-
+    {
+      "id": "smart-devices",
+      "titulo": "Smart Devices",
+      "periodo": "1st Semester 2025-2026",
+      "status": "Completed",
+      "tecnologias": [],
+      "tags": [],
+      "imagens": ["assets/img/"],
+      "relatorio_pdf": "",
+      "descricao": "",
+      "tecnica": "",
+      "sistema_de_curso": "",
+      "matriz_competencia": [
+        {
+          "nota": 0,
+          "titulo": ""
+        }
+      ],
+      "justificativa": "",
+      "relacao_projeto_profissional": ""
+    },
     
     {
       "id": "energy-for-connected-objects",
@@ -102,7 +122,7 @@
       "status": "Completed",
       "tecnologias": ["ESP8266 (NodeMCU)", "C++", "MQTT", "Eclipse Mosquitto", "Arduino IDE", "Node-RED", "Home Assistant", "ArduinoHA"],
       "tags": ["IoT", "MQTT protocol", "MQTT Broker", "Communications", "Smart Home"],
-      "imagens": ["assets/img/m2m.jpeg", "assets/img/m2m.png", "assets/img/m2m_node-red.png"],
+      "imagens": ["assets/img/m2m.jpeg", "assets/img/m2m_esp8266.png", "assets/img/m2m_node-red.png"],
       "relatorio_pdf": "reports/m2m.pdf",
       "descricao": "This course strengthened how to think about machine-to-machine communication as an engineering system: devices, middleware, and the application layer working together in a coherent architecture. The main focus was understanding how constrained IoT nodes can exchange data reliably and securely using MQTT, then building an end-to-end pipeline that remains easy to test, extend, and supervise.\n\nBeyond the technical stack, the course was especially useful because it connected directly to projects running in parallel during the semester. Concepts and tools from the labs were reused in an open-source project (a gas sensor application) and also in my Innovative Project (keyless car entry) where MQTT is part of the cloud integration through AWS IoT Core, which helped reinforce the “why” behind each design choice.",
       "tecnica": "The course covered IoT fundamentals and platform challenges (heterogeneity, interoperability, security, and quality of service), then narrowed down to practical middleware building blocks for connected systems. MQTT was introduced as a lightweight publish/subscribe protocol designed for sensors and actuators, relying on a broker to manage client sessions and route messages through topic-based queues. Key topics included MQTT over TCP/IP, topic hierarchies, retained messages, keep-alive mechanisms, will messages for disconnect handling, and QoS levels (0, 1, 2) to balance reliability versus overhead.\n\nHands-on work started by installing and validating an Eclipse Mosquitto broker and testing publish/subscribe behavior using command-line clients. The labs then moved to embedded implementation with an ESP8266 (NodeMCU) programmed in Arduino IDE: Wi-Fi connectivity, MQTT client setup, and bidirectional messaging with both publications (telemetry/events) and subscriptions (remote commands). A simple smart-home scenario structured the application logic around dedicated topics for button state, luminosity measurements, and light commands, illustrating how manual and automatic behaviors can coexist through clear topic design.\n\nNode-RED was used for fast prototyping of higher-level applications on top of MQTT. Flow-based logic enabled quick parsing, routing, and rule evaluation, and dashboards provided real-time visualization and interaction (charts, controls, debug traces). The same middleware reasoning was later extended to specialized platforms with Home Assistant, where entities, services, and device organization provide a more structured supervision layer. Using ArduinoHA, the ESP8266 was integrated as a Home Assistant device and exposed controllable entities, highlighting naming conventions, scalability considerations, and practical security measures such as authentication and the possibility of TLS when needed. Energy-related considerations were also addressed through message frequency, connection efficiency, and the availability of low-power modes on the ESP8266 for battery-powered deployments.",
@@ -131,6 +151,72 @@
       ],
       "justificativa": "The rating is high across all competencies because the course required both understanding and execution: selecting the right communication model, deploying the broker infrastructure, building an embedded client, and validating interactions end-to-end with real tools. The lab sequence also demonstrated how to move from a working prototype (MQTT + Node-RED) to a more structured ecosystem (Home Assistant with entities and services), which reflects real product workflows. I saw immediate impact in other semester projects, since Node-RED and MQTT were reused in an open-source gas sensor application and in my Innovative Project (keyless car entry) with AWS IoT Core, reinforcing the transferability of these skills.",
       "relacao_projeto_profissional": "This course maps directly to embedded and IoT roles where the core challenge is connecting devices to a reliable middleware layer and exposing data/controls to applications safely and maintainably. MQTT-based architectures are common in smart home, industrial monitoring, and connected mobility, and the ability to design topics, reason about QoS, and debug broker-level behavior is practical day one value.\n\nOn a personal level, the course also improved confidence in technical discussions during recruiting. Knowledge from this module helped me during an interview for “Innovation IoT: Connectez un Objet Intelligent via de multiples Protocoles de Communication” at Thales, where MQTT and LwM2M were part of the expected communication stack, and the lab-driven understanding made it easier to explain architectural choices and trade-offs."
+    },
+
+    {
+      "id": "software-engineering",
+      "titulo": "Software engineering",
+      "periodo": "1st Semester 2025-2026",
+      "status": "Completed",
+      "tecnologias": [],
+      "tags": [],
+      "imagens": ["assets/img/"],
+      "relatorio_pdf": "",
+      "descricao": "",
+      "tecnica": "",
+      "sistema_de_curso": "",
+      "matriz_competencia": [
+        {
+          "nota": 0,
+          "titulo": ""
+        }
+      ],
+      "justificativa": "",
+      "relacao_projeto_profissional": ""
+    },
+
+    {
+      "id": "service-architecture",
+      "titulo": "Service architecture",
+      "periodo": "1st Semester 2025-2026",
+      "status": "Completed",
+      "tecnologias": [],
+      "tags": [],
+      "imagens": ["assets/img/"],
+      "relatorio_pdf": "",
+      "descricao": "",
+      "tecnica": "",
+      "sistema_de_curso": "",
+      "matriz_competencia": [
+        {
+          "nota": 0,
+          "titulo": ""
+        }
+      ],
+      "justificativa": "",
+      "relacao_projeto_profissional": ""
+    },
+
+    {
+      "id": "security-connected-objects",
+      "titulo": "Security for connected objects",
+      "periodo": "1st Semester 2025-2026",
+      "status": "Completed",
+      "tecnologias": [],
+      "tags": [],
+      "imagens": ["assets/img/"],
+      "relatorio_pdf": "",
+      "descricao": "",
+      "tecnica": "",
+      "sistema_de_curso": "",
+      "matriz_competencia": [
+        {
+          "nota": 0,
+          "titulo": ""
+        }
+      ],
+      "justificativa": "",
+      "relacao_projeto_profissional": ""
     },
 
     {
@@ -178,6 +264,50 @@
     },
     
     {
+      "id": "lp-wpan-protocols",
+      "titulo": "Communication protocols for LP-WPAN",
+      "periodo": "1st Semester 2025-2026",
+      "status": "Completed",
+      "tecnologias": [],
+      "tags": [],
+      "imagens": ["assets/img/"],
+      "relatorio_pdf": "",
+      "descricao": "",
+      "tecnica": "",
+      "sistema_de_curso": "",
+      "matriz_competencia": [
+        {
+          "nota": 0,
+          "titulo": ""
+        }
+      ],
+      "justificativa": "",
+      "relacao_projeto_profissional": ""
+    },
+
+    {
+      "id": "emerging-network",
+      "titulo": "Emerging network (SDN, NGN)",
+      "periodo": "1st Semester 2025-2026",
+      "status": "Completed",
+      "tecnologias": [],
+      "tags": [],
+      "imagens": ["assets/img/"],
+      "relatorio_pdf": "",
+      "descricao": "",
+      "tecnica": "",
+      "sistema_de_curso": "",
+      "matriz_competencia": [
+        {
+          "nota": 0,
+          "titulo": ""
+        }
+      ],
+      "justificativa": "",
+      "relacao_projeto_profissional": ""
+    },
+
+    {
       "id": "from3gto6g",
       "titulo": "From 3G to 6G",
       "periodo": "1st Semester 2025-2026",
@@ -196,6 +326,72 @@
       ],
       "justificativa": "These ratings reflect what was practiced in the course: a clear generation-by-generation model (services, spectrum, and KPIs) was consolidated, connected to the 3GPP release logic, and grounded with RF fundamentals explaining why higher frequencies require new antenna strategies. The health-focused topic was handled as a structured synthesis rather than a “settled” claim, highlighting mechanisms, evidence limits, and interpretation gaps then delivered through an evaluated oral presentation with a responsible conclusion.",
       "relacao_projeto_profissional": "This course directly supports my professional trajectory in embedded systems and connected devices because it connects real industry constraints (standardization, roadmap timing, spectrum availability, hardware scaling) to the design decisions behind IoT and mobile connectivity. Understanding the 3GPP ecosystem and the evolution from LTE to 5G NR and beyond helps position cellular IoT technologies within realistic constraints for products and industrial systems. This knowledge also proved immediately useful in my interview at Thales for the “R&I: Communications V2X et Sécurité 5G” role, where I could discuss these constraints and trade-offs with concrete technical grounding.\n\nIt also strengthened my ability to account for societal and safety concerns that still influence engineering decisions. For roles involving IoT, smart systems, or telecom-connected embedded products, discussing EM exposure questions responsibly without exaggeration, but with technical grounding and awareness of uncertainty adds value when designing systems, documenting risk, or communicating with stakeholders."
+    },
+
+    {
+      "id": "english",
+      "titulo": "English",
+      "periodo": "1st Semester 2025-2026",
+      "status": "Completed",
+      "tecnologias": [],
+      "tags": [],
+      "imagens": ["assets/img/"],
+      "relatorio_pdf": "",
+      "descricao": "",
+      "tecnica": "",
+      "sistema_de_curso": "",
+      "matriz_competencia": [
+        {
+          "nota": 0,
+          "titulo": ""
+        }
+      ],
+      "justificativa": "",
+      "relacao_projeto_profissional": ""
+    },
+
+    {
+      "id": "individualized-professional-development",
+      "titulo": "Individualized Professional Development",
+      "periodo": "1st Semester 2025-2026",
+      "status": "Completed",
+      "tecnologias": [],
+      "tags": [],
+      "imagens": ["assets/img/"],
+      "relatorio_pdf": "",
+      "descricao": "",
+      "tecnica": "",
+      "sistema_de_curso": "",
+      "matriz_competencia": [
+        {
+          "nota": 0,
+          "titulo": ""
+        }
+      ],
+      "justificativa": "",
+      "relacao_projeto_profissional": ""
+    },
+
+    {
+      "id": "team-management",
+      "titulo": "Team Management",
+      "periodo": "1st Semester 2025-2026",
+      "status": "Completed",
+      "tecnologias": [],
+      "tags": [],
+      "imagens": ["assets/img/"],
+      "relatorio_pdf": "",
+      "descricao": "",
+      "tecnica": "",
+      "sistema_de_curso": "",
+      "matriz_competencia": [
+        {
+          "nota": 0,
+          "titulo": ""
+        }
+      ],
+      "justificativa": "",
+      "relacao_projeto_profissional": ""
     },
 
     {
