@@ -8,7 +8,7 @@
       "status": "In progress",
       "tecnologias": ["Python","UWB","BLE","Cryptography","IoT","AWS IoT Core"],
       "tags": ["Ultra Wideband","IoT","Security"],
-      "imagens": ["assets/img/keyless.jpg","assets/img/keyless-app.jpg","assets/img/keyless-hardware.jpg"],
+      "imagens": ["assets/img/keyless.jpg","assets/img/NXP_board.jpg","assets/img/keyless-hardware.jpg"],
       "relatorio_pdf": "reports/keyless-access-car.pdf",
       "descricao": "Innovative system to unlock fleet vehicles via smartphone using authorized corporate credentials. Year-long, high-complexity project developed in partnership with ACTIA and NXP, involving cutting-edge wireless communication, cryptography, and secure authentication. This project aims to revolutionize fleet management by providing a seamless and secure keyless access solution that leverages modern mobile technology and industrial-grade security protocols.",
       "tecnica": "The project focuses on implementing Ultra-Wideband (UWB) technology for precise distance measurement and Bluetooth Low Energy (BLE) for initial device discovery and communication. We utilize advanced cryptographic algorithms including AES-256 for data encryption and RSA for key exchange to ensure secure communication between the smartphone and the vehicle. The system architecture involves AWS IoT Core for cloud-based device management, authentication services, and real-time monitoring. Python is used for backend services and mobile application integration. The technical challenges include managing precise ranging measurements, implementing replay attack prevention, ensuring low power consumption, and maintaining robust security across all communication layers.",
@@ -93,6 +93,44 @@
       ],
       "justificativa": "These scores reflect both the breadth of the course content and the fact that the lab validated the full reasoning chain from requirements to implementation constraints. The work combined power budgeting, architecture selection (direct vs store-then-use), and system-level interpretation of RF measurements, including MPPT dynamics and antenna/polarization effects. Writing the final report also required explaining decisions and limitations clearly, matching the intended learning outcomes of designing energy-autonomous connected objects under realistic constraints.",
       "relacao_projeto_profissional": "This course directly supports embedded systems and IoT work by grounding low-power design in realistic energy constraints rather than only computation and communication requirements. Understanding how storage thresholds, duty cycling, and RF link conditions translate into usable DC power is a practical skill for deployable sensor nodes in constrained environments. Battery-free and maintenance-free sensing is particularly relevant for industrial monitoring use cases where replacing batteries is costly or impossible; the end-to-end rectenna-based approach clarified what is feasible with ambient RF versus dedicated WPT and highlighted improvement levers such as antenna strategy, matching, and power-management choices when pushing for range and robustness."
+    },
+
+    {
+      "id": "m2m",
+      "titulo": "Machine to Machine",
+      "periodo": "1st Semester 2025-2026",
+      "status": "Completed",
+      "tecnologias": ["ESP8266 (NodeMCU)", "C++", "MQTT", "Eclipse Mosquitto", "Arduino IDE", "Node-RED", "Home Assistant", "ArduinoHA"],
+      "tags": ["IoT", "MQTT protocol", "MQTT Broker", "Communications", "Smart Home"],
+      "imagens": ["assets/img/m2m.jpeg", "assets/img/m2m.png"],
+      "relatorio_pdf": "reports/m2m.pdf",
+      "descricao": "This course strengthened how to think about machine-to-machine communication as an engineering system: devices, middleware, and the application layer working together in a coherent architecture. The main focus was understanding how constrained IoT nodes can exchange data reliably and securely using MQTT, then building an end-to-end pipeline that remains easy to test, extend, and supervise.\n\nBeyond the technical stack, the course was especially useful because it connected directly to projects running in parallel during the semester. Concepts and tools from the labs were reused in an open-source project (a gas sensor application) and also in my Innovative Project (keyless car entry) where MQTT is part of the cloud integration through AWS IoT Core, which helped reinforce the “why” behind each design choice.",
+      "tecnica": "The course covered IoT fundamentals and platform challenges (heterogeneity, interoperability, security, and quality of service), then narrowed down to practical middleware building blocks for connected systems. MQTT was introduced as a lightweight publish/subscribe protocol designed for sensors and actuators, relying on a broker to manage client sessions and route messages through topic-based queues. Key topics included MQTT over TCP/IP, topic hierarchies, retained messages, keep-alive mechanisms, will messages for disconnect handling, and QoS levels (0, 1, 2) to balance reliability versus overhead.\n\nHands-on work started by installing and validating an Eclipse Mosquitto broker and testing publish/subscribe behavior using command-line clients. The labs then moved to embedded implementation with an ESP8266 (NodeMCU) programmed in Arduino IDE: Wi-Fi connectivity, MQTT client setup, and bidirectional messaging with both publications (telemetry/events) and subscriptions (remote commands). A simple smart-home scenario structured the application logic around dedicated topics for button state, luminosity measurements, and light commands, illustrating how manual and automatic behaviors can coexist through clear topic design.\n\nNode-RED was used for fast prototyping of higher-level applications on top of MQTT. Flow-based logic enabled quick parsing, routing, and rule evaluation, and dashboards provided real-time visualization and interaction (charts, controls, debug traces). The same middleware reasoning was later extended to specialized platforms with Home Assistant, where entities, services, and device organization provide a more structured supervision layer. Using ArduinoHA, the ESP8266 was integrated as a Home Assistant device and exposed controllable entities, highlighting naming conventions, scalability considerations, and practical security measures such as authentication and the possibility of TLS when needed. Energy-related considerations were also addressed through message frequency, connection efficiency, and the availability of low-power modes on the ESP8266 for battery-powered deployments.",
+      "sistema_de_curso": "The course combined 3 lecture sessions (1h15 each) with 4 laboratory sessions (2h45 each). The course content introduced IoT architecture and interoperability challenges, then focused on MQTT principles and rapid prototyping with Node-RED, before exploring specialized middleware with Home Assistant. The labs progressively validated an end-to-end chain: broker installation and testing, embedded MQTT client development on ESP8266, application orchestration and dashboards in Node-RED, and device integration into Home Assistant using ArduinoHA.",
+      "matriz_competencia": [
+        {
+          "nota": 4,
+          "titulo": "Know how to situate the main standards for the Internet of Things"
+        },
+        {
+          "nota": 4,
+          "titulo": "Deploy an architecture compliant to an IoT standard and implement a sensor network"
+        },
+        {
+          "nota": 4,
+          "titulo": "Deploy and configure an IoT architecture"
+        },
+        {
+          "nota": 4,
+          "titulo": "Interact with the different resources of the architecture using REST services"
+        },
+        {
+          "nota": 4,
+          "titulo": "Integrate a new technology into the deployed architecture"
+        }
+      ],
+      "justificativa": "The rating is high across all competencies because the course required both understanding and execution: selecting the right communication model, deploying the broker infrastructure, building an embedded client, and validating interactions end-to-end with real tools. The lab sequence also demonstrated how to move from a working prototype (MQTT + Node-RED) to a more structured ecosystem (Home Assistant with entities and services), which reflects real product workflows. I saw immediate impact in other semester projects, since Node-RED and MQTT were reused in an open-source gas sensor application and in my Innovative Project (keyless car entry) with AWS IoT Core, reinforcing the transferability of these skills.",
+      "relacao_projeto_profissional": "This course maps directly to embedded and IoT roles where the core challenge is connecting devices to a reliable middleware layer and exposing data/controls to applications safely and maintainably. MQTT-based architectures are common in smart home, industrial monitoring, and connected mobility, and the ability to design topics, reason about QoS, and debug broker-level behavior is practical day one value.\n\nOn a personal level, the course also improved confidence in technical discussions during recruiting. Knowledge from this module helped me during an interview for “Innovation IoT: Connectez un Objet Intelligent via de multiples Protocoles de Communication” at Thales, where MQTT and LwM2M were part of the expected communication stack, and the lab-driven understanding made it easier to explain architectural choices and trade-offs."
     },
 
     {
