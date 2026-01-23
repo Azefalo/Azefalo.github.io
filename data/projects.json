@@ -6,8 +6,8 @@
       "titulo": "Keyless Access Car — ACTIA & NXP",
       "periodo": "Academic Year 2025-2026",
       "status": "In progress",
-      "tecnologias": ["Python","UWB","BLE","Cryptography","IoT","AWS IoT Core"],
-      "tags": ["Ultra Wideband","IoT","Security"],
+      "tecnologias": ["Python","UWB","BLE","IoT","AWS IoT Core"],
+      "tags": ["Ultra Wideband","Energy Management", "Cloud Integration","Embedded Systems"],
       "imagens": ["assets/img/keyless.jpg","assets/img/NXP_board.jpg","assets/img/keyless-hardware.jpg"],
       "relatorio_pdf": "reports/keyless-access-car.pdf",
       "descricao": "Innovative system to unlock fleet vehicles via smartphone using authorized corporate credentials. Year-long, high-complexity project developed in partnership with ACTIA and NXP, involving cutting-edge wireless communication, cryptography, and secure authentication. This project aims to revolutionize fleet management by providing a seamless and secure keyless access solution that leverages modern mobile technology and industrial-grade security protocols.",
@@ -31,7 +31,59 @@
       "relacao_projeto_profissional": "This project directly aligns with my career goal of working in the embedded systems and IoT industry, particularly in automotive and security-focused applications. The competences developed in wireless communication, cryptography, and cloud integration are essential for modern connected vehicle systems and smart mobility solutions. I aim to pursue roles such as IoT Systems Engineer or Embedded Security Specialist in automotive companies or technology firms developing next-generation connected devices. The experience with industrial partners ACTIA and NXP has provided valuable insights into industry practices, standards, and the complete product development lifecycle, which will be crucial for my professional success in embedded systems and IoT domains."
     },
 
-
+    {
+      "id": "smart-devices",
+      "titulo": "Smart devices: from manufacturing to application",
+      "periodo": "1st Semester 2025-2026",
+      "status": "Completed",
+      "tecnologias": ["Nanofabrication", "Arduino", "LoRaWAN", "Node‑RED", "PCB"],
+      "tags": ["Smart devices", "Gas sensor", "IoT"],
+      "imagens": ["assets/img/smart-devices.png", "assets/img/gas_sensor.jpeg", "assets/img/open_source.jpg"],
+      "relatorio_pdf": "reports/smart_devices.pdf",
+      "descricao": "This project aimed to build a complete IoT gas-sensor system from scratch. It started with nanofabrication of a WO₃-based metal-oxide gas sensor and concluded with a connected device that sends data over LoRaWAN and displays it on a custom dashboard. The work combined hands-on laboratory fabrication, sensor characterization, analog conditioning, embedded programming, wireless communication and software integration. By going through all stages, from microfabrication to cloud connectivity, the course provided a comprehensive view of how smart devices are created.",
+      "tecnica": "The core component was a metal-oxide gas sensor using tungsten trioxide nanoparticles deposited between interdigitated electrodes. Two identical sensing elements and an integrated polysilicon heater allowed control of the operating temperature up to about 300 °C, monitored by a metal thermistor. The sensor was packaged in a 10-lead TO-5 can and exhibited very high resistance in dry air (10–20 GΩ). Electrical characterization measured an aluminium thermistor resistance around 86 Ω at room temperature with ~1 Ω / °C sensitivity. Gas-response tests at 277 °C with 1000 ppm ethanol showed a relative resistance change of ~64 %, a sensitivity of 85 kΩ / ppm and a detection limit near 38 ppm. These results were compiled into a data sheet and informed the design of an analog front-end.\n\nBecause the sensor resistance is extremely high, a transimpedance amplifier with high gain was designed to convert nanoampere currents into measurable voltages for the Arduino ADC. RC filters reduced low-frequency drift and mains interference. Simulations confirmed an amplifier gain near 101 and effective suppression of 50 Hz noise. The microcontroller used was an Arduino Uno, chosen for its large community support and compatibility with the RN2483A LoRaWAN module. The firmware reads the gas sensor on analog pin A0, displays values on an OLED, triggers an LED alarm when the threshold is exceeded and transmits data via The Things Network every 10 s.\n\nFor remote connectivity, the system used LoRaWAN. Recent trends in LoRaWAN point to hybrid sub‑GHz + 2.4 GHz operation for higher data rates, stronger encryption and key-management schemes, and multi-hop relays that extend coverage without replacing gateways. Integrating such protocols ensured that the gas-sensor prototype is aligned with current IoT developments. On the software side, Node‑RED was employed to build an MQTT-based pipeline that subscribes to ChirpStack/TTN topics, decodes payloads, applies threshold logic and displays real-time and historical data on a dashboard.\n\nBeyond the prototype, a custom PCB was designed in KiCAD, integrating the sensor, amplifier, microcontroller, digital potentiometers and LoRa module into a single board. A basic mobile app was created with MIT App Inventor to control and monitor the system via Bluetooth, demonstrating how users could interact with the device.",
+      "sistema_de_curso": "The course combined intensive laboratory work and classroom sessions. Approximately 20 hours were dedicated to nanofabrication, including photolithography, electrode patterning and nanoparticle deposition. Around 19 class sessions of 1h15 each covered sensor characterization, analog circuit design, simulation with LTSpice, programming the Arduino and integrating LoRaWAN and Node‑RED. Students developed a full data sheet, wrote firmware, built Node‑RED flows, designed the PCB and tested the system with instructors.",
+      "matriz_competencia": [
+        {
+          "nota": 4,
+          "titulo": "Understand microcontroller archictecture and how to use them"
+        },
+        {
+          "nota": 4,
+          "titulo": "Be able to design data acquisition system (sensor, conditioner, microcontroller) with respect to the application"
+        },
+        {
+          "nota": 3,
+          "titulo": "Be able to design a shield to accommodate the gas sensor"
+        },
+        {
+          "nota": 4,
+          "titulo": "Be abe to design the sofware to use the gas sensor and its HMI"
+        },
+        {
+          "nota": 4,
+          "titulo": "Be able to combine all of the above mentioned components into a smart device"
+        },
+        {
+          "nota": 4,
+          "titulo": "Be able to manufacture a nano-particles sensor using micro-electronics tools: chemical synthesis, assembly, testing"
+        },
+        {
+          "nota": 4,
+          "titulo": "Understand basic notions of sensors, data acquisition: physics, electronics and metrology point of view"
+        },
+        {
+          "nota": 4,
+          "titulo": "Be able to design the datasheet of the sensor manufactured"
+        },
+        {
+          "nota": 4,
+          "titulo": "Be able to design the electronic circuit of a sensor’s signal conditioner (design + simulation)"
+        }
+      ],
+      "justificativa": "The competence scores reflect a project that spanned sensor fabrication, electronic design and IoT integration. Mastery of microcontroller architecture was required to code the Arduino and implement LoRaWAN communication. Designing the data-acquisition chain demanded understanding of high-impedance sensors and amplifier circuits. While the PCB concept was realized, the shield itself remained a work in progress, justifying a slightly lower score. Overall, the practical work enabled a deeper grasp of nanofabrication, sensor physics, analog conditioning and embedded software.",
+      "relacao_projeto_profissional": "This project has direct relevance to my professional ambitions in embedded systems and IoT. Building a gas-sensor platform from the ground up required integrating nanoscale fabrication with system-level design, which echoes the multidisciplinary challenges in modern product development. By applying both analog and digital design skills, I feel better prepared to tackle future projects such as integrating camera-based AI sensors on STM microcontrollers with LoRaWAN connectivity. The experience of designing a custom PCB, coding network protocols and deploying a dashboard has strengthened my confidence to contribute to smart-city and industrial IoT solutions."
+    },
 
     {
       "id": "embedded-ia-for-iot",
@@ -62,28 +114,6 @@
       "justificativa": "My deep learning competence is rated 3 because I successfully designed, trained, and optimized CNN models, though some advanced techniques like custom loss functions required additional research. Computer vision competence is also 3 as I effectively applied preprocessing and augmentation techniques that significantly improved model performance. Model evaluation is rated 2 because while I used appropriate metrics and validation strategies, I could improve in advanced techniques like cross-validation and bias-variance analysis. Python programming for ML is rated 3 as I demonstrated proficiency in using TensorFlow and Keras frameworks, implementing the complete pipeline independently with occasional reference to documentation.",
       "relacao_projeto_profissional": "This project is highly relevant to my interest in intelligent embedded systems and IoT applications. Machine learning, particularly computer vision, is increasingly integrated into embedded devices for edge computing scenarios. I aspire to work in areas where ML models are deployed on resource-constrained devices for real-time applications such as smart surveillance, autonomous systems, or health monitoring. The competences in ML model development, optimization, and evaluation are essential for roles like ML Engineer, Computer Vision Specialist, or Embedded AI Developer. This experience provides a foundation for future work in deploying ML models on edge devices, which is a growing field in IoT and smart systems."
     },
-
-    {
-      "id": "smart-devices",
-      "titulo": "Smart Devices",
-      "periodo": "1st Semester 2025-2026",
-      "status": "Completed",
-      "tecnologias": [],
-      "tags": [],
-      "imagens": ["assets/img/smart-devices.png"],
-      "relatorio_pdf": "",
-      "descricao": "",
-      "tecnica": "",
-      "sistema_de_curso": "",
-      "matriz_competencia": [
-        {
-          "nota": 0,
-          "titulo": ""
-        }
-      ],
-      "justificativa": "",
-      "relacao_projeto_profissional": ""
-    },
     
     {
       "id": "energy-for-connected-objects",
@@ -92,7 +122,7 @@
       "status": "Completed",
       "tecnologias": ["Raspberry Pi", "SDR", "Rectenna (RF-to-DC)", "PMU", "Supercapacitor"],
       "tags": ["IoT", "Energy Harvesting", "Wireless Power Transfer", "Battery-free", "Low-power design", "RF"],
-      "imagens": ["assets/img/energy.png"],
+      "imagens": ["assets/img/energy.png", "assets/img/energy_lab.jpg", "assets/img/energy_setup.jpg"],
       "relatorio_pdf": "reports/energy_connected_objects.pdf",
       "descricao": "Energy for Connected Objects focused on powering low-power IoT nodes without wires and without conventional batteries, combining energy storage, ambient energy harvesting, and wireless power transfer. The course connected the physics of energy conversion with practical design choices required to build energy-autonomous sensing nodes. Hands-on lab work explored what “battery-free” really means in practice: how much energy is needed for a task, what power levels are realistically available, and which architecture makes the system robust to fluctuations. The final report documented the full chain from RF capture to DC power management and real-world constraints such as non-linearities and propagation effects.",
       "tecnica": "The course covered three main approaches: (1) electricity storage (capacitors/inductors versus indirect options like batteries/supercapacitors), focusing on usable energy, voltage thresholds, losses, and regulation needs; (2) ambient harvesting (light, mechanical, thermal, electromagnetic), emphasizing variability and order-of-magnitude feasibility checks; and (3) wireless power transfer with dedicated sources, including near-field vs far-field regimes, free-space losses, and practical ISM-band considerations. A rectenna-based chain was used as a reference architecture for RF harvesting/WPT: antenna, impedance matching, RF-to-DC rectifier, and DC filtering/storage, with an emphasis on end-to-end co-optimization. In the lab, the work started from a power budget for a red LED and compared two strategies: direct consumption (antenna → rectifier → LED) versus store-then-use (PMU + DC-DC + supercapacitor) to accumulate energy and then discharge at a controlled operating point. Rectifier characterization used frequency sweeps in the 868 MHz and 2.45 GHz bands with an SDR-based setup; observations highlighted parasitics/non-linearities and the impact of antenna choice and polarization alignment in over-the-air tests.",
@@ -183,7 +213,7 @@
       "tecnologias": [],
       "tags": [],
       "imagens": ["assets/img/service-architecture.png"],
-      "relatorio_pdf": "",
+      "relatorio_pdf": "reports/service_architecture.pdf",
       "descricao": "",
       "tecnica": "",
       "sistema_de_curso": "",
