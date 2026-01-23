@@ -34,6 +34,7 @@
     {
       "id": "smart-devices",
       "titulo": "Smart devices: from manufacturing to application",
+      "github": "https://github.com/MOSH-Insa-Toulouse/2025-2026-5ISS-BENCHEKROUN-DIANI-AZZABI-BUTTOW-ELGHAIT",
       "periodo": "1st Semester 2025-2026",
       "status": "Completed",
       "tecnologias": ["Nanofabrication", "Arduino", "LoRaWAN", "Node‑RED", "PCB"],
