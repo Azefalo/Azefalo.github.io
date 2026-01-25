@@ -192,21 +192,25 @@
       "titulo": "Software engineering",
       "periodo": "1st Semester 2025-2026",
       "status": "Completed",
-      "tecnologias": [],
+      "tecnologias": ["Java", "Microservices", "Agile method"],
       "tags": [],
-      "imagens": ["assets/img/software-engineering.png"],
+      "imagens": ["assets/img/software-engineering.png", "assets/img/architecture-diagram.jpg"],
       "relatorio_pdf": "",
-      "descricao": "",
-      "tecnica": "",
-      "sistema_de_curso": "",
+      "descricao": "This short module was used as a structured kickoff for an Architecture Service project, focusing on how to translate a real scenario into a coherent service architecture before implementation. The work centered on clarifying responsibilities, defining service boundaries, and validating architectural choices early to avoid rework later.\n\nThe selected use case was a smart airport safety workflow, where sensing, decision-making, actuation, and traceability were separated into clear components to support maintainability and future evolution.",
+      "tecnica": "The course emphasized architectural thinking before coding, especially for microservice-based systems where responsibilities must be explicit and interfaces must remain stable. The main deliverable was a system diagram capturing the end-to-end flow and the role of each service in the architecture.\n\nThe proposed design modeled three independent sensing functions deployed at an airport fuel station, each represented as its own microservice. These sensing services report to a controller microservice responsible for aggregating events and coordinating the safety logic. A dedicated historical microservice stores operational data to support traceability, later analysis, and audit requirements.\n\nActuation was separated into an actuator microservice that triggers emergency responses at the airport fire station. In the defined workflow, this actuator microservice is responsible for activating a siren, turning on an emergency light, and opening all gates so that fire trucks can leave immediately. This separation keeps safety actions isolated, testable, and replaceable without modifying the sensing layer.\n\nAgile principles were discussed as a practical way to de-risk architecture work: iterating from a high-level diagram to refined service contracts, prioritizing the most critical flows first, and validating assumptions early with stakeholders.",
+      "sistema_de_curso": "The course was organized as two 1h15 sessions, used to brainstorm the service architecture, draft the microservice workflow, and validate the proposed structure with the instructor before moving toward implementation in the broader project.",
       "matriz_competencia": [
         {
-          "nota": 0,
-          "titulo": ""
+          "nota": 2,
+          "titulo": "Apply DevOps : Continuous integration and continous deployement (CI/CD) on a microservice based architecture"
+        },
+        {
+          "nota": 3,
+          "titulo": "Conduct a project following the agile method"
         }
       ],
-      "justificativa": "",
-      "relacao_projeto_profissional": ""
+      "justificativa": "A score of 2 for DevOps/CI/CD reflects the fact that these topics remained conceptual in this module, without hands-on implementation of pipelines or deployment automation. The agile method earned a 3 because it was effectively used to structure the early project phase and converge on an architecture efficiently, while deeper execution practices and longer iteration cycles were left to subsequent project work.",
+      "relacao_projeto_profissional": "This module reinforced a habit that directly carries into professional engineering: defining system boundaries, data flow, and responsibilities before writing code, especially when multiple services must evolve independently. The airport safety scenario also mirrors real constraints found in industrial systems, where traceability, reliability, and clear separation between sensing, decision, and actuation are essential.\n\nIn future embedded and IoT-facing roles, this approach supports designing robust service backends around physical devices, reducing integration risk, and enabling maintainable growth from prototype to production."
     },
 
     {
@@ -214,21 +218,37 @@
       "titulo": "Service architecture",
       "periodo": "1st Semester 2025-2026",
       "status": "Completed",
-      "tecnologias": [],
-      "tags": [],
-      "imagens": ["assets/img/service-architecture.png"],
+      "tecnologias": ["Java", "Spring Boot", "Maven", "MySQL Workbench", "Eclipse IDE", "Git/GitHub"],
+      "tags": ["Service-Oriented Architecture", "Microservices", "RESTful Services", "Distributed Architecture", "Backend Engineering", "System Integration"],
+      "imagens": ["assets/img/service-architecture.png", "assets/img/architecture-final-test.png"],
       "relatorio_pdf": "reports/service_architecture.pdf",
-      "descricao": "",
-      "tecnica": "",
-      "sistema_de_curso": "",
+      "descricao": "This course built a structured understanding of Service-Oriented Architecture (SOA) and how service-based systems are designed, exposed, and integrated in distributed environments. The focus was on the architectural principles behind interoperable services, including clear contracts, loose coupling, separation of concerns, and the practical tradeoffs between different service styles (SOAP and REST) when building real systems. \n\nTo make these concepts concrete, the course used a realistic integration case study where multiple services must collaborate to monitor a situation, compute decisions, trigger actions, and keep traceable records. The project work served as an applied sandbox to practice service decomposition, API design, orchestration patterns, and end-to-end verification across independently running components.",
+      "tecnica": "The course introduced Service-Oriented Architecture (SOA) fundamentals and how interoperability is achieved through well-defined service contracts, standardized communication, and loose coupling. In practice, this means separating responsibilities into services that expose clear interfaces, so implementations can evolve independently without breaking the overall system. The course compared SOAP and REST as two major approaches to web services: SOAP emphasizes formal contracts and standardized message structures, while REST focuses on resource-oriented APIs over HTTP and is often more lightweight for service-to-service communication in modern systems.\n\nThese principles were practiced through a microservices architecture implemented as multiple independent Spring Boot applications. Each microservice was created with Spring Initializr and built with Maven, ensuring consistent dependency management and reproducible packaging across services. To enable local integration in a distributed style, each service was configured to run on its own port, allowing them to start independently while still communicating through HTTP calls.\n\nA strict separation of concerns was enforced by design: sensor services only hold and expose their own state; the decision engine contains the decision logic but does not own sensor state; the actuator service executes commands without business rules; and persistence is isolated in a dedicated history service. This architecture keeps coupling low, makes responsibilities explicit, and mirrors real deployments where devices, control logic, and storage are decoupled but integrated through stable APIs.\n\nCommunication between services was implemented through REST interfaces. Sensor microservices expose endpoints to update and retrieve their simulated readings, which allowed external testing and controlled scenario execution. The decision engine retrieves the live state of each sensor by performing REST requests to the corresponding services, then evaluates predefined rules to determine whether an emergency exists. When a critical condition is detected, the decision engine calls the actuator service endpoints to activate the siren, switch on emergency lights, and open the gate. This workflow demonstrates a practical orchestration pattern where one service coordinates a system-wide response without directly owning the components it controls. \n\nTraceability was treated as a first-class requirement through a dedicated History Service backed by a MySQL database managed via MySQL Workbench. Instead of letting every microservice access the database, persistence is centralized behind the history service API, which becomes the single entry point for storing events. Data was mapped via JPA so that records are created automatically as part of the normal execution flow. The database schema was designed around an events table that stores timestamps, sensor type, measured value, and a description of the triggered action, enabling post-analysis and audit trails of both observations and reactions. \n\nValidation was performed through scenario-based integration tests using Postman. Scenarios covered normal operation, gas leak detection, fire detection, manual alarm activation, and combined sequences to demonstrate global coherence. During these tests, sensor updates were posted manually, the decision engine was invoked to evaluate the system, actuators were triggered accordingly, and the resulting event traces were verified in the MySQL database to confirm that the end-to-end architecture behaves as expected.",
+      "sistema_de_curso": "The course combined 6 remote lectures covering SOA, RESTful services, and microservices, plus 10 exercise sessions (1h15) and 4 longer sessions (2h45) dedicated to implementing and integrating the final solution with the professor’s support.",
       "matriz_competencia": [
         {
-          "nota": 0,
-          "titulo": ""
+          "nota": 4,
+          "titulo": "Understand the related concepts and features of a Service Oriented Architecture"
+        },
+        {
+          "nota": 4,
+          "titulo": "Develop a distributed architecture using  web services"
+        },
+        {
+          "nota": 4,
+          "titulo": "Deploy and configure an SOA using SOAP"
+        },
+        {
+          "nota": 4,
+          "titulo": "Implement and test a microservices architecture using Spring BootDeploy and configure an SOA using REST"
+        },
+        {
+          "nota": 4,
+          "titulo": "Design, develop, and deploy a microservice architecture"
         }
       ],
-      "justificativa": "",
-      "relacao_projeto_profissional": ""
+      "justificativa": "These scores reflect strong alignment with the course objectives: SOA concepts were applied to structure a system into well-bounded services with clear interfaces, and the final implementation demonstrated distributed behavior through REST-based integration and a clean separation of responsibilities. The work also validated traceability through a dedicated persistence service and database verification, which matches SOA concerns in real deployments where audit trails and system observability are required.",
+      "relacao_projeto_profissional": "This course strengthened backend architecture skills that transfer directly to IoT and embedded-connected systems, especially when devices and edge services must report state, trigger actions, and maintain audit trails. Concepts like service contracts, loose coupling, and traceability map well to fleet management, safety monitoring, and industrial supervision platforms where reliability and post-incident analysis matter. \n\nEven if Java and Spring are not the primary tools planned for future projects, the architectural reasoning remains valuable: decomposing a system into independently deployable services, designing robust API boundaries, and validating distributed workflows with realistic scenarios are skills that carry across stacks (cloud-native platforms, IoT backends, and event-driven systems)."
     },
 
     {
