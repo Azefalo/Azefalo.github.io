@@ -124,7 +124,7 @@
       "titulo": "Energy for connected objects",
       "periodo": "1st Semester 2025-2026",
       "status": "Completed",
-      "tecnologias": ["Raspberry Pi", "SDR", "Rectenna (RF-to-DC)", "PMU", "Supercapacitor", "NXP Boards"],
+      "tecnologias": ["Raspberry Pi", "SDR", "PMU", "Supercapacitor", "NXP Boards"],
       "tags": ["IoT", "Energy Harvesting", "Wireless Power Transfer", "Battery-free", "Low-power design", "RF"],
       "imagens": ["assets/img/energy.png", "assets/img/energy_lab.jpg", "assets/img/energy_setup.jpg"],
       "relatorio_pdf": "reports/energy_connected_objects.pdf",
@@ -300,21 +300,41 @@
       "titulo": "Cloud and Edge Computing",
       "periodo": "1st Semester 2025-2026",
       "status": "Completed",
-      "tecnologias": [],
-      "tags": [],
+      "tecnologias": ["Docker", "OpenStack", "Kubernetes", "VirtualBox", "Node.js"],
+      "tags": ["Cloud Infrastructure", "Virtualization", "Containers", "OpenStack", "Kubernetes", "Cloud Networking"],
       "imagens": ["assets/img/edge-computing.jpg"],
       "relatorio_pdf": "reports/edge_computing.pdf",
-      "descricao": "",
-      "tecnica": "",
-      "sistema_de_curso": "",
+      "descricao": "Cloud and Edge Computing provided a practical path from virtualization fundamentals to deploying and operating service-based systems on modern cloud infrastructure. The work connected concepts such as VMs versus containers, infrastructure abstraction, and network isolation with hands-on deployments that exposed the operational reality behind “elastic” and “on-demand” resources.\n\nAcross a sequence of labs, the course progressively moved from local virtualized environments to an IaaS platform, and finally to container orchestration on top of that infrastructure. Instead of staying at a conceptual level, each step required making services reachable, keeping deployments reproducible, and validating behavior with real client requests and network constraints.",
+      "tecnica": "The course started by grounding cloud and edge discussions in virtualization primitives and isolation models. Virtual machines were treated as full OS-level environments managed by a hypervisor, while containers were approached as process-level isolation sharing the host kernel. This difference directly influenced startup time, resource overhead, portability, and the operational trade-offs when packaging and deploying services.\n\nA first layer of practical work used VirtualBox to understand how “a service on a machine” becomes “a service on a network.” The setup relied on NAT networking with explicit port forwarding to expose services running inside the guest VM to the host environment. That exercise made connectivity constraints tangible: without correct forwarding rules and consistent addressing, the service exists but remains unreachable. The same logic later reappeared at cloud scale through router configuration, security groups, and public IP exposure. \n\nContainerization was then used to turn application deployment into a repeatable artifact. Docker images were built from Dockerfiles, making dependencies and runtime configuration explicit and reproducible. Rather than deploying “by hand,” the application lifecycle became: define the build context, produce an image, run containers with clear ports and environment variables, and validate behavior with client calls. This step also clarified why containers are a natural fit for service-based systems: consistent packaging, fast instantiation, and an interface-driven runtime model.\n\nThe infrastructure focus moved to OpenStack as an IaaS provider, covering the practical architecture behind compute, image management, identity, and networking. Work on Horizon and CLI workflows exposed a complete provisioning chain: selecting an image and flavor, creating instances, attaching them to a private network, and controlling traffic using security groups. A key aspect was network reachability from outside the cloud: public exposure required routing through a virtual router and binding a Floating IP, which mirrors how real providers separate tenant networks from the public internet.\n\nService-based deployment was concretely exercised through a microservice-style Node.js application distributed across multiple virtual machines. Each service instance had to run reliably, be reachable on the expected ports, and communicate across subnets. This introduced realistic cloud networking problems, including multi-network topologies and the need for routing decisions rather than assuming a single flat network. Static routes were configured to enable inter-subnet communication, showing how segmentation improves control but increases configuration complexity. \n\nAutomation and orchestration were addressed by shifting from manual provisioning toward tool-assisted lifecycle management. The course emphasized that cloud value comes from repeatability: deployments should be created, destroyed, and recreated with consistent results. This perspective set the stage for orchestrators that manage placement, networking, and service availability across a pool of resources, rather than relying on per-machine administration.\n\nFinally, Kubernetes was deployed on top of OpenStack to reach a production-like orchestration layer. A cluster was bootstrapped using kubeadm, followed by configuring a CNI plugin (Calico) to enable pod networking. The exercise highlighted how orchestration changes the unit of deployment from “a VM running a process” to “a service described declaratively,” with scheduling, scaling primitives, and stable service access patterns. Using ClusterIP services reinforced internal service discovery and load distribution inside the cluster, complementing earlier lessons on exposing endpoints to the outside world.",
+      "sistema_de_curso": "The course was organized into 4 lectures of 1h15 and 6 hands-on practical sessions of 2h45. The practical work followed step-by-step lab instructions, moving from local virtualization exercises to OpenStack provisioning and finally Kubernetes cluster deployment and service exposure.",
       "matriz_competencia": [
         {
-          "nota": 0,
-          "titulo": ""
+          "nota": 3,
+          "titulo": "Understand the concept of virtualization and the fundamental differences between virtual hosts (VM versus containers)"
+        },
+        {
+          "nota": 3,
+          "titulo": "Understand the concept of cloud computing"
+        },
+        {
+          "nota": 3,
+          "titulo": "Understand the architecture of IaaS provider"
+        },
+        {
+          "nota": 3,
+          "titulo": "Deploy a service-based applications in the cloud"
+        },
+        {
+          "nota": 3,
+          "titulo": "Automate the service-based applications provisioning with service orchestrators"
+        },
+        {
+          "nota": 3,
+          "titulo": "Deploy service-based applications in cloud-edge continuum and setup QoS management"
         }
       ],
-      "justificativa": "",
-      "relacao_projeto_profissional": ""
+      "justificativa": "A score of 3 makes sense because the course covered the full chain from virtualization to cloud infrastructure and orchestration, and the labs did result in working deployments. At the same time, the practical sessions were often closer to following a “recipe” provided by the professor, where commands were copied into the terminal with limited time to deeply understand each component. Several topics were also skipped because the class was progressing slowly and prioritizing basic execution over a deeper explanation, which meant parts of the workflow were completed without fully understanding what was happening internally.",
+      "relacao_projeto_profissional": "This course gave a concrete first exposure to cloud infrastructure and orchestration tooling that appears in many modern software stacks. However, this is not an area that feels central to the type of embedded and connected-systems work I currently target, where hardware constraints, firmware, sensing, and edge-side integration usually dominate the engineering effort.\n\nStill, if a future role requires operating services on an IaaS platform or interacting with container orchestration, the course provides a starting point and vocabulary to re-enter the topic. With dedicated revision and more deliberate practice beyond the step-by-step labs, it should be possible to apply these concepts in a more autonomous and confident way when needed."
     },
     
     {
@@ -366,7 +386,7 @@
       "titulo": "From 3G to 6G",
       "periodo": "1st Semester 2025-2026",
       "status": "Completed",
-      "tecnologias": ["3GPP","UMTS","LTE","5G", "6G","Literature Review","Presentation"],
+      "tecnologias": ["3GPP","LTE","5G", "6G","Literature Review","Presentation"],
       "tags": ["Wireless Communications","Mobile Networks","Telecom Standardization","IoT","Spectrum","EM Waves","mmWave","Health & Safety","Semiconductor Scaling (nm/Å nodes)"],
       "imagens": ["assets/img/from3gto6g.jpg"],
       "relatorio_pdf": "reports/from3gto6g.pdf",
