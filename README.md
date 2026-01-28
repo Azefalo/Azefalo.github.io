@@ -1,190 +1,190 @@
-# Portfólio - GitHub Pages
+# Portfolio - GitHub Pages
 
-Site estático de portfólio profissional desenvolvido com HTML, CSS e JavaScript puro (sem frameworks ou build steps).
+Static professional portfolio website developed with pure HTML, CSS, and JavaScript (no frameworks or build steps).
 
 🌐 **Demo:** [https://azefalo.github.io](https://azefalo.github.io)
 
-## 📋 Sobre o Projeto
+## 📋 About the Project
 
-Este é um portfólio completo para apresentar projetos do último ano da faculdade, incluindo:
-- Página inicial com seção hero, sobre mim, experiências e projeto em destaque
-- Listagem completa de projetos com filtros por tecnologia
-- Páginas individuais de projeto com galerias, descrições detalhadas e download de relatórios
-- Tema claro/escuro automático e manual
-- Design responsivo (mobile-first)
-- Acessibilidade (WCAG)
-- SEO otimizado
+This is a complete portfolio to showcase projects from the final year of college, including:
+- Homepage with hero section, about me, experience, and featured project
+- Complete project listing with technology filters
+- Individual project pages with galleries, detailed descriptions, and report downloads
+- Automatic and manual light/dark theme
+- Responsive design (mobile-first)
+- Accessibility (WCAG)
+- Optimized SEO
 
-## 🚀 Como Publicar no GitHub Pages
+## 🚀 How to Publish on GitHub Pages
 
-1. **Faça commit e push das suas alterações:**
+1. **Commit and push your changes:**
    ```bash
    git add .
-   git commit -m "Atualizar portfólio"
+   git commit -m "Update portfolio"
    git push origin main
    ```
 
-2. **Ative o GitHub Pages:**
-   - Acesse: **Settings → Pages**
-   - Em **Source**, selecione: **Deploy from a branch**
-   - Escolha a branch **main** e a pasta **/ (root)**
-   - Clique em **Save**
+2. **Activate GitHub Pages:**
+   - Go to: **Settings → Pages**
+   - In **Source**, select: **Deploy from a branch**
+   - Choose the **main** branch and **/ (root)** folder
+   - Click **Save**
 
-3. **Aguarde alguns minutos** e seu site estará disponível em:
-   `https://[seu-usuario].github.io`
+3. **Wait a few minutes** and your site will be available at:
+   `https://[your-username].github.io`
 
-## ✏️ Como Personalizar
+## ✏️ How to Customize
 
-### 1. Editar Informações Pessoais
+### 1. Edit Personal Information
 
-Substitua os placeholders marcados com `<!-- EDITAR: ... -->` nos arquivos HTML:
+Replace the placeholders marked with `<!-- EDITAR: ... -->` in the HTML files:
 
 #### **index.html**
-- Nome e função no hero section
-- Descrição "Sobre Mim"
-- Experiências profissionais
-- Tecnologias conhecidas
-- Links de contato (email, LinkedIn, GitHub)
-- Direitos autorais no rodapé
+- Name and role in the hero section
+- "About Me" description
+- Professional experience
+- Known technologies
+- Contact links (email, LinkedIn, GitHub)
+- Copyright in footer
 
-#### **projetos.html** e **projeto.html**
-- Nome no logo da navegação
-- Direitos autorais no rodapé
+#### **projetos.html** and **projeto.html**
+- Name in navigation logo
+- Copyright in footer
 
-### 2. Adicionar/Editar Projetos
+### 2. Add/Edit Projects
 
-Edite o arquivo **`data/projects.json`**:
+Edit the **`data/projects.json`** file:
 
 ```json
 {
-  "featured": "id-do-projeto-em-destaque",
+  "featured": "featured-project-id",
   "items": [
     {
-      "id": "slug-do-projeto",
-      "titulo": "Nome do Projeto",
-      "parcerias": ["Empresa 1", "Empresa 2"],
+      "id": "project-slug",
+      "titulo": "Project Name",
+      "parcerias": ["Company 1", "Company 2"],
       "periodo": "2024-2025",
-      "status": "Em desenvolvimento",
-      "intro": "Resumo curto (2-3 linhas)",
-      "descricao": "Descrição completa do projeto",
+      "status": "In development",
+      "intro": "Short summary (2-3 lines)",
+      "descricao": "Full project description",
       "tecnologias": ["Tech1", "Tech2"],
-      "imagens": ["assets/img/projeto1.jpg"],
-      "relatorio_pdf": "reports/projeto1.pdf",
+      "imagens": ["assets/img/project1.jpg"],
+      "relatorio_pdf": "reports/project1.pdf",
       "tags": ["Tag1", "Tag2"]
     }
   ]
 }
 ```
 
-### 3. Substituir Imagens
+### 3. Replace Images
 
-Substitua os arquivos em **`assets/img/`** pelas suas imagens reais:
-- Formatos recomendados: JPG, PNG, WebP
-- Tamanho recomendado: máximo 1200px de largura
-- Otimize as imagens antes de fazer upload (use TinyPNG, Squoosh, etc.)
+Replace the files in **`assets/img/`** with your real images:
+- Recommended formats: JPG, PNG, WebP
+- Recommended size: maximum 1200px width
+- Optimize images before uploading (use TinyPNG, Squoosh, etc.)
 
-Imagens usadas:
-- `profile.jpg` - Foto de perfil (meta tags Open Graph)
-- `keyless.jpg`, `keyless-app.jpg`, etc. - Screenshots dos projetos
+Images used:
+- `profile.jpg` - Profile photo (Open Graph meta tags)
+- `keyless.jpg`, `keyless-app.jpg`, etc. - Project screenshots
 
-### 4. Substituir Relatórios PDF
+### 4. Replace PDF Reports
 
-Substitua os arquivos em **`reports/`** pelos seus PDFs reais:
-- Nome do arquivo deve corresponder ao definido em `projects.json`
-- Mantenha tamanho razoável (máximo 10MB recomendado)
+Replace the files in **`reports/`** with your real PDFs:
+- File name must match the one defined in `projects.json`
+- Keep a reasonable size (maximum 10MB recommended)
 
-### 5. Personalizar Cores e Estilos
+### 5. Customize Colors and Styles
 
-Edite as variáveis CSS em **`assets/css/main.css`** (linhas 1-30):
+Edit the CSS variables in **`assets/css/main.css`** (lines 1-30):
 
 ```css
 :root {
-    --color-primary: #0d6efd;        /* Cor primária */
-    --color-bg: #ffffff;             /* Fundo claro */
-    --color-text: #212529;           /* Texto claro */
-    /* ... outras variáveis ... */
+    --color-primary: #0d6efd;        /* Primary color */
+    --color-bg: #ffffff;             /* Light background */
+    --color-text: #212529;           /* Light text */
+    /* ... other variables ... */
 }
 ```
 
-## 📁 Estrutura de Pastas
+## 📁 Folder Structure
 
 ```
 .
-├─ index.html                 # Página inicial
-├─ projetos.html             # Listagem de projetos
-├─ projeto.html              # Detalhe de projeto (dinâmico)
+├─ index.html                 # Homepage
+├─ projetos.html             # Project listing
+├─ projeto.html              # Project detail (dynamic)
 ├─ assets/
-│  ├─ css/main.css          # Estilos globais
-│  ├─ js/app.js             # JavaScript principal
-│  └─ img/                  # Imagens do site
+│  ├─ css/main.css          # Global styles
+│  ├─ js/app.js             # Main JavaScript
+│  └─ img/                  # Site images
 ├─ data/
-│  └─ projects.json         # Dados dos projetos
-├─ reports/                  # PDFs dos relatórios
-├─ favicon.ico              # Ícone do site
-├─ sitemap.xml              # Mapa do site (SEO)
-├─ robots.txt               # Instruções para bots
-├─ .nojekyll                # Desativa processamento Jekyll
-├─ LICENSE                  # Licença MIT
-└─ README.md                # Este arquivo
+│  └─ projects.json         # Project data
+├─ reports/                  # Report PDFs
+├─ favicon.ico              # Site icon
+├─ sitemap.xml              # Site map (SEO)
+├─ robots.txt               # Bot instructions
+├─ .nojekyll                # Disable Jekyll processing
+├─ LICENSE                  # MIT License
+└─ README.md                # This file
 ```
 
-## 🎨 Recursos
+## 🎨 Features
 
-### Tema Claro/Escuro
-- Respeita preferência do sistema operacional
-- Toggle manual no canto superior
-- Preferência salva no `localStorage`
+### Light/Dark Theme
+- Respects operating system preference
+- Manual toggle in the upper corner
+- Preference saved in `localStorage`
 
-### Responsividade
+### Responsiveness
 - Mobile-first design
 - Breakpoints: 480px, 768px, 1024px
-- Grid flexível e imagens responsivas
+- Flexible grid and responsive images
 
-### Acessibilidade
-- Semântica HTML5 adequada
-- Contraste de cores WCAG AA
-- Foco visível em elementos interativos
-- Atributos ARIA em componentes dinâmicos
-- Texto alternativo em imagens
+### Accessibility
+- Proper HTML5 semantics
+- WCAG AA color contrast
+- Visible focus on interactive elements
+- ARIA attributes on dynamic components
+- Alternative text on images
 
 ### SEO
-- Meta tags apropriadas
-- Open Graph e Twitter Cards
+- Appropriate meta tags
+- Open Graph and Twitter Cards
 - Sitemap.xml
 - Robots.txt
-- URLs amigáveis
+- Friendly URLs
 
-## 🔧 Desenvolvimento Local
+## 🔧 Local Development
 
-Para testar localmente:
+To test locally:
 
-1. **Usando Python:**
+1. **Using Python:**
    ```bash
-   cd /caminho/para/Azefalo.github.io
+   cd /path/to/Azefalo.github.io
    python -m http.server 8000
    ```
-   Acesse: `http://localhost:8000`
+   Access: `http://localhost:8000`
 
-2. **Usando Node.js (http-server):**
+2. **Using Node.js (http-server):**
    ```bash
    npx http-server -p 8000
    ```
 
-3. **Usando PHP:**
+3. **Using PHP:**
    ```bash
    php -S localhost:8000
    ```
 
-## 🌐 Domínio Customizado (Opcional)
+## 🌐 Custom Domain (Optional)
 
-Para usar um domínio próprio:
+To use your own domain:
 
-1. Crie um arquivo **`CNAME`** na raiz com seu domínio:
+1. Create a **`CNAME`** file in the root with your domain:
    ```
-   seudominio.com
+   yourdomain.com
    ```
 
-2. Configure os registros DNS do seu domínio:
+2. Configure your domain's DNS records:
    ```
    A    185.199.108.153
    A    185.199.109.153
@@ -192,27 +192,27 @@ Para usar um domínio próprio:
    A    185.199.111.153
    ```
    
-   Ou para subdomínio (www):
+   Or for subdomain (www):
    ```
-   CNAME    [seu-usuario].github.io
+   CNAME    [your-username].github.io
    ```
 
-3. Ative HTTPS em **Settings → Pages**
+3. Enable HTTPS in **Settings → Pages**
 
-## 📝 Licença
+## 📝 License
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+This project is under the MIT license. See the [LICENSE](LICENSE) file for more details.
 
-## 🤝 Contribuindo
+## 🤝 Contributing
 
-Sugestões e melhorias são bem-vindas! Abra uma issue ou pull request.
+Suggestions and improvements are welcome! Open an issue or pull request.
 
-## 📧 Contato
+## 📧 Contact
 
-- **Email:** seu.email@exemplo.com
-- **LinkedIn:** [seu-perfil](https://linkedin.com/in/seu-perfil)
+- **Email:** your.email@example.com
+- **LinkedIn:** [your-profile](https://linkedin.com/in/your-profile)
 - **GitHub:** [Azefalo](https://github.com/Azefalo)
 
 ---
 
-Desenvolvido com ❤️ usando HTML, CSS e JavaScript puro
+Developed with ❤️ using pure HTML, CSS and JavaScript
