@@ -92,21 +92,25 @@ function initScrollAnimations() {
 
     // Observer for project cards with stagger effect
     const cardObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
+                const delay = parseInt(entry.target.dataset.index || 0) * 100;
                 setTimeout(() => {
                     entry.target.classList.add('visible');
-                }, index * 100);
+                }, delay);
+                cardObserver.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // Wait for projects to load then observe cards
-    setTimeout(() => {
-        document.querySelectorAll('.project-card').forEach(card => {
+    // Function to observe cards after they're loaded
+    window.observeProjectCards = function() {
+        const cards = document.querySelectorAll('.project-card');
+        cards.forEach((card, index) => {
+            card.dataset.index = index;
             cardObserver.observe(card);
         });
-    }, 500);
+    };
 }
 
 // ============================================
@@ -246,6 +250,11 @@ function renderLatestProjects() {
     }
 
     container.innerHTML = projects.map(project => createProjectCard(project)).join('');
+    
+    // Observe cards for animations after rendering
+    if (window.observeProjectCards) {
+        window.observeProjectCards();
+    }
 }
 
 // ============================================
@@ -265,6 +274,11 @@ function renderAllProjects() {
 
     document.getElementById('noResults').style.display = 'none';
     container.innerHTML = projects.map(project => createProjectCard(project)).join('');
+    
+    // Observe cards for animations after rendering
+    if (window.observeProjectCards) {
+        window.observeProjectCards();
+    }
 }
 
 // ============================================
