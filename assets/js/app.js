@@ -1,13 +1,13 @@
 // ============================================
-// APP.JS - Lógica principal do portfólio
+// APP.JS - Main portfolio logic
 // ============================================
 
-// Estado da aplicação
+// Application state
 let projectsData = null;
 let currentFilter = 'all';
 
 // ============================================
-// INICIALIZAÇÃO
+// INITIALIZATION
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
     initTheme();
@@ -17,20 +17,20 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ============================================
-// GESTÃO DE TEMA (CLARO/ESCURO)
+// THEME MANAGEMENT (LIGHT/DARK)
 // ============================================
 function initTheme() {
     const themeToggle = document.getElementById('themeToggle');
     if (!themeToggle) return;
 
-    // Carregar preferência salva ou usar preferência do sistema
+    // Load saved preference or use system preference
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         document.body.classList.add(savedTheme);
         updateThemeIcon(savedTheme);
     }
 
-    // Toggle entre temas
+    // Toggle between themes
     themeToggle.addEventListener('click', () => {
         const currentTheme = document.body.classList.contains('theme-dark') ? 'theme-dark' : 'theme-light';
         const newTheme = currentTheme === 'theme-dark' ? 'theme-light' : 'theme-dark';
@@ -51,10 +51,10 @@ function updateThemeIcon(theme) {
 }
 
 // ============================================
-// NAVEGAÇÃO
+// NAVIGATION
 // ============================================
 function initNavigation() {
-    // Destacar link ativo baseado na URL atual
+    // Highlight active link based on current URL
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('.nav-links a');
     
@@ -118,7 +118,7 @@ function initExperienceCarousel() {
 }
 
 // ============================================
-// CARREGAMENTO DE PROJETOS
+// PROJECT LOADING
 // ============================================
 async function loadProjects() {
     try {
@@ -129,7 +129,7 @@ async function loadProjects() {
         
         projectsData = await response.json();
         
-        // Renderizar baseado na página atual
+        // Render based on current page
         const currentPage = window.location.pathname;
         
         if (currentPage.includes('index.html') || currentPage === '/' || currentPage === '') {
@@ -149,7 +149,7 @@ async function loadProjects() {
 }
 
 // ============================================
-// RENDERIZAÇÃO - PROJETO EM DESTAQUE (Home)
+// RENDERING - FEATURED PROJECT (Home)
 // ============================================
 function renderFeaturedProject() {
     const container = document.getElementById('featuredProject');
@@ -185,13 +185,13 @@ function renderFeaturedProject() {
 }
 
 // ============================================
-// RENDERIZAÇÃO - ÚLTIMOS PROJETOS (Home)
+// RENDERING - LATEST PROJECTS (Home)
 // ============================================
 function renderLatestProjects() {
     const container = document.getElementById('latestProjects');
     if (!container || !projectsData) return;
 
-    // Mostrar até 3 projetos (excluindo o em destaque)
+    // Show up to 3 projects (excluding the featured one)
     const featuredId = projectsData.featured;
     const projects = projectsData.items
         .filter(p => p.id !== featuredId)
@@ -206,7 +206,7 @@ function renderLatestProjects() {
 }
 
 // ============================================
-// RENDERIZAÇÃO - TODOS OS PROJETOS (projetos.html)
+// RENDERING - ALL PROJECTS (projetos.html)
 // ============================================
 function renderAllProjects() {
     const container = document.getElementById('projectsGrid');
@@ -225,7 +225,7 @@ function renderAllProjects() {
 }
 
 // ============================================
-// CRIAÇÃO DE CARD DE PROJETO
+// PROJECT CARD CREATION
 // ============================================
 function createProjectCard(project) {
     const tagsHTML = project.tecnologias && project.tecnologias.length > 0
@@ -261,13 +261,13 @@ function createProjectCard(project) {
 }
 
 // ============================================
-// FILTROS DE TECNOLOGIA
+// TECHNOLOGY FILTERS
 // ============================================
 function initFilters() {
     const container = document.getElementById('filterButtons');
     if (!container || !projectsData) return;
 
-    // Coletar todas as tecnologias únicas
+    // Collect all unique technologies
     const allTechs = new Set();
     projectsData.items.forEach(project => {
         if (project.tecnologias) {
@@ -280,7 +280,7 @@ function initFilters() {
         }
     });
 
-    // Criar botões de filtro
+    // Create filter buttons
     const techButtons = Array.from(allTechs).sort().map(tech => 
         `<button class="filter-btn" data-filter="${escapeHtml(tech)}">${escapeHtml(tech)}</button>`
     ).join('');
@@ -290,14 +290,14 @@ function initFilters() {
         ${techButtons}
     `;
 
-    // Adicionar event listeners
+    // Add event listeners
     container.querySelectorAll('.filter-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
-            // Atualizar estado ativo
+            // Update active state
             container.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             e.target.classList.add('active');
             
-            // Aplicar filtro
+            // Apply filter
             currentFilter = e.target.dataset.filter;
             renderAllProjects();
         });
@@ -315,7 +315,7 @@ function filterProjects(projects) {
 }
 
 // ============================================
-// RENDERIZAÇÃO - DETALHE DO PROJETO (projeto.html)
+// RENDERING - PROJECT DETAIL (projeto.html)
 // ============================================
 function renderProjectDetail() {
     const container = document.getElementById('projectContent');
@@ -323,7 +323,7 @@ function renderProjectDetail() {
     
     if (!container || !projectsData) return;
 
-    // Obter ID da query string
+    // Get ID from query string
     const urlParams = new URLSearchParams(window.location.search);
     const projectId = urlParams.get('id');
 
@@ -339,10 +339,10 @@ function renderProjectDetail() {
         return;
     }
 
-    // Atualizar título da página
+    // Update page title
     document.title = `${project.titulo} - João Gabriel Buttow Albuquerque`;
 
-    // Renderizar galeria de imagens
+    // Render image gallery
     const galleryHTML = project.imagens && project.imagens.length > 0
         ? `<div class="project-gallery">
              ${project.imagens.map(img => 
@@ -351,7 +351,7 @@ function renderProjectDetail() {
            </div>`
         : '';
 
-    // Renderizar tecnologias
+    // Render technologies
     const techHTML = project.tecnologias && project.tecnologias.length > 0
         ? `<div class="project-tech-list">
              ${project.tecnologias.map(tech => 
@@ -360,7 +360,7 @@ function renderProjectDetail() {
            </div>`
         : '';
 
-    // Renderizar tags
+    // Render tags
     const tagsHTML = project.tags && project.tags.length > 0
         ? `<div class="project-tech-list">
              ${project.tags.map(tag => 
@@ -369,7 +369,7 @@ function renderProjectDetail() {
            </div>`
         : '';
 
-    // Renderizar matriz de competência
+    // Render competence matrix
     const competenceHTML = project.matriz_competencia && project.matriz_competencia.length > 0
         ? `<div class="competence-matrix">
              ${project.matriz_competencia.map(comp => `
@@ -451,7 +451,7 @@ function renderProjectDetail() {
         </div>
     `;
 
-    // Esconder a div de "não encontrado"
+    // Hide the "not found" div
     if (notFoundDiv) {
         notFoundDiv.style.display = 'none';
     }
@@ -474,7 +474,7 @@ function showNotFound() {
 }
 
 // ============================================
-// FUNÇÕES UTILITÁRIAS
+// UTILITY FUNCTIONS
 // ============================================
 function escapeHtml(text) {
     const div = document.createElement('div');
@@ -496,7 +496,7 @@ function showError(message) {
         </div>
     `;
     
-    // Tentar encontrar containers e exibir erro
+    // Try to find containers and display error
     const containers = [
         document.getElementById('featuredProject'),
         document.getElementById('latestProjects'),
@@ -512,7 +512,7 @@ function showError(message) {
 }
 
 // ============================================
-// EXPORTAR FUNÇÕES (se necessário para testes)
+// EXPORT FUNCTIONS (if needed for testing)
 // ============================================
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
