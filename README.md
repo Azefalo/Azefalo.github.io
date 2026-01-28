@@ -37,7 +37,7 @@ This is a complete portfolio to showcase projects from the final year of college
 
 ### 1. Edit Personal Information
 
-Replace the placeholders marked with `<!-- EDITAR: ... -->` in the HTML files:
+Replace the placeholders marked with `<!-- EDIT: ... -->` in the HTML files:
 
 #### **index.html**
 - Name and role in the hero section
