@@ -7,7 +7,7 @@ Static professional portfolio website developed with pure HTML, CSS, and JavaScr
 ## 📋 About the Project
 
 This is a complete portfolio to showcase projects from the final year of college, including:
-- Homepage with hero section, about me, experience, and featured project
+- Homepage with hero section, about me, experiences, and featured project
 - Complete project listing with technology filters
 - Individual project pages with galleries, detailed descriptions, and report downloads
 - Automatic and manual light/dark theme
@@ -215,4 +215,4 @@ Suggestions and improvements are welcome! Open an issue or pull request.
 
 ---
 
-Developed with ❤️ using pure HTML, CSS and JavaScript
+Developed with ❤️ using pure HTML, CSS, and JavaScript
