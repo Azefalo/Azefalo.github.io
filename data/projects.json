@@ -366,21 +366,25 @@
       "titulo": "Communication protocols for LP-WPAN",
       "periodo": "1st Semester 2025-2026",
       "status": "Completed",
-      "tecnologias": [],
-      "tags": [],
+      "tecnologias": ["IPv6", "6LoWPAN"],
+      "tags": ["IoT Networking", "LPWAN", "IPv6 for IoT", "Low-Power Communication", "Protocol Stack Design"],
       "imagens": ["assets/img/communication-protocols.jpg"],
       "relatorio_pdf": "",
-      "descricao": "",
-      "tecnica": "",
-      "sistema_de_curso": "",
+      "descricao": "This course built a practical understanding of how IoT connectivity differs from traditional wired networks, with emphasis on low-power and wide-area constraints. The content connected radio-channel behavior to protocol design decisions, showing how loss, limited bandwidth, and energy constraints propagate upward and shape networking and application performance.\n\nA second focus was the Internet-based architecture promoted for IoT, positioning IPv6 as an interoperability backbone while acknowledging the overhead and adaptation mechanisms required in constrained links. Short lecture blocks were complemented by hands-on sessions that made the stack more concrete through configuration and observation of real protocol behavior.",
+      "tecnica": "The course started from a wireless-link abstraction and highlighted what makes it fundamentally different from a wired medium: time-varying signal quality, interference, asymmetry, higher loss rates, and strict energy budgets. These properties were then mapped to higher-layer consequences, such as the need for lightweight control traffic, robustness to intermittent connectivity, careful fragmentation strategies, and routing decisions driven by link quality and node constraints rather than purely shortest paths.\n\nA broad overview of IoT access technologies positioned LPWAN within the IoT landscape, clarifying trade-offs between range, data rate, latency, and device lifetime. From that context, the technical core moved to the IETF architecture for IoT and the rationale for adopting an Internet-based stack in constrained networks. IPv6 was treated as the common addressing and interoperability layer, but also as a source of overhead that must be reduced or adapted to fit low-power links.\n\nKey mechanisms were discussed around enabling IPv6 in constrained environments: 6LoWPAN-style adaptation principles (header compression and fragmentation concepts) and multi-hop routing approaches aligned with low-power and lossy networks, notably RPL. The differences from legacy non-Internet IoT stacks were framed in terms of end-to-end addressing, integration with existing IP infrastructure, and easier cross-vendor interoperability, balanced against added complexity and the need for careful tuning to preserve efficiency.\n\nHands-on work focused on setting up and operating a basic IPv6-based IoT network and validating connectivity and routing behavior through observation and packet-level reasoning. Practical steps included configuring nodes for IPv6 communication over a low-power link, checking address assignment and reachability, and using traffic inspection to relate what was configured to what was actually exchanged on the network. Even without a separate semester project, the lab sessions provided a concrete workflow to connect the theory of the IETF stack to its real operational constraints. This knowledge also ties naturally to sustainable engineering by enabling interoperable infrastructures that can reduce redundant gateways and extend device lifetimes through more efficient networking choices (SDG 9: Industry, Innovation and Infrastructure).",
+      "sistema_de_curso": "The course was organized into 3 lecture sessions (1h15 each) and 3 practical sessions (1h15 each). Lectures introduced wireless-link constraints, the IoT connectivity landscape, and the IETF protocol-stack approach, while labs emphasized basic IPv6-based IoT network setup and operational verification through configuration checks and traffic observation. Assessment was aligned with demonstrated understanding of the stack and correct operation during practical work.",
       "matriz_competencia": [
         {
-          "nota": 0,
-          "titulo": ""
+          "nota": 2,
+          "titulo": "Understand the main benefits and limitations of adopting an Internet-based (i.e., IPv6) protocol stack for IoT access networks, including its underlying principles and how it differs from the legacy IPv6-based protocol stack"
+        },
+        {
+          "nota": 2,
+          "titulo": "Set up and operate a basic IPv6 based IoT Network"
         }
       ],
-      "justificativa": "",
-      "relacao_projeto_profissional": ""
+      "justificativa": "A score of 2 fits because the course outcomes were achieved at a functional baseline level: the main motivations and limitations of using IPv6 for constrained IoT networks were understood, and a basic IPv6 IoT network could be configured and operated during lab work. However, the short format and the absence of a dedicated project limited depth and repetition, so the learning remained focused on core principles and a minimal operational setup rather than advanced optimization, extended experimentation, or large-scale network design.",
+      "relacao_projeto_profissional": "For embedded and connected-systems work, this course strengthens the ability to reason about why connectivity behaves the way it does in constrained environments, and how design choices at the protocol stack level affect reliability, latency, and autonomy. The IPv6-for-IoT perspective is especially useful when integration with existing infrastructure, interoperability, and long-term maintainability are priorities.\n\nIn practice, the most direct value is being able to debug and make informed architecture choices when facing real wireless constraints, rather than treating communication as a black box. If future roles involve IoT integration or systems validation, the ability to set up a basic IPv6-based IoT network and interpret protocol behavior can shorten iteration cycles and improve technical decisions under realistic constraints."
     },
 
     {
@@ -435,21 +439,45 @@
       "titulo": "English",
       "periodo": "1st Semester 2025-2026",
       "status": "Completed",
-      "tecnologias": [],
-      "tags": [],
+      "tecnologias": ["Presentation Tools", "Technical Writing", "Sprint Reviews"],
+      "tags": ["Communication", "Technical English", "Public Speaking"],
       "imagens": ["assets/img/learn-english.jpeg"],
       "relatorio_pdf": "",
-      "descricao": "",
-      "tecnica": "",
-      "sistema_de_curso": "",
+      "descricao": "This English course strengthened the language foundation needed for engineering studies, with a practical focus on vocabulary, grammar, and pronunciation for technical communication. The most valuable part was the continuous training through real deliverables rather than isolated exercises.\n\nPresentations were closely connected to the semester’s Innovative Project workflow. Every two weeks, a sprint update was delivered in English, using my Keyless Car Access project as the main context, which helped build confidence, structure, and clarity when explaining technical progress to an audience.",
+      "tecnica": "The course emphasized communication skills that are directly transferable to an engineering environment. Vocabulary development targeted technical and project-related contexts, enabling more precise descriptions of systems, constraints, and design choices. Grammar work focused on producing clear, correct sentences in both spoken and written formats, especially for explaining reasoning and trade-offs.\n\nPronunciation and intonation were trained to improve intelligibility during presentations, reducing friction when speaking for longer periods and when answering questions. Regular sprint presentations created a realistic speaking rhythm: framing objectives, summarizing results, highlighting blockers, and defining next steps.\n\nIn parallel, written production covered report writing and structured argumentation. The project report and associated presentation material required organizing information logically, synthesizing content, and maintaining an appropriate formal tone for academic and technical documentation.",
+      "sistema_de_curso": "The course combined language reinforcement with recurring practical production. Activities included vocabulary and grammar exercises, pronunciation practice, and prepared presentations, with a sprint presentation delivered approximately every two weeks based on the semester Innovative Project. Written work also included the project report and the preparation of supporting presentation material.",
       "matriz_competencia": [
         {
-          "nota": 0,
-          "titulo": ""
+          "nota": 4,
+          "titulo": "Can provide a detailed description and presentation on a wide range of topics related to his/her area of interest by developing and justifying ideas with relevant subpoints and examples."
+        },
+        {
+          "nota": 4,
+          "titulo": "Can make a clear, prepared presentation, putting forward reasons for or against a particular point of view and presenting the advantages and disadvantages of various options. Can handle a series of questions, after the presentation, with a degree of fluency and spontaneity that does not cause tension to the audience or to himself/herself."
+        },
+        {
+          "nota": 4,
+          "titulo": "Can write an essay or report that develops an argument by providing justifications for or against a particular point of view and explaining the advantages or disadvantages of different options. Can synthesize information and arguments from a variety of sources"
+        },
+        {
+          "nota": 4,
+          "titulo": "Has fairly good grammar control. Does not make mistakes leading to misunderstandings"
+        },
+        {
+          "nota": 4,
+          "titulo": "Can usually use the right intonation, place the accent correctly, and articulate isolated sounds clearly; Accent tends to be influenced by one or the other of the languages he/she speaks, but the impact on comprehension is negligible or non-existent"
+        },
+        {
+          "nota": 4,
+          "titulo": "Can speak for a relatively long time with a fairly regular flow, although he/she may hesitate when looking for turns of phrase and expressions; there are few long pauses."
+        },
+        {
+          "nota": 4,
+          "titulo": "Can use correct terminology when discussing his/her area of specialization with other specialists. Can articulate ideas and opinions and argue accurately on complex topics and respond convincingly to the arguments of others."
         }
       ],
-      "justificativa": "",
-      "relacao_projeto_profissional": ""
+      "justificativa": "All competencies were rated at 4 because the course performance was demonstrated repeatedly in realistic conditions, not only in isolated language exercises. Regular sprint presentations demanded clear structure, accurate terminology, and the ability to answer questions with composure, while the written deliverables required coherent argumentation and well-controlled grammar. Working on updates connected to my Keyless Car Access project also made progress measurable over time, since the same technical context was explained multiple times with increasing clarity and fluency.",
+      "relacao_projeto_profissional": "Clear communication is a core engineering skill, especially in multidisciplinary teams where design decisions must be explained and defended. The sprint-style format mirrors professional routines such as stand-ups, design reviews, and stakeholder updates, where clarity and concision directly affect project efficiency.\n\nThis experience also supports future work involving documentation and customer-facing communication. Even when the technical content is strong, being able to present it with the right terminology, structure, and pronunciation increases credibility and makes collaboration smoother across international environments."
     },
 
     {
@@ -457,21 +485,21 @@
       "titulo": "Individualized Professional Development",
       "periodo": "1st Semester 2025-2026",
       "status": "Completed",
-      "tecnologias": [],
-      "tags": [],
+      "tecnologias": ["Interview Preparation", "Salary Negotiation", "Career Planning", "HR Processes", "Mentoring"],
+      "tags": ["Career Development", "Professional Skills", "Soft Skills", "Employability", "Communication"],
       "imagens": ["assets/img/ipd.png"],
       "relatorio_pdf": "",
-      "descricao": "",
-      "tecnica": "",
-      "sistema_de_curso": "",
+      "descricao": "Individualized Professional Development focused on practical preparation for the early professional life, combining targeted workshops with personal guidance. The sessions addressed common transition points such as job interviews, salary discussions, and how to position a profile with clarity and confidence.\n\nBeyond general advice, the module helped turn vague concerns into concrete actions, connecting market expectations with personal strengths. The mentoring exchange with an INSA alumnus added a realistic perspective on career choices and day-to-day professional communication.",
+      "tecnica": "The workshops covered key professional situations and the underlying logic behind them. Interview preparation was approached as a structured process: identifying missing elements in the profile, clarifying personal uncertainties, and practicing how to answer questions with consistent storytelling. Emphasis was placed on translating academic experiences into outcomes, constraints, and responsibilities that recruiters can quickly evaluate.\n\nSalary negotiation was presented from an HR perspective through a session led by two HR professionals. Market data and salary benchmarks were discussed to frame negotiation as a data-informed conversation rather than a purely subjective request. The session also addressed typical negotiation stages, the role of total compensation, and how to articulate value while staying professional and realistic.\n\nThe mentoring component focused on career doubts and decision-making strategies. With the INSA alumnus, discussions helped refine my pitch, reduce hesitation when presenting my goals, and strengthen self-confidence when speaking about skills and experience.",
+      "sistema_de_curso": "The module was organized as workshops plus mentoring sessions, mixing interactive discussions, Q&A moments, and guidance based on real recruiting practices, with a strong emphasis on addressing personal gaps and applying methods immediately.",
       "matriz_competencia": [
         {
-          "nota": 0,
-          "titulo": ""
+          "nota": 4,
+          "titulo": "Validate a professional project and construct a plan to find a job"
         }
       ],
-      "justificativa": "",
-      "relacao_projeto_profissional": ""
+      "justificativa": "The note reflects the practical impact of the module on turning career intentions into a clearer plan and a more convincing professional narrative. The HR-led negotiation session provided market context and concrete negotiation methods, while the interview workshop helped identify what was missing in my preparation and address personal insecurities directly. The mentoring discussion further strengthened my pitch and confidence, making the job-search approach more structured and actionable.",
+      "relacao_projeto_profissional": "This module supported the transition from academic work to a professional positioning that is easier to communicate in interviews and applications. A clearer pitch and stronger self-confidence make it easier to explain technical projects, justify choices, and stay coherent across CV, interviews, and discussions with recruiters.\n\nEven when targeting technical roles, negotiation and interview preparation remain essential to avoid underselling skills and to align expectations with the market. The approach learned here provides a reusable framework to prepare future applications, refine the narrative over time, and make decisions with more clarity and confidence."
     },
 
     {
@@ -479,21 +507,29 @@
       "titulo": "Team Management",
       "periodo": "1st Semester 2025-2026",
       "status": "Completed",
-      "tecnologias": [],
-      "tags": [],
+      "tecnologias": ["Leadership", "People Management"],
+      "tags": ["Recruitment Process", "Structured Interviewing", "Employee Motivation Levers", "Compensation & Benefits Fundamentals", "Career Development Planning", "Conflict Management Styles", "Leadership Styles"],
       "imagens": ["assets/img/management.png"],
       "relatorio_pdf": "",
-      "descricao": "",
-      "tecnica": "",
-      "sistema_de_curso": "",
+      "descricao": "This course built a practical foundation for managing teams in an engineering environment, connecting HR fundamentals with day-to-day leadership decisions. Taught by Cindy Brennan, an Airbus project manager, the sessions were strongly grounded in real situations, with concrete examples of what works (and what fails) when leading people.\n\nBeyond concepts, the course repeatedly linked theory to action: each class included a business case to practice analysis, decision-making, and justification, mirroring the kinds of trade-offs a manager faces in industry.",
+      "tecnica": "1.Introduction to Team Management\nThe course started by framing the manager’s role as both a performance enabler and a people support function. Core management “basics” were introduced, including why managers must understand the employment context: how employment contracts are structured, what collective agreements imply, and what typical clauses and constraints can affect team life (mobility, confidentiality, working conditions, and termination principles). This opening module also clarified what managers own versus what HR owns, preparing a realistic view of shared responsibilities.\n\n2.Recruitment\nRecruitment was presented as an end-to-end process where technical evaluation and human judgment must remain structured. Key steps were covered from needs definition and job description to shortlist validation, interviews, final selection, and onboarding, with explicit attention to the manager’s contribution at each stage. Interview preparation and structured questioning were emphasized to improve consistency, reduce noise in evaluation, and make the final decision defensible based on evidence rather than impressions. The onboarding phase was treated as a critical management responsibility to accelerate integration and reduce early churn.\n\n3.Team Motivation\nMotivation was addressed through the idea that performance depends on individual needs, context, and meaningful levers, not only on “incentives.” The module distinguished intrinsic vs extrinsic drivers and explored how managers can reinforce autonomy, progress, and recognition through daily practices (clarifying goals, giving feedback, and providing room to act). A diagnostic approach was also used through individual motivation profiles, helping translate “what motivates this person” into concrete management actions rather than generic advice.\n\n4.Compensation & Benefits\nCompensation and benefits were introduced as part of a broader “total rewards” logic, connecting pay structures to motivation, retention, and perceived fairness. Fundamental concepts were discussed such as the difference between monetary compensation and non-monetary benefits, and how variable elements (bonuses, profit sharing) fit alongside base salary. The importance of equity was highlighted through external equity (market comparison) and internal equity (fairness across roles), showing how perceived unfairness can damage engagement. The manager’s role was positioned around communication, coherence, and responsible contribution to compensation discussions within defined company rules.\n\n5.Career Management\nCareer management was treated as a shared process between employee, manager, and organization, with the manager acting as a key facilitator of growth. The module focused on performance review practices, continuous feedback, and building development plans aligned with both business needs and individual aspirations. SMART objectives were used as a concrete tool to turn expectations into measurable progress, supporting fair assessment and clearer alignment. Practical career conversations were framed as a way to keep talent engaged while also structuring mobility and skill development.\n\n6.Conflict Management\nConflict was approached as a normal outcome of constraints, priorities, and interpersonal dynamics, with an emphasis on early detection and disciplined response. The course covered behavioral signals that suggest emerging conflict, and introduced conflict management styles mapped on assertiveness and cooperativeness: competing, avoiding, accommodating, compromising, and collaborating. Each style was discussed as context-dependent rather than “good” or “bad,” with guidance on when a manager might choose one approach over another. The overall objective was to de-escalate effectively, protect the team climate, and reach workable agreements without ignoring facts.\n\n7.Leadership\nLeadership was presented as distinct from management: management focuses on execution and organization, while leadership drives movement from a vision and motivates people toward it. The sessions explored leadership styles and the idea of adapting leadership to both the situation and the individuals, including coaching-oriented behaviors and supportive vs directive positioning. Practical advice emphasized trust-building, communication clarity, and using feedback as a leadership tool, especially in technical environments where influence often matters more than formal authority.",
+      "sistema_de_curso": "The course was delivered in seven 2h45 sessions combining interactive lectures with practical industry examples brought by Cindy Brennan. Each session included a dedicated business case or in-class exercise to apply the theoretical frameworks and practice managerial reasoning in realistic situations.",
       "matriz_competencia": [
         {
-          "nota": 0,
-          "titulo": ""
+          "nota": 3,
+          "titulo": "Find and understand information related to HR"
+        },
+        {
+          "nota": 3,
+          "titulo": "Analyze a team management situation by referring to a theoretical framework"
+        },
+        {
+          "nota": 3,
+          "titulo": "Formulate and justify managerial decisions"
         }
       ],
-      "justificativa": "",
-      "relacao_projeto_profissional": ""
+      "justificativa": "A grade of 3 fits because the course repeatedly required gathering and using HR-related information to support decisions, especially when discussing recruitment, compensation principles, and career processes. Business cases in every class trained structured analysis using frameworks (motivation levers, equity, SMART objectives, conflict styles, leadership adaptation), and the decisions had to be justified coherently rather than stated as opinions. The strong link to real workplace situations made it easier to understand what managers are accountable for and how to communicate choices responsibly.",
+      "relacao_projeto_profissional": "This course directly supports the path toward becoming a strong manager and team leader, especially in engineering contexts where technical delivery depends on people alignment. The modules provided a concrete toolkit for hiring, integrating, motivating, and developing teammates, while also handling conflict early and professionally.\n\nIt was also valuable for understanding the French workplace context, including the legal and organizational foundations that shape how companies operate. Concepts around contracts, collective agreements, HR processes, and the specific terminology used in professional environments helped build confidence for working and leading teams in France. I want to lead with clarity and fairness, and this course reinforced what responsible management looks like in practice through realistic cases and decision-making routines."
     },
 
     {
