@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     initNavigation();
     initExperienceCarousel();
+    initScrollAnimations();
     loadProjects();
 });
 
@@ -64,6 +65,48 @@ function initNavigation() {
             link.classList.add('active');
         }
     });
+}
+
+// ============================================
+// SCROLL ANIMATIONS
+// ============================================
+function initScrollAnimations() {
+    // Observer for section animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    // Observe all sections
+    document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+    });
+
+    // Observer for project cards with stagger effect
+    const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, index * 100);
+            }
+        });
+    }, observerOptions);
+
+    // Wait for projects to load then observe cards
+    setTimeout(() => {
+        document.querySelectorAll('.project-card').forEach(card => {
+            cardObserver.observe(card);
+        });
+    }, 500);
 }
 
 // ============================================
